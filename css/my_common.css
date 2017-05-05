@@ -1,0 +1,16 @@
+body, ul, ol, dl, dd, dt, p, h6, h5, h4 {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.container {
+  width: 1200px;
+  margin: 0 auto; }
+  .container:after {
+    content: '';
+    display: block;
+    clear: both; }
+  .container:before {
+    content: '';
+    display: block;
+    clear: both; }

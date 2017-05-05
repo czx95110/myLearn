@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    div{
+      width: 1800px;
+      margin: 50px auto;
+    }
+    canvas{
+      border: 1px solid red;
+      background: #ddd;
+    }
+  </style>
+</head>
+<body>
+<!--http://blog.csdn.net/clh604/article/details/8536059-->
+<div class="">
+  <canvas id="canvas" width="800" height="600"></canvas>
+</div>
+
+<script>
+  var canvas=document.getElementById('canvas');
+  var ctx=canvas.getContext('2d');
+  ctx.fillStyle=randomColor();
+  ctx.strokeStyle=randomColor();
+  var cw=canvas.width;
+  var ch=canvas.height;
+
+  function fiveStar(x,y,Radius,radius) {
+    var rdeg=Math.PI/180;
+//    ctx.beginPath();
+//    ctx.strokeStyle=randomColor();
+//    ctx.arc(x,y,Radius,0,Math.PI*2);
+//    ctx.stroke();
+    ctx.beginPath();
+    ctx.fillStyle=randomColor();
+     for(var i=0;i<5;i++){
+       ctx.lineTo(x+Math.cos((18+i*72)*rdeg)*Radius,y-Math.sin((18+i*72)*rdeg)*Radius);
+       ctx.lineTo(x+Math.cos((54+i*72)*rdeg)*radius,y-Math.sin((54+i*72)*rdeg)*radius);
+     }
+    ctx.closePath();
+    ctx.fill();
+  }
+  fiveStar(400,300,50,20);
+   //坐标系
+  function axis(lineLength,arrow) {
+//    shadow(3,2,randomColor(),4);
+    ctx.lineWidth=2;
+    ctx.beginPath();
+    ctx.strokeStyle=randomColor();
+    ctx.moveTo(50,ch-50);
+    ctx.lineTo(50+lineLength,ch-50);
+    ctx.moveTo(50+lineLength-arrow,ch-50-arrow);
+    ctx.lineTo(50+lineLength,ch-50);
+    ctx.lineTo(50+lineLength-arrow,ch-50+arrow);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.strokeStyle=randomColor();
+    ctx.moveTo(50,ch-50);
+    ctx.lineTo(50,ch-50-lineLength);
+    ctx.moveTo(50-arrow,ch-50-lineLength+arrow);
+    ctx.lineTo(50,ch-50-lineLength);
+    ctx.lineTo(50+arrow,ch-50-lineLength+arrow);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.strokeStyle=randomColor();
+    ctx.moveTo(50,ch-50);
+    ctx.lineTo(50+lineLength/2,ch-50-lineLength/2);
+    ctx.moveTo(50+lineLength/2,ch-50-lineLength/2+arrow*1.5);
+    ctx.lineTo(50+lineLength/2,ch-50-lineLength/2);
+    ctx.lineTo(50+lineLength/2-arrow*1.5,ch-50-lineLength/2);
+    ctx.stroke();
+   }
+  axis(100,8);
+
+  function shadow(x,y,color,blur) {
+    ctx.shadowOffsetX=x;
+    ctx.shadowOffsetY=y;
+    ctx.shadowColor=color;
+    ctx.shadowBlur=blur;
+  }
+  function randomColor() {
+    var r=Math.floor(Math.random()*255+1);
+    var g=Math.floor(Math.random()*255+1);
+    var b=Math.floor(Math.random()*255+1);
+    return 'rgb('+r+','+g+','+b+')';
+  }
+  function clearArc(x,y,radius){//圆心(x,y)，半径radius
+    var calcWidth=radius-stepClear;
+    var calcHeight=Math.sqrt(radius*radius-calcWidth*calcWidth);
+    var posX=x-calcWidth;
+    var posY=y-calcHeight;
+    var widthX=2*calcWidth;
+    var heightY=2*calcHeight;
+    if(stepClear<=radius){
+      ctx.clearRect(posX,posY,widthX,heightY);
+      stepClear+=1;
+      clearArc(x,y,radius);
+    }
+  }
+</script>
+</body>
+</html>

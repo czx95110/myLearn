@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>img-effect</title>
+
+  <style>
+    .container{
+      overflow: hidden;
+      position: relative;
+    }
+    a{
+      position: relative;
+      display: block;
+      width: 683px;
+      height: 384px;
+      overflow: hidden;
+    }
+    img{
+      position: absolute;
+      top: 0;
+      border-style: none;
+      transition: all .3s linear;
+    }
+    .big{
+      opacity: .7;
+    }
+    .lf{
+      left: -342px;
+    }
+    .rt{
+      right: -341px;
+    }
+
+    a:hover .lf{
+      left: 0;
+    }
+    a:hover .rt{
+      right: 0;
+    }
+  </style>
+</head>
+<body>
+
+
+
+<div class="container">
+  <a href="">
+    <img src="../img/left.jpg" class="big"/>
+    <img src="../img/left_01.jpg" class="lf"/>
+    <img src="../img/left_02.jpg" class="rt"/>
+  </a>
+</div>
+
+
+<script src="../js/jquery-1.11.3.js"></script>
+<script>
+
+</script>
+
+
+</body>
+</html>

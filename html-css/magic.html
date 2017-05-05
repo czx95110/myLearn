@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>demo</title>
+  <style>
+    .stage{
+      position:relative;
+      top:50px;
+    }
+    .box_before,.box_back,.box_left,.box_right,.box_top,.box_bottom {
+      height:240px;
+      width:240px;
+      text-align:center;
+      font-weight:bolder;
+      color:yellow;
+      font-size:60px;
+      position:absolute;
+      -webkit-transform-origin:right top;
+      -moz-transform-origin:right top;
+      -ms-transform-origin:right top;
+      -o-transform-origin:right top;
+      transform-origin:right top;
+      box-shadow:0 0 10px rgba(50,50,50,0.1);
+      line-height:240px;
+      background:#000;
+      border-radius:15px;
+    }
+
+    .box_before span,.box_back span,.box_left span,.box_right span,.box_top span,.box_bottom span{display:block;width:25%;line-height:60px;text-align:center;float:left;border-radius:15px;box-shadow:0 0 1px #000;}
+
+    .box_back {
+      left:240px;
+      top:88px;
+      background:#000;
+      -webkit-transform:skew( 0deg,20deg );
+      -moz-transform:skew( 0deg,20deg );
+      -ms-transform:skew( 0deg,20deg );
+      -o-transform:skew( 0deg,20deg );
+      transform:skew( 0deg,20deg );
+    }
+    .box_left {
+      background:#000;
+      -webkit-transform:skew( 0deg,-20deg );
+      -moz-transform:skew( 0deg,-20deg );
+      -ms-transform:skew( 0deg,-20deg );
+      -o-transform:skew( 0deg,-20deg );
+      transform:skew( 0deg,-20deg );
+    }
+    .box_bottom {
+      width:218px;
+      top:240px;
+      left:19px;
+      background:#000;
+      -webkit-transform:rotate( -50deg ) skew( 20deg,30deg );
+      -moz-transform:rotate( -50deg ) skew( 20deg,30deg );
+      -ms-transform:rotate( -50deg ) skew( 20deg,30deg );
+      -o-transform:rotate( -50deg ) skew( 20deg,30deg );
+      transform:rotate( -50deg ) skew( 20deg,30deg );
+    }
+    .box_before {
+      left:0;
+      top:174px;
+      background:#000;
+      -webkit-transform:skew( 0deg,20deg );
+      -moz-transform:skew( 0deg,20deg );
+      -ms-transform:skew( 0deg,20deg );
+      -o-transform:skew( 0deg,20deg );
+      transform:skew( 0deg,20deg );
+      -webkit-transition:all 300ms ease;
+      -moz-transition:all 300ms ease;
+      -o-transition:all 300ms ease;
+      transition:all 300ms ease;
+    }
+    .box_before:hover {
+      -webkit-transform:skew( 0deg,0deg );
+      -moz-transform:skew( 0deg,0deg );
+      -ms-transform:skew( 0deg,0deg );
+      -o-transform:skew( 0deg,0deg );
+      transform:skew( 0deg,0deg );
+    }
+    .box_right {
+      left:240px;
+      top:87px;
+      background:#000;
+      -webkit-transform:skew( 0deg,-20deg );
+      -moz-transform:skew( 0deg,-20deg );
+      -ms-transform:skew( 0deg,-20deg );
+      -o-transform:skew( 0deg,-20deg );
+      transform:skew( 0deg,-20deg );
+      -webkit-transition:all 300ms ease;
+      -moz-transition:all 300ms ease;
+      -o-transition:all 300ms ease;
+      transition:all 300ms ease;
+    }
+    .box_right:hover {
+      -webkit-transform-origin:left;
+      -moz-transform-origin:left;
+      -ms-transform-origin:left;
+      -o-transform-origin:left;
+      transform-origin:left;
+      -webkit-transform:skew( 0deg,-20deg );
+      -moz-transform:skew( 0deg,-20deg );
+      -ms-transform:skew( 0deg,-20deg );
+      -o-transform:skew( 0deg,-20deg );
+      transform:skew( 0deg,-20deg );
+    }
+    .box_top {
+      width:220px;
+      top:-0;
+      left:19px;
+      background:#000;
+      -webkit-transform:rotate( -50deg ) skew( 20deg,30deg );
+      -moz-transform:rotate( -50deg ) skew( 20deg,30deg );
+      -ms-transform:rotate( -50deg ) skew( 20deg,30deg );
+      -o-transform:rotate( -50deg ) skew( 20deg,30deg );
+      transform:rotate( -50deg ) skew( 20deg,30deg );
+      -webkit-transition:all 300ms ease;
+      -moz-transition:all 300ms ease;
+      -o-transition:all 300ms ease;
+      transition:all 300ms ease;
+    }
+    .box_top:hover {
+      top:-80px;
+    }
+    .box_before:before,#box_right:before {
+      -webkit-transform:translate(0px,242px);
+      -moz-transform:translate(0px,242px);
+      -ms-transform:translate(0px,242px);
+      -o-transform:translate(0px,242px);
+      transform:translate(0px,242px);
+      background:#000;
+    }
+    .box_before:before {
+      width:240px;
+      left:1px;
+    }
+    span.bgcolor_01{background:#da251c;color:#da251c;}
+    span.bgcolor_02{background:#fff500;color:#fff500;}
+    span.bgcolor_03{background:#00923f;color:#00923f;}
+    span.bgcolor_04{background:#ffffff;color:#ffffff;}
+    span.bgcolor_05{background:#0093dd;color:#0093dd;}
+    span.bgcolor_06{background:#e67817;color:#e67817;}
+  </style>
+</head>
+
+<body>
+
+<!--上下12,左右34,前后56-->
+
+<dl class="stage">
+
+  <dd class="box_back">
+    <span class="bgcolor_01">1</span>
+    <span class="bgcolor_01">1</span>
+    <span class="bgcolor_01">1</span>
+    <span class="bgcolor_01">1</span>
+    <span class="bgcolor_01">1</span>
+    <span class="bgcolor_01">1</span>
+
+    <span class="bgcolor_01">1</span>
+    <span class="bgcolor_01">1</span>
+    <span class="bgcolor_01">1</span>
+    <span class="bgcolor_01">1</span>
+
+    <span class="bgcolor_01">1</span>
+    <span class="bgcolor_01">1</span>
+    <span class="bgcolor_01">1</span>
+    <span class="bgcolor_01">1</span>
+    <span class="bgcolor_01">1</span>
+    <span class="bgcolor_01">1</span>
+  </dd>
+
+  <dd class="box_bottom">
+    <span class="bgcolor_02">2</span>
+    <span class="bgcolor_02">2</span>
+    <span class="bgcolor_02">2</span>
+    <span class="bgcolor_02">2</span>
+    <span class="bgcolor_02">2</span>
+    <span class="bgcolor_02">2</span>
+
+    <span class="bgcolor_02">2</span>
+    <span class="bgcolor_02">2</span>
+    <span class="bgcolor_02">2</span>
+    <span class="bgcolor_02">2</span>
+
+    <span class="bgcolor_02">2</span>
+    <span class="bgcolor_02">2</span>
+    <span class="bgcolor_02">2</span>
+    <span class="bgcolor_02">2</span>
+    <span class="bgcolor_02">2</span>
+    <span class="bgcolor_02">2</span>
+  </dd>
+
+  <dd class="box_left">
+    <span class="bgcolor_03">3</span>
+    <span class="bgcolor_03">3</span>
+    <span class="bgcolor_03">3</span>
+    <span class="bgcolor_03">3</span>
+    <span class="bgcolor_03">3</span>
+    <span class="bgcolor_03">3</span>
+
+    <span class="bgcolor_03">3</span>
+    <span class="bgcolor_03">3</span>
+    <span class="bgcolor_03">3</span>
+    <span class="bgcolor_03">3</span>
+
+    <span class="bgcolor_03">3</span>
+    <span class="bgcolor_03">3</span>
+    <span class="bgcolor_03">3</span>
+    <span class="bgcolor_03">3</span>
+    <span class="bgcolor_03">3</span>
+    <span class="bgcolor_03">3</span>
+  </dd>
+
+  <dd class="box_before">
+    <span class="bgcolor_04">4</span>
+    <span class="bgcolor_04">4</span>
+    <span class="bgcolor_04">4</span>
+    <span class="bgcolor_04">4</span>
+    <span class="bgcolor_04">4</span>
+    <span class="bgcolor_04">4</span>
+
+    <span class="bgcolor_04">4</span>
+    <span class="bgcolor_04">4</span>
+    <span class="bgcolor_04">4</span>
+    <span class="bgcolor_04">4</span>
+
+    <span class="bgcolor_04">4</span>
+    <span class="bgcolor_04">4</span>
+    <span class="bgcolor_04">4</span>
+    <span class="bgcolor_04">4</span>
+    <span class="bgcolor_04">4</span>
+    <span class="bgcolor_04">4</span>
+  </dd>
+
+  <dd class="box_top">
+    <span class="bgcolor_05">5</span>
+    <span class="bgcolor_05">5</span>
+    <span class="bgcolor_05">5</span>
+    <span class="bgcolor_05">5</span>
+    <span class="bgcolor_05">5</span>
+    <span class="bgcolor_05">5</span>
+
+    <span class="bgcolor_05">5</span>
+    <span class="bgcolor_05">5</span>
+    <span class="bgcolor_05">5</span>
+    <span class="bgcolor_05">5</span>
+
+    <span class="bgcolor_05">5</span>
+    <span class="bgcolor_05">5</span>
+    <span class="bgcolor_05">5</span>
+    <span class="bgcolor_05">5</span>
+    <span class="bgcolor_05">5</span>
+    <span class="bgcolor_05">5</span>
+  </dd>
+
+  <dd class="box_right">
+    <span class="bgcolor_06">6</span>
+    <span class="bgcolor_06">6</span>
+    <span class="bgcolor_06">6</span>
+    <span class="bgcolor_06">6</span>
+    <span class="bgcolor_06">6</span>
+    <span class="bgcolor_06">6</span>
+
+    <span class="bgcolor_06">6</span>
+    <span class="bgcolor_06">6</span>
+    <span class="bgcolor_06">6</span>
+    <span class="bgcolor_06">6</span>
+
+    <span class="bgcolor_06">6</span>
+    <span class="bgcolor_06">6</span>
+    <span class="bgcolor_06">6</span>
+    <span class="bgcolor_06">6</span>
+    <span class="bgcolor_06">6</span>
+    <span class="bgcolor_06">6</span>
+  </dd>
+
+</dl>
+
+</body>
+</html>  

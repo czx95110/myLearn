@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <link rel="icon" href="img/my.ico"/>
+  <link rel="stylesheet" href="css/normalize.css"/>
+  <link rel="stylesheet" href="css/my_index.css"/>
+  <title>资源-目录</title>
+</head>
+<body>
+
+
+<header>
+  <div class="container">
+    <h1 class="title-h">Hello World!</h1>
+  </div>
+</header>
+<nav>
+  <div class="container box">
+    <div class="item"><a href="html-catalog/html.html">HTML</a></div>
+    <div class="item"><a href="html-catalog/css.html">CSS</a></div>
+    <div class="item"><a href="html-catalog/javascript.html">JS</a></div>
+    <div class="item"><a href="html-catalog/ajax.html">4</a></div>
+    <div class="item"><a href="html-catalog/mui.html">5</a></div>
+    <div class="item"><a href="html-catalog/nodejs.html">6</a></div>
+  </div>
+</nav>
+
+<section>
+  <div class="container box">
+    <div class="item left">
+      <p class="title-s">
+        <img src="img/book01-ss.png" />
+        <b>目录结构</b>
+      </p>
+      <ul class="list">
+        <li class="b-btm">
+          <a href="" class="list-title">运行环境</a>
+          <ol class="list-detail">
+            <li>
+              <a href="" class="sub-title">浏览器</a>
+              <div class="sub-detail">
+                <a href="">兼容性</a>
+                <a href="">兼容性</a>
+                <a href="">兼容性</a>
+                <a href="">兼容性</a>
+                <a href="">兼容性</a>
+                <a href="">兼容性</a>
+                <a href="">兼容性</a>
+                <a href="">兼容性</a>
+                <a href="">兼容性</a>
+                <a href="">兼容性</a>
+                <a href="">兼容性</a>
+                <a href="">兼容性</a>
+                <a href="">兼容性</a>
+                <a href="">兼容性</a>
+                <a href="">兼容性</a>
+                <a href="">兼容性</a>
+                <a href="">兼容性</a>
+                <a href="">兼容性</a>
+                <a href="">兼容性</a>
+                <a href="">兼容性</a>
+                <a href="">兼容性</a>
+                <a href="">兼容性</a>
+                <a href="">兼容性</a>
+                <a href="">兼容性</a>
+                <a href="">兼容性</a>
+                <a href="">兼容性</a>
+                <a href="">兼容性</a>
+                <a href="">兼容性</a>
+                <a href="">兼容性</a>
+                <a href="">兼容性</a>
+                <a href="">兼容性</a>
+                <a href="">安全</a>
+                <a href="">性能优化</a>
+              </div>
+            </li>
+            <li>
+              <a href="" class="sub-title">node</a>
+              <div class="sub-detail">
+                <a href="">1</a>
+                <a href="">2</a>
+                <a href="">3</a>
+                <a href="">4</a>
+                <a href="">5</a>
+                <a href="">6</a>
+                <a href="">7</a>
+                <a href="">8</a>
+              </div>
+            </li>
+          </ol>
+        </li>
+        <li class="b-btm">
+          <a href="" class="list-title">编码开发</a>
+          <ol class="list-detail">
+            <li>
+              <a href="" class="sub-title">开发工具</a>
+              <div class="sub-detail">
+                <a href="">05</a>
+                <a href="">06</a>
+                <a href="">07</a>
+                <a href="">08</a>
+                <a href="">09</a>
+              </div>
+            </li>
+            <li>
+              <a href="" class="sub-title">模块</a>
+              <div class="sub-detail">
+                <a href="">01</a>
+                <a href="">02</a>
+                <a href="">03</a>
+                <a href="">04</a>
+              </div>
+            </li>
+            <li>
+              <a href="" class="sub-title">版本</a>
+              <div class="sub-detail">
+                <a href="">01</a>
+                <a href="">02</a>
+              </div>
+            </li>
+            <li>
+              <a href="" class="sub-title">调试</a>
+              <div class="sub-detail">
+                <a href="">01</a>
+                <a href="">02</a>
+                <a href="">03</a>
+              </div>
+            </li>
+            <li>
+              <a href="" class="sub-title">测试</a>
+              <div class="sub-detail">
+                <a href="">01</a>
+                <a href="">02</a>
+                <a href="">03</a>
+              </div>
+            </li>
+          </ol>
+        </li>
+        <li class="b-btm">
+          <a href="" class="list-title">类库框架</a>
+          <ol class="list-detail">
+            <li>
+              <a href="" class="sub-title">abc</a>
+              <div class="sub-detail">
+                <a href="">1</a>
+                <a href="">2</a>
+                <a href="">3</a>
+                <a href="">4</a>
+                <a href="">5</a>
+                <a href="">6</a>
+              </div>
+            </li>
+          </ol>
+        </li>
+      </ul>
+    </div>
+    <div class="item right">
+    </div>
+  </div>
+</section>
+
+
+
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+    var sAs=$('.sub-detail a');
+    for(var i=0;i<sAs.length;i++){
+      var obj=sAs[i];
+      $(obj).css('background',randomColor());
+    }
+
+  function randomColor() {
+    var r=Math.floor(Math.random()*255+1);
+    var g=Math.floor(Math.random()*255+1);
+    var b=Math.floor(Math.random()*255+1);
+    return 'rgb('+r+','+g+','+b+')';
+  }
+
+</script>
+
+</body>
+</html>

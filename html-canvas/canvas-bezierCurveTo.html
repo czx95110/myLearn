@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+<canvas id="cvs" width="800" height="600">不支持canvas</canvas>
+
+<!--http://www.jb51.net/html5/70320.html-->
+<script>
+  var cvs = document.getElementById('cvs'); //画布
+  var ctx = cvs.getContext('2d'); // 画笔
+
+  var x1=450, //控制点1的x坐标
+    y1 = 300, //控制点1的y
+    x2 = 450, //控制点2的x
+    y2 = 500,//控制点2的y
+    x = 300, //终点x
+    y = 500;//终点y
+  ctx.moveTo(300,300);//起点
+  ctx.beginPath();
+  ctx.lineWidth = 5;
+  ctx.strokeStyle = "rgba(0,0,0,1)"
+  ctx.moveTo(300,300);
+  ctx.bezierCurveTo(x1,y1,x2,y2,x,y);
+  ctx.stroke();
+  //开始画辅助线
+  ctx.beginPath();
+  ctx.strokeStyle = "rgba(255,0,0,0.5)";
+  ctx.lineWidth = 1;
+  // 连接起点和控制点1
+  ctx.moveTo(300,300);
+  ctx.lineTo(x1,y1);
+  // 连接终点和控制点2
+  ctx.moveTo(x2,y2);
+  ctx.lineTo(x,y);
+  // 连接起点与终点（基线）
+  ctx.moveTo(300,300);
+  ctx.lineTo(x,y);
+  ctx.stroke();
+
+</script>
+</body>
+</html>

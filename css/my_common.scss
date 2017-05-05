@@ -1,0 +1,42 @@
+$baseColor:#4352D8;
+$bgColor:#6CC6EA;
+
+*{box-sizing: border-box;}
+body,ul,ol,dl,dd,dt,p,h6,h5,h4{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a{text-decoration: none;
+  color: $baseColor;}
+img{
+  border: 0;
+  vertical-align: middle;
+}
+.container{
+  width: 1200px;
+  margin: 0 auto;
+  &:after{
+    content: '';
+    display: block;
+    clear: both;
+  }
+  &:before{
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+.lf{float: left;}
+.rt{float: right;}
+.hide{display: none;}
+.hide-v{visibility: hidden;}
+
+
+
+
+
+
+
+
+

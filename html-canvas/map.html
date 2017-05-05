@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  <title>map test</title>
+  <script type="text/javascript"  src="http://api.map.baidu.com/api?v=2.0&ak=i1WRhbZ9GwP0K3wRPbHdtW6HD8BOwynQ"></script>
+  <style>
+    #container{
+      width: 1000px;
+      height: 600px;
+    }
+  </style>
+</head>
+<body>
+<div id="container"></div>
+
+<script>
+  var map=new BMap.Map('container');
+  var point=new BMap.Point(116.404,39.915);
+  map.centerAndZoom(point,15);
+  map.enableScrollWheelZoom(true);
+  map.addControl(new BMap.OverviewMapControl());
+  map.addControl(new BMap.ScaleControl());
+  map.addControl(new BMap.MapTypeControl());
+
+  var navigationControl=new BMap.NavigationControl({
+    anchor:BMAP_ANCHOR_TOP_LEFT,
+    type:BMAP_NAVIGATION_CONTROL_LARGE,
+    enableGeolocation:true
+  });
+  map.addControl(navigationControl);
+
+  var marker = new BMap.Marker(point);  // 创建标注
+  map.addOverlay(marker);               // 将标注添加到地图中
+  marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+</script>
+</body>
+</html>
