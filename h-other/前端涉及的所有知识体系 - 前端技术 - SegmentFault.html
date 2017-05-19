@@ -1,0 +1,2316 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)https://segmentfault.com/a/1190000004070468 -->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"><meta name="renderer" content="webkit"><meta property="qc:admins" content="15317273575564615446375"><meta property="og:image" content="https://static.segmentfault.com/v-59192c02/global/img/touch-icon.png"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><meta name="alexaVerifyID" content="LkzCRJ7rPEUwt6fVey2vhxiw1vQ"><meta name="apple-itunes-app" content="app-id=958101793, app-argument="><title>前端涉及的所有知识体系 - 前端技术 - SegmentFault</title><meta name="description" content="资源教程: 综合类 前端知识体系 前端知识结构 Web前端开发大系概览 Web前端开发大系概览-中文版 Web Front-end Stack v2.2 免费的编程中文书籍索引 前端书籍 前端免费书籍大全 前端知识体系 免费的编程中文书籍索..."><meta name="keywords" content="html,css,javascript"><link rel="search" type="application/opensearchdescription+xml" href="https://segmentfault.com/opensearch.xml" title="SegmentFault"><link rel="shortcut icon" href="https://static.segmentfault.com/v-59192c02/global/img/favicon.ico"><link rel="apple-touch-icon" href="https://static.segmentfault.com/v-59192c02/global/img/touch-icon.png"><meta name="msapplication-TileColor" content="#009a61"><meta name="msapplication-square150x150logo" content="https://static.segmentfault.com/v-59192c02/global/img/touch-icon.png"><link rel="alternate" type="application/atom+xml" title="SegmentFault 最新问题" href="https://segmentfault.com/feeds/questions"><link rel="alternate" type="application/atom+xml" title="SegmentFault 最新文章" href="https://segmentfault.com/feeds/blogs"><link rel="stylesheet" href="./前端涉及的所有知识体系 - 前端技术 - SegmentFault_files/global.css"><link rel="stylesheet" href="./前端涉及的所有知识体系 - 前端技术 - SegmentFault_files/blog.css"><link rel="stylesheet" href="./前端涉及的所有知识体系 - 前端技术 - SegmentFault_files/responsive.css"></head><body data-mod="blog" class="blog-post "><!--[if lt IE 9]><div class="alert alert-danger topframe" role="alert">你的浏览器实在<strong>太太太太太太旧了</strong>，放学别走，升级完浏览器再说 <a target="_blank" class="alert-link" href="http://browsehappy.com">立即升级</a></div><![endif]--><img id="icon4weChat" style="height: 0;width: 0;" data-src="https://static.segmentfault.com/v-59192c02/global/img/touch-icon-512.png"><div class="global-nav sf-header sf-header--index"><nav class="container nav"><div class="hidden-sm hidden-lg hidden-md"><div class="sf-header__logo sf-header__logo--response"><h1><a></a></h1></div><div class="dropdown m-menu"><a href="javascript:void(0);" id="dLabel" class="visible-xs-block m-toptools" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-align-justify"></span><span class="mobile-menu__unreadpoint"></span></a><ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"><li class="mobile-menu__item"><a href="https://segmentfault.com/">首页</a></li><li class="mobile-menu__item"><a href="https://segmentfault.com/news" class="menu__item--new-show">头条</a></li><li class="mobile-menu__item"><a href="https://segmentfault.com/questions">问答</a></li><li class="mobile-menu__item"><a href="https://segmentfault.com/blogs">专栏</a></li><li class="mobile-menu__item"><a href="https://segmentfault.com/lives" class="menu__item--new-show">讲堂</a></li><li class="mobile-menu__item"><a href="https://segmentfault.com/jobs">职位</a></li><li class="mobile-menu__item"><a href="https://segmentfault.com/events">活动</a></li><li class="mobile-menu__item"><a href="https://segmentfault.com/notes">笔记</a></li><li class="mobile-menu__item"><a href="https://segmentfault.com/tags">标签</a></li><li class="mobile-menu__item"><a href="https://segmentfault.com/users">榜单</a></li></ul></div><a href="https://segmentfault.com/user/login" class="visible-xs-block pull-right m-ask m-toptools"><span class="glyphicon glyphicon-log-in"></span></a></div><div class="row hidden-xs"><div class="col-sm-8 col-md-8 col-lg-7"><div class="sf-header__logo"><h1><a href="https://segmentfault.com/">SegmentFault</a></h1></div><ul class="menu list-inline pull-left hidden-xs"><li class="menu__item"><a href="https://segmentfault.com/news" class="menu__item--new-show">头条</a></li><li class="menu__item"><a href="https://segmentfault.com/questions">问答</a></li><li class="menu__item"><a href="https://segmentfault.com/blogs">专栏</a></li><li class="menu__item"><a href="https://segmentfault.com/lives" class="menu__item--new-show">讲堂</a></li><li class="menu__item"><a href="https://segmentfault.com/jobs">职位</a></li><li class="menu__item ml0"><a href="https://segmentfault.com/events">活动</a></li></ul></div><div class="col-sm-4 col-md-4 col-lg-5 text-right"><form action="https://segmentfault.com/search" class="header-search  hidden-sm hidden-xs mr20"><button class="btn btn-link"><span class="sr-only">搜索</span><span class="glyphicon glyphicon-search"></span></button><input id="searchBox" name="q" type="text" placeholder="输入关键字搜索" class="form-control" value="" style="max-height:"></form><ul class="opts list-inline hidden-xs"><li class="opts__item message has-unread"><a target="_blank" href="https://segmentfault.com/tour"><span class="sr-only">消息</span><span id="messageCount" class="fa fa-hand-peace-o"></span></a></li><li class="opts__item"><a href="https://segmentfault.com/user/login" class="SFLogin em ml10" onclick="_gaq.push([&#39;_trackEvent&#39;, &#39;Button&#39;, &#39;Click&#39;, &#39;Login&#39;]);">注册 ·
+                                        登录</a></li></ul></div></div></nav></div><div class="global-navTags"><div class="container"><nav class=" nav"><ul class="nav__list"><li class="nav__item"><a href="https://segmentfault.com/"><i class="fa fa-home"></i>home
+                            </a></li><li class="nav__item nav__item--split"><a><span class="split"></span></a></li><li class="nav__item tag-nav__item"><a href="https://segmentfault.com/t/javascript">javascript</a></li><li class="nav__item tag-nav__item"><a href="https://segmentfault.com/t/php">php</a></li><li class="nav__item tag-nav__item"><a href="https://segmentfault.com/t/python">python</a></li><li class="nav__item tag-nav__item"><a href="https://segmentfault.com/t/java">java</a></li><li class="nav__item tag-nav__item"><a href="https://segmentfault.com/t/mysql">mysql</a></li><li class="nav__item tag-nav__item"><a href="https://segmentfault.com/t/ios">ios</a></li><li class="nav__item tag-nav__item"><a href="https://segmentfault.com/t/android">android</a></li><li class="nav__item tag-nav__item"><a href="https://segmentfault.com/t/node.js">node.js</a></li><li class="nav__item tag-nav__item"><a href="https://segmentfault.com/t/html5">html5</a></li><li class="nav__item tag-nav__item"><a href="https://segmentfault.com/t/linux">linux</a></li><li class="nav__item tag-nav__item"><a href="https://segmentfault.com/t/c%2B%2B">c++</a></li><li class="nav__item tag-nav__item"><a href="https://segmentfault.com/t/css3">css3</a></li><li class="nav__item tag-nav__item"><a href="https://segmentfault.com/t/git">git</a></li><li class="nav__item tag-nav__item"><a href="https://segmentfault.com/t/golang">golang</a></li><li class="nav__item tag-nav__item"><a href="https://segmentfault.com/t/ruby">ruby</a></li><li class="nav__item tag-nav__item"><a href="https://segmentfault.com/t/vim">vim</a></li><li class="nav__item tag-nav__item"><a href="https://segmentfault.com/t/docker">docker</a></li><li class="nav__item tag-nav__item"><a href="https://segmentfault.com/t/mongodb">mongodb</a></li><li class="nav__item nav__item--more" data-open="0"><a class="nav__item--more-link" href="https://segmentfault.com/tags"><div class="tag__more"><i class="tag__more--icon"></i><i class="tag__more--icon"></i><i class="tag__more--icon"></i></div></a></li></ul><div class="tag-mgr__box hide"><input class="tag-mgr__query" type="text" placeholder="搜索关注的标签" data-tags="null"><div class="mCustomScrollbar _mCS_1 mCS-autoHide mCS_no_scrollbar" data-mcs-theme="minimal-dark" style="position: relative; overflow: visible;"><div id="mCSB_1" class="mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside" style="max-height: 0px;" tabindex="0"><div id="mCSB_1_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr"><ul class="tag-mgr__list"></ul></div></div><div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-minimal-dark mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 50px; top: 0px;" oncontextmenu="return false;"><div class="mCSB_dragger_bar" style="line-height: 50px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div><a href="https://segmentfault.com/tags" class="btn btn-primary btn-sm tag-mgr__btn">标签管理</a></div></nav></div></div>
+    <div class="wrap" data-blogid="1200000004070396">
+    <div class="post-topheader custom-">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 col-sm-8 col-xs-12">
+                    <span class="post-topheader__title--icon-symbol">文</span>
+
+                    <div class="post-topheader__info" data-username="autumnswind" data-userslug="autumnswind" data-useravatar="https://sfault-avatar.b0.upaiyun.com/321/330/3213301393-565beb12b56e5_big64">
+
+                        <h1 class="h3 post-topheader__info--title" id="articleTitle" data-id="1190000004070468">
+
+                            <a href="https://segmentfault.com/a/1190000004070468"> 前端涉及的所有知识体系</a>
+                        </h1>
+
+                        <ul class="taglist--inline inline-block article__title--tag mr10">
+                                                            <li class="tagPopup mb5"><a class="tag" href="https://segmentfault.com/t/html/blogs" data-toggle="popover" data-img="https://sfault-avatar.b0.upaiyun.com/418/365/4183652815-1040000000089571_huge256" data-placement="top" data-original-title="html" data-id="1040000000089571">html</a></li>
+                                                            <li class="tagPopup mb5"><a class="tag" href="https://segmentfault.com/t/css/blogs" data-toggle="popover" data-img="https://sfault-avatar.b0.upaiyun.com/122/960/1229606535-1040000000089434_huge256" data-placement="top" data-original-title="css" data-id="1040000000089434">css</a></li>
+                                                            <li class="tagPopup mb5"><a class="tag" href="https://segmentfault.com/t/javascript/blogs" data-toggle="popover" data-img="https://sfault-avatar.b0.upaiyun.com/195/823/1958237468-1040000000089436_huge256" data-placement="top" data-original-title="javascript" data-id="1040000000089436">javascript</a></li>
+                                                    </ul>
+
+                        <div class="article__author">
+                            <a href="https://segmentfault.com/u/autumnswind" class="mr5 "><strong>autumnswind</strong></a>
+                            2015年11月30日发布
+                                                                                </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 hidden-xs">
+                    <ul class="post-topheader__side list-unstyled">
+                        <li>
+                                                                                                <button type="button" class="btn btn-success btn-sm" data-id="1190000004070468" id="sideLike">推荐
+                                    </button>
+                                                                                        <strong id="sideLiked">21</strong> 推荐
+                        </li>
+                        <li>
+                                                                                                <button type="button" id="sideBookmark" class="btn btn-default btn-sm" data-id="1190000004070468" data-type="article">收藏
+                                    </button>
+                                                                                        <strong id="sideBookmarked">405</strong> 收藏，<strong class="no-stress">14.9k</strong> 浏览
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div><!-- end .post-topheader -->
+
+    <div class="container mt30">
+        <div class="row">
+            <div class="col-xs-12 col-md-9 main ">
+
+                
+                <div class="article fmt article__content" data-id="1190000004070468" data-license="sa">
+                    
+<p>资源教程:</p>
+<ol>
+<li>
+<p>综合类</p>
+<ul>
+<li><p><a href="http://www.cnblogs.com/sb19871023/p/3894452.html" target="_blank">前端知识体系</a></p></li>
+<li><p><a href="https://github.com/JacksonTian/fks" target="_blank">前端知识结构</a></p></li>
+<li><p><a href="https://github.com/unruledboy/WebFrontEndStack" target="_blank">Web前端开发大系概览</a></p></li>
+<li><p><a href="http://www.cnblogs.com/unruledboy/p/WebFrontEndStack.html" target="_blank">Web前端开发大系概览-中文版</a></p></li>
+<li><p><a href="https://raw.githubusercontent.com/unruledboy/WebFrontEndStack/master/Web%20Front%20End%20Stack.png" target="_blank">Web Front-end Stack v2.2</a></p></li>
+<li><p><a href="https://github.com/justjavac/free-programming-books-zh_CN" target="_blank">免费的编程中文书籍索引</a></p></li>
+<li><p><a href="https://github.com/dypsilon/frontend-dev-bookmarks" target="_blank">前端书籍</a></p></li>
+<li><p><a href="https://github.com/vhf/free-programming-books" target="_blank">前端免费书籍大全</a></p></li>
+<li><p><a href="http://www.cnblogs.com/sb19871023/p/3894452.html" target="_blank">前端知识体系</a></p></li>
+<li><p><a href="https://github.com/justjavac/free-programming-books-zh_CN" target="_blank">免费的编程中文书籍索引</a></p></li>
+<li><p><a href="http://study.163.com/course/introduction/224014.htm" target="_blank">智能社 - 精通JavaScript开发</a></p></li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/A_re-introduction_to_JavaScript" target="_blank">重新介绍 JavaScript（JS 教程）</a></p></li>
+<li><p><a href="http://v.163.com/special/opencourse/bianchengdaolun.html" target="_blank">麻省理工学院公开课：计算机科学及编程导论</a></p></li>
+<li><p><a href="http://segmentfault.com/a/1190000002640298">JavaScript中的this陷阱的最全收集--没有之一</a></p></li>
+<li><p><a href="https://llh911001.gitbooks.io/mostly-adequate-guide-chinese/content/ch1.html" target="_blank">JS函数式编程指南</a></p></li>
+<li><p><a href="http://liubin.github.io/promises-book/" target="_blank">JavaScript Promise迷你书（中文版）</a></p></li>
+<li><p><a href="https://github.com/AlloyTeam/Mars" target="_blank">腾讯移动Web前端知识库</a></p></li>
+<li><p><a href="https://github.com/Front-End-Developers-Hunan/Front-End-Develop-Guide" target="_blank">Front-End-Develop-Guide 前端开发指南</a></p></li>
+<li><p><a href="https://li-xinyang.gitbooks.io/frontend-notebook/content/" target="_blank">前端开发笔记本</a></p></li>
+<li><p><a href="https://github.com/nieweidong/fetool" target="_blank">大前端工具集 - 聂微东</a></p></li>
+<li><p><a href="https://dwqs.gitbooks.io/frontenddevhandbook/content/" target="_blank">前端开发者手册</a></p></li>
+</ul>
+</li>
+<li>
+<p>入门类</p>
+<ul>
+<li><p><a href="http://www.cnblogs.com/jikey/p/3613082.html" target="_blank">前端入门教程</a></p></li>
+<li><p><a href="http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000" target="_blank">瘳雪峰的Javascript教程</a></p></li>
+<li><p><a href="http://www.imooc.com/view/11" target="_blank">jQuery基础教程</a></p></li>
+<li><p><a href="http://www.imooc.com/view/506" target="_blank">前端工程师必备的PS技能——切图篇</a></p></li>
+<li><p><a href="https://github.com/qiu-deqing/FE-learning" target="_blank">结合个人经历总结的前端入门方法</a></p></li>
+</ul>
+</li>
+<li>
+<p>效果类</p>
+<ul>
+<li><p><a href="http://www.imooc.com/learn/58" target="_blank">弹出层</a></p></li>
+<li><p><a href="http://www.imooc.com/learn/18" target="_blank">焦点图轮播特效</a></p></li>
+</ul>
+</li>
+<li>
+<p>工具类</p>
+<ul>
+<li><p><a href="http://www.imooc.com/learn/93" target="_blank">css sprite 雪碧图制作</a></p></li>
+<li><p><a href="http://www.imooc.com/learn/390" target="_blank">版本控制入门 – 搬进 Github</a></p></li>
+<li><p><a href="http://www.imooc.com/learn/30" target="_blank">Grunt-beginner前端自动化工具</a></p></li>
+</ul>
+</li>
+<li>
+<p>慕课专题</p>
+<ul>
+<li><p><a href="http://www.imooc.com/space/teacher/id/197450" target="_blank">张鑫旭 - 慕课系列</a></p></li>
+<li><p><a href="http://www.imooc.com/space/teacher/id/104593" target="_blank">lyn - 慕课系列</a></p></li>
+<li><p><a href="http://www.imooc.com/space/teacher/id/290139" target="_blank">艾伦 - 慕课系列</a></p></li>
+<li><p><a href="http://www.imooc.com/view/494" target="_blank">碧仔 - Hello，移动WEB</a></p></li>
+</ul>
+</li>
+<li>
+<p>周报类</p>
+<ul><li><p><a href="https://github.com/PaicHyperionDev/MobileDevWeekly" target="_blank">平安科技移动开发二队技术周报</a></p></li></ul>
+</li>
+</ol>
+<h3 id="articleHeader0">六. API:</h3>
+<h4>1. 总目录</h4>
+<ol>
+<li>
+<p>开发中心</p>
+<ul>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript" target="_blank">mozilla js参考</a></p></li>
+<li><p><a href="https://developer.chrome.com/extensions/api_index.html" target="_blank">chrome开发中心（chrome的内核已转向blink）</a></p></li>
+<li><p><a href="https://developer.apple.com/library/safari/navigation" target="_blank">safari开发中心</a></p></li>
+<li><p><a href="https://msdn.microsoft.com/zh-cn/library/d1et7k7c(v=vs.94" target="_blank">microsoft js参考</a>.aspx)</p></li>
+<li><p><a href="http://sanshi.me/articles/JavaScript-Garden-CN/html/index.html" target="_blank">js秘密花园</a></p></li>
+<li><p><a href="http://bonsaiden.github.io/JavaScript-Garden/zh/" target="_blank">js秘密花园</a></p></li>
+<li><p><a href="http://www.w3help.org/" target="_blank">w3help</a> 综合Bug集合网站</p></li>
+</ul>
+</li>
+<li>
+<p>综合搜索</p>
+<ul>
+<li><p><a href="http://www.javascripting.com/" target="_blank">javascripting</a></p></li>
+<li><p><a href="http://microjs.com/" target="_blank">各种流行库搜索</a></p></li>
+</ul>
+</li>
+<li>
+<p>综合API</p>
+<ul>
+<li><p><a href="http://www.runoob.com/" target="_blank">runoob.com-包含各种API集合</a></p></li>
+<li><p><a href="http://tool.oschina.net/apidocs" target="_blank">开源中国在线API文档合集</a></p></li>
+<li><p><a href="http://devdocs.io/" target="_blank">devdocs</a> 英文综合API网站</p></li>
+</ul>
+</li>
+</ol>
+<h4>2. jQuery</h4>
+<ul>
+<li><p><a href="http://www.jquery123.com/" target="_blank">jQuery API 中文文档</a></p></li>
+<li><p><a href="http://hemin.cn/jq/" target="_blank">hemin 在线版</a></p></li>
+<li><p><a href="http://www.css88.com/jqapi-1.9/on/" target="_blank">css88 jq api</a></p></li>
+<li><p><a href="http://www.css88.com/jquery-ui-api/" target="_blank">css88 jqui api</a></p></li>
+<li><p><a href="http://learn.jquery.com/" target="_blank">学习jquery</a></p></li>
+<li><p><a href="http://james.padolsey.com/jquery/" target="_blank">jquery 源码查找</a></p></li>
+</ul>
+<h4>3. Ecmascript</h4>
+<ul>
+<li><p><a href="https://leanpub.com/understandinges6/read" target="_blank">Understanding ECMAScript 6 - Nicholas C. Zakas</a></p></li>
+<li><p><a href="https://leanpub.com/exploring-es6/read" target="_blank">exploring-es6</a></p></li>
+<li><p><a href="https://github.com/es6-org/exploring-es6" target="_blank">exploring-es6翻译</a></p></li>
+<li><p><a href="http://es6-org.github.io/exploring-es6/" target="_blank">exploring-es6翻译后预览</a></p></li>
+<li><p><a href="http://es6.ruanyifeng.com/" target="_blank">阮一峰 es6</a></p></li>
+<li><p><a href="http://javascript.ruanyifeng.com/" target="_blank">阮一峰 Javascript</a></p></li>
+<li><p><a href="http://yanhaijing.com/es5/" target="_blank">ECMA-262，第 5 版</a></p></li>
+<li><p><a href="http://es5.github.io/" target="_blank">es5</a></p></li>
+</ul>
+<h4>4. Js template</h4>
+<ul>
+<li><p><a href="http://garann.github.io/template-chooser/" target="_blank">template-chooser</a></p></li>
+<li><p><a href="https://github.com/aui/artTemplate" target="_blank">artTemplate</a></p></li>
+<li><p><a href="https://github.com/aui/tmodjs/blob/master/README.md" target="_blank">tomdjs</a></p></li>
+<li><p><a href="http://juicer.name/docs/docs_zh_cn.html" target="_blank">淘宝模板juicer模板</a></p></li>
+<li><p><a href="http://koen301.github.io/fxtpl/" target="_blank">Fxtpl v1.0 繁星前端模板引擎</a></p></li>
+<li><p><a href="http://laytpl.layui.com/" target="_blank">laytpl</a></p></li>
+<li><p><a href="https://github.com/mozilla/nunjucks" target="_blank">mozilla - nunjucks</a></p></li>
+<li><p><a href="https://github.com/PaulGuo/Juicer" target="_blank">Juicer</a></p></li>
+<li><p><a href="http://akdubya.github.io/dustjs/" target="_blank">dustjs</a></p></li>
+<li><p><a href="http://ecomfe.github.io/etpl/" target="_blank">etpl</a></p></li>
+</ul>
+<h4>5. 弹出层</h4>
+<ul>
+<li><p><a href="https://github.com/aui/artDialog" target="_blank">artDialog 最新版</a></p></li>
+<li><p><a href="http://aui.github.io/artDialog/doc/index.html" target="_blank">artDialog 文档</a></p></li>
+<li><p><a href="https://code.google.com/p/artdialog/downloads/list" target="_blank">google code 下载地址</a></p></li>
+<li><p><a href="http://layer.layui.com/" target="_blank">贤心弹出层</a></p></li>
+<li><p><a href="https://github.com/bh-lay/UI" target="_blank">响应式用户交互组件库</a></p></li>
+<li><p><a href="http://t4t5.github.io/sweetalert/" target="_blank">sweetalert-有css3动画弹出层</a></p></li>
+</ul>
+<h4>6. CSS</h4>
+<ul>
+<li><p><a href="http://tympanus.net/codrops/css_reference/" target="_blank">CSS 语法参考</a></p></li>
+<li><p><a href="http://isux.tencent.com/css3/index.html" target="_blank">CSS3动画手册</a></p></li>
+<li><p><a href="http://isux.tencent.com/css3/tools.html" target="_blank">腾讯css3动画制作工具</a></p></li>
+<li><p><a href="http://linxz.github.io/tianyizone/" target="_blank">志爷css小工具集合</a></p></li>
+<li><p><a href="http://www.note12.com/category/blog/2014-6-5/538fe0a9f786f1b7019a4dfb" target="_blank">css3 js 移动大杂烩</a></p></li>
+<li><p><a href="http://bouncejs.com/" target="_blank">bouncejs 触摸库</a></p></li>
+<li><p><a href="http://fian.my.id/Waves/" target="_blank">css3 按钮动画</a></p></li>
+<li><p><a href="http://daneden.github.io/animate.css/" target="_blank">animate.css</a></p></li>
+<li><p><a href="http://www.alloyteam.com/2015/10/8536/" target="_blank">全局CSS的终结(狗带) [译]</a></p></li>
+</ul>
+<h4>7. Angularjs</h4>
+<ul>
+<li><p><a href="https://github.com/dolymood/AngularLearning" target="_blank">Angular.js 的一些学习资源</a></p></li>
+<li><p><a href="http://angularjs.cn/" target="_blank">angularjs中文社区</a></p></li>
+<li><p><a href="http://www.cnblogs.com/xuwenmin888/p/3739096.html" target="_blank">Angularjs源码学习</a></p></li>
+<li><p><a href="http://www.ifeenan.com/?c=AngularJS" target="_blank">Angularjs源码学习</a></p></li>
+<li><p><a href="http://angular-ui.github.io/bootstrap/" target="_blank">angular对bootstrap的封装</a></p></li>
+<li><p><a href="https://cnodejs.org/topic/51404e0f069911196d2e3923" target="_blank">angularjs + nodejs</a></p></li>
+<li><p><a href="http://www.cnblogs.com/lvdabao/tag/AngularJs/" target="_blank">吕大豹 Angularjs</a></p></li>
+<li><p><a href="http://www.infoq.com/cn/news/2013/02/angular-web-app" target="_blank">AngularJS 最佳实践</a></p></li>
+<li><p><a href="http://www.lovelucy.info/angularjs-best-practices.html" target="_blank">Angular的一些扩展指令</a></p></li>
+<li><p><a href="https://github.com/Pasvaz/bindonce" target="_blank">Angular数据绑定原理</a></p></li>
+<li><p><a href="https://github.com/angular-ui/" target="_blank">一些扩展Angular UI组件</a></p></li>
+<li><p><a href="http://voidcanvas.com/emberjs-vs-angularjs-performance-testing/" target="_blank">Ember和AngularJS的性能测试</a></p></li>
+<li><p><a href="http://www.cnblogs.com/powertoolsteam/p/angularjs-introdection.html" target="_blank">带你走近AngularJS - 基本功能介绍</a></p></li>
+<li><p><a href="http://angular.duapp.com/docs/guide" target="_blank">Angularjs开发指南</a></p></li>
+<li><p><a href="http://www.cnblogs.com/amosli/p/3710648.html" target="_blank">Angularjs学习</a></p></li>
+<li><p><a href="http://www.rainweb.cn/article/angularjs-jquery.html" target="_blank">不要带着jQuery的思维去学习AngularJS</a></p></li>
+<li><p><a href="http://wangjiatao.diandian.com/?tag=angularjs" target="_blank">angularjs 学习笔记</a></p></li>
+<li><p><a href="http://www.angularjs.cn/T008" target="_blank">angularjs 开发指南</a></p></li>
+<li><p><a href="https://github.com/jmcunningham/AngularJS-Learning" target="_blank">angularjs 英文资料</a></p></li>
+<li><p><a href="http://angular-ui.github.io/bootstrap/" target="_blank">angular bootstrap</a></p></li>
+<li><p><a href="https://github.com/opitzconsulting/jquery-mobile-angular-adapter" target="_blank">angular jq mobile</a></p></li>
+<li><p><a href="http://mgcrea.github.io/angular-strap/" target="_blank">angular ui</a></p></li>
+<li><p><a href="http://www.tuicool.com/articles/7ZZVr2" target="_blank">整合jQuery Mobile+AngularJS经验谈</a></p></li>
+<li><p><a href="http://blog.jobbole.com/46589/%20" target="_blank">有jQuery背景，该如何用AngularJS编程思想</a></p></li>
+<li><p><a href="http://each.sinaapp.com/angular/" target="_blank">AngularJS在线教程</a></p></li>
+<li><p><a href="http://www.zouyesheng.com/angular.html" target="_blank">angular学习笔记</a></p></li>
+</ul>
+<h4>8. React</h4>
+<ul>
+<li><p><a href="http://www.react-china.org/" target="_blank">react.js 中文论坛</a></p></li>
+<li><p><a href="https://facebook.github.io/react/index.html" target="_blank">react.js 官方网址</a></p></li>
+<li><p><a href="https://facebook.github.io/react/docs/getting-started.html" target="_blank">react.js 官方文档</a></p></li>
+<li><p><a href="http://material-ui.com/#/" target="_blank">react.js material UI</a></p></li>
+<li><p><a href="http://touchstonejs.io/" target="_blank">react.js TouchstoneJS UI</a></p></li>
+<li><p><a href="http://amazeui.org/react/" target="_blank">react.js amazeui UI</a></p></li>
+<li><p><a href="http://www.ruanyifeng.com/blog/2015/03/react.html" target="_blank">React 入门实例教程 - 阮一峰</a></p></li>
+<li><p><a href="http://wiki.jikexueyuan.com/project/react-native/" target="_blank">React Native 中文版</a></p></li>
+<li><p><a href="http://www.html-js.com/article/Fakefish%203053" target="_blank">Webpack 和 React 小书 - 前端乱炖</a></p></li>
+<li><p><a href="https://fakefish.github.io/react-webpack-cookbook/" target="_blank">Webpack 和 React 小书 - gitbook</a></p></li>
+<li><p><a href="https://github.com/webpack/webpack" target="_blank">webpack</a></p></li>
+<li><p><a href="http://html-js.com/article/3009" target="_blank">Webpack，101入门体验</a></p></li>
+<li><p><a href="http://html-js.com/article/3113" target="_blank">webpack入门教程</a></p></li>
+<li><p><a href="http://segmentfault.com/a/1190000003499526">基于webpack搭建前端工程解决方案探索</a></p></li>
+<li><p><a href="http://www.piliyu.com/" target="_blank">React原创实战视频教程</a></p></li>
+</ul>
+<h4>9. 移动端API</h4>
+<ol>
+<li>
+<p>API</p>
+<ul>
+<li><p><a href="https://github.com/jtyjty99999/mobileTech" target="_blank">99移动端知识集合</a></p></li>
+<li><p><a href="https://github.com/AlloyTeam/Mars" target="_blank">移动端前端开发知识库</a></p></li>
+<li><p><a href="http://caibaojian.com/mobile-web-bug.html" target="_blank">移动前端的一些坑和解决方法（外观表现）</a></p></li>
+<li><p><a href="http://www.cnblogs.com/PeunZhang/p/3407453.html" target="_blank">【原】移动web资源整理</a></p></li>
+<li><p><a href="http://mweb.baidu.com/zeptoapi/" target="_blank">zepto 1.0 中文手册</a></p></li>
+<li><p><a href="http://www.html-5.cn/Manual/Zepto/" target="_blank">zepto 1.0 中文手册</a></p></li>
+<li><p><a href="http://www.css88.com/doc/zeptojs_api/" target="_blank">zepto 1.1.2</a></p></li>
+<li><p><a href="http://www.cnblogs.com/sky000/archive/2013/03/29/2988952.html" target="_blank">zepto 中文注释</a></p></li>
+<li><p><a href="http://app-framework-software.intel.com/api.php" target="_blank">jqmobile 手册</a></p></li>
+<li><p><a href="https://github.com/maxzhang/maxzhang.github.com/issues" target="_blank">移动浏览器开发集合</a></p></li>
+<li><p><a href="https://github.com/hoosin/mobile-web-favorites" target="_blank">移动开发大杂烩</a></p></li>
+<li><p><a href="http://lin-chao.github.io/2014/11/14/%E5%BE%AE%E4%BF%A1webview%E4%B8%AD%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/" target="_blank">微信webview中的一些问题</a></p></li>
+</ul>
+</li>
+<li>
+<p>框架</p>
+<ul>
+<li><p><a href="http://framework7.taobao.org/" target="_blank">特色的HTML框架可以创建精美的iOS应用</a></p></li>
+<li><p><a href="http://m.sui.taobao.org/" target="_blank">淘宝SUI</a></p></li>
+</ul>
+</li>
+</ol>
+<h4>10. avalon</h4>
+<ul>
+<li><p><a href="http://avalonjs.github.io/" target="_blank">avalonjs</a></p></li>
+<li><p><a href="http://ued.qunar.com/oniui/index.html" target="_blank">Avalon新一代UI库： OniUI</a></p></li>
+<li><p><a href="https://github.com/RubyLouvre/avalon.oniui" target="_blank">avalon.oniui-基于avalon的组件库</a></p></li>
+<li><p>[]()</p></li>
+</ul>
+<h4>11. Requriejs</h4>
+<ul>
+<li><p><a href="http://www.ruanyifeng.com/blog/2012/10/javascript_module.html" target="_blank">Javascript模块化编程（一）：模块的写法 </a></p></li>
+<li><p><a href="http://www.ruanyifeng.com/blog/2012/10/asynchronous_module_definition.html" target="_blank">Javascript模块化编程（二）：AMD规范</a></p></li>
+<li><p><a href="http://www.ruanyifeng.com/blog/2012/11/require_js.html" target="_blank">Javascript模块化编程（三）：require.js的用法</a></p></li>
+<li><p><a href="http://www.cnblogs.com/snandy/archive/2012/05/22/2513652.html" target="_blank">RequireJS入门（一）</a></p></li>
+<li><p><a href="http://www.cnblogs.com/snandy/archive/2012/05/23/2513712.html" target="_blank">RequireJS入门（二）</a></p></li>
+<li><p><a href="http://www.cnblogs.com/snandy/archive/2012/06/08/2538001.html" target="_blank">RequireJS进阶（三）</a></p></li>
+<li><p><a href="http://www.cnblogs.com/yexiaochai/p/3632580.html%20" target="_blank">requrie源码学习</a></p></li>
+<li><p><a href="http://www.oschina.net/translate/getting-started-with-the-requirejs-library%20" target="_blank">requrie 入门指南</a></p></li>
+<li><p><a href="http://www.cnblogs.com/yexiaochai/p/3214926.html%20" target="_blank">requrieJS 学习笔记</a></p></li>
+<li><p><a href="http://cyj.me/why-seajs/requirejs/%20" target="_blank">requriejs 其一 </a></p></li>
+<li><p><a href="http://www.cnblogs.com/yexiaochai/p/3221081.html%20" target="_blank">require backbone结合</a></p></li>
+</ul>
+<h4>12. Seajs</h4>
+<ul>
+<li><p><a href="http://seajs.org/" target="_blank">seajs</a></p></li>
+<li><p><a href="http://cyj.me/why-seajs/zh/" target="_blank">seajs 中文手册</a></p></li>
+</ul>
+<h4>13. Less,sass</h4>
+<ul>
+<li><p><a href="http://www.w3cplus.com/sassguide/" target="_blank">sass</a></p></li>
+<li><p><a href="http://www.sass.hk/" target="_blank">sass教程-sass中国</a></p></li>
+<li><p><a href="http://sass.bootcss.com/" target="_blank">Sass 中文文档</a></p></li>
+<li><p><a href="http://less.bootcss.com/" target="_blank">less</a></p></li>
+</ul>
+<h4>14. Markdown</h4>
+<ul>
+<li><p><a href="http://wowubuntu.com/markdown/" target="_blank">Markdown 语法说明 (简体中文版)</a></p></li>
+<li><p><a href="https://github.com/LearnShare/Learning-Markdown/blob/master/README.md" target="_blank">markdown入门参考</a></p></li>
+<li><p><a href="https://www.gitbook.com/" target="_blank">gitbook</a> 国外的在线markdown可编辑成书</p></li>
+<li><p><a href="https://www.zybuluo.com/mdeditor" target="_blank">mdeditor</a>  一款国内的在线markdown编辑器</p></li>
+<li><p><a href="https://stackedit.io/" target="_blank">stackedit</a> 国外的在线markdown编辑器，功能强大，同步云盘</p></li>
+<li><p><a href="http://bh-lay.github.io/mditor/" target="_blank">mditor</a> 一款轻量级的markdown编辑器</p></li>
+<li><p><a href="https://github.com/lepture/editor" target="_blank">lepture-editor</a></p></li>
+<li><p><a href="https://github.com/jbt/markdown-editor" target="_blank">markdown-editor</a></p></li>
+</ul>
+<h4>15. D3</h4>
+<ul>
+<li><p><a href="https://github.com/mbostock/d3/wiki/Tutorials" target="_blank">d3 Tutorials</a></p></li>
+<li><p><a href="https://github.com/mbostock/d3/wiki/Gallery" target="_blank">Gallery</a></p></li>
+<li><p><a href="http://datavisual.lofter.com/post/40cf3a_188e535" target="_blank">lofter</a></p></li>
+<li><p><a href="http://alanland.iteye.com/blog/1878595" target="_blank">iteye</a></p></li>
+<li><p><a href="http://javascript.ruanyifeng.com/library/d3.html" target="_blank">ruanyifeng</a></p></li>
+</ul>
+<h4>16. 兼容性</h4>
+<ul>
+<li><p><a href="http://kangax.github.io/compat-table/es6/" target="_blank">esma 兼容列表</a></p></li>
+<li><p><a href="http://jigsaw.w3.org/css-validator/validator.html.zh-cn" target="_blank">W3C CSS验证服务</a></p></li>
+<li><p><a href="http://caniuse.com/#index%20" target="_blank">caniuse</a></p></li>
+<li><p><a href="http://csscreator.com/properties" target="_blank">csscreator</a></p></li>
+<li><p><a href="https://msdn.microsoft.com/zh-cn/library/cc351024(v=vs.85" target="_blank">microsoft</a>.aspx)</p></li>
+<li><p><a href="http://www.responsinator.com/" target="_blank">在线测兼容-移动端</a></p></li>
+<li><p><a href="https://www.manymo.com/emulators" target="_blank">emulators</a></p></li>
+</ul>
+<h4>17. UI相关</h4>
+<ul>
+<li><p><a href="http://v3.bootcss.com/" target="_blank">bootcss</a></p></li>
+<li><p><a href="http://www.w3cplus.com/MetroUICSS/" target="_blank">MetroUICSS</a></p></li>
+<li><p><a href="http://semantic-ui.com/" target="_blank">semantic</a></p></li>
+<li><p><a href="http://alexwolfe.github.io/Buttons/" target="_blank">Buttons</a></p></li>
+<li><p><a href="http://hiloki.github.io/kitecss/" target="_blank">kitecss</a></p></li>
+<li><p><a href="http://www.pintuer.com/" target="_blank">pintuer</a></p></li>
+<li><p><a href="http://amazeui.org/" target="_blank">amazeui</a></p></li>
+<li><p><a href="http://www.worldhello.net/gotgithub/index.html" target="_blank">worldhello</a></p></li>
+<li><p><a href="http://igit.linuxtoy.org/contents.html" target="_blank">linuxtoy</a></p></li>
+<li><p><a href="http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/zh_cn/" target="_blank">gitmagic</a></p></li>
+<li><p><a href="http://rogerdudler.github.io/git-guide/index.zh.html" target="_blank">rogerdudler</a></p></li>
+<li><p><a href="http://gitref.justjavac.com/" target="_blank">gitref</a></p></li>
+<li><p><a href="http://git-scm.com/book/zh" target="_blank">book</a></p></li>
+<li><p><a href="http://gogojimmy.net/2012/01/17/how-to-use-git-1-git-basic/" target="_blank">gogojimmy</a></p></li>
+</ul>
+<h4>18. HTTP</h4>
+<ul><li><p><a href="http://segmentfault.com/bookmark/1230000002521721">HTTP API 设计指南</a></p></li></ul>
+<h4>19. 其它API</h4>
+<ul>
+<li><p><a>javascript流行库汇总</a></p></li>
+<li><p><a href="http://niceue.com/validator/demo/index.php" target="_blank">验证api</a></p></li>
+<li><p><a href="http://www.css88.com/doc/underscore/" target="_blank">underscore 中文手册</a></p></li>
+<li><p><a href="http://www.html-js.com/article/Underscorejs-source-code-analysis-of-underscorejs-source-code-analysis%203031" target="_blank">underscore源码分析</a></p></li>
+<li><p><a href="http://yalishizhude.github.io/tags/underscore/" target="_blank">underscore源码分析-亚里士朱德的博客</a></p></li>
+<li><p><a href="http://underscorejs.org/" target="_blank">underscrejs en api</a></p></li>
+<li><p><a href="https://lodash.com/" target="_blank">lodash - underscore的代替品</a></p></li>
+<li><p><a href="http://extjs-doc-cn.github.io/ext4api/" target="_blank">ext4api</a></p></li>
+<li><p><a href="http://www.csser.com/tools/backbone/backbone.js.html" target="_blank">backbone 中文手册</a></p></li>
+<li><p><a href="http://dev.qwrap.com/resource/js/_docs/_youa/#/qw/base/loadJs_.htm" target="_blank">qwrap手册</a></p></li>
+<li><p><a href="http://easings.net/zh-cn" target="_blank">缓动函数</a></p></li>
+<li><p><a href="http://www.w3school.com.cn/svg/svg_reference.asp" target="_blank">svg 中文参考</a></p></li>
+<li><p><a href="https://developer.mozilla.org/en-US/docs/Web/SVG" target="_blank">svg mdn参考</a></p></li>
+<li><p><a href="https://github.com/gabelerner/canvg" target="_blank">svg 导出 canvas</a></p></li>
+<li><p><a href="https://github.com/exupero/saveSvgAsPng" target="_blank">svg 导出 png</a></p></li>
+<li><p><a href="http://www.zamzar.com/convert/ai-to-svg/" target="_blank">ai-to-svg</a></p></li>
+<li><p><a href="https://github.com/machao/localStorage" target="_blank">localStorage 库</a></p></li>
+</ul>
+<h4>20. 图表类</h4>
+<ul>
+<li><p><a href="http://www.hcharts.cn/api/index.php" target="_blank">Highcharts 中文API</a></p></li>
+<li><p><a href="http://api.highcharts.com/highcharts" target="_blank">Highcharts 英文API</a></p></li>
+<li><p><a href="http://echarts.baidu.com/%20" target="_blank">ECharts 百度的图表软件</a></p></li>
+<li><p><a href="http://lbs.amap.com/api/" target="_blank">高德地图</a></p></li>
+<li><p><a href="http://paperjs.org/" target="_blank">开源的矢量图脚本框架</a></p></li>
+<li><p><a href="http://jvectormap.com/" target="_blank">svg 地图</a></p></li>
+</ul>
+<h4>21. vue</h4>
+<ul>
+<li><p><a href="http://cn.vuejs.org/" target="_blank">Vue</a></p></li>
+<li><p><a href="http://forum.vuejs.org/" target="_blank">Vue 论坛</a></p></li>
+<li><p><a href="http://www.cnblogs.com/aaronjs/p/3660102.html" target="_blank">Vue 入门指南</a></p></li>
+<li><p><a href="http://segmentfault.com/a/1190000000411057">Vue 的一些资源索引</a></p></li>
+<li><p>[]()</p></li>
+</ul>
+<h4>21. 正则</h4>
+<ul>
+<li><p><a href="http://segmentfault.com/a/1190000002471140" target="_blank">JS正则表达式元字符</a></p></li>
+<li><p><a href="http://deerchao.net/tutorials/regex/regex.htm" target="_blank">正则表达式30分钟入门教程</a></p></li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions" target="_blank">MDN-正则表达式</a></p></li>
+<li><p><a href="http://javascript.ruanyifeng.com/stdlib/regexp.html" target="_blank">ruanyifeng - RegExp对象</a></p></li>
+<li><p><a href="http://div.io/topic/764?page=1" target="_blank">小胡子哥 - 进阶正则表达式</a></p></li>
+<li><p><a href="https://github.com/Cedriking/is.js/blob/master/is.js" target="_blank">is.js</a></p></li>
+<li><p><a href="http://regexper.com/" target="_blank">正则在线测试</a></p></li>
+<li><p>[]()</p></li>
+</ul>
+<h4>22. ionic</h4>
+<ul><li><p><a href="https://github.com/ychow/ionic-guide" target="_blank">ionic</a></p></li></ul>
+<h4>23. 其它</h4>
+<ul><li><p><a href="http://mockjs.com/" target="_blank">Mock.js 是一款模拟数据生成器</a></p></li></ul>
+<h3 id="articleHeader1">七. 开发规范</h3>
+<ol>
+<li>
+<p>前端</p>
+<ul>
+<li><p><a href="http://alloyteam.github.io/CodeGuide" target="_blank">通过分析github代码库总结出来的工程师代码书写习惯</a></p></li>
+<li><p><a href="http://codeguide.bootcss.com/" target="_blank">HTML&amp;CSS编码规范 by @mdo</a></p></li>
+<li><p><a href="http://www.alloyteam.com/2011/10/107/" target="_blank">团队合作的css命名规范-腾讯AlloyTeam前端团队</a></p></li>
+<li><p><a href="http://yuwenhui.github.io/" target="_blank">前端编码规范之js - by yuwenhui</a></p></li>
+<li><p><a href="http://www.cnblogs.com/hustskyking/p/javascript-spec.html" target="_blank">前端编码规范之js - by 李靖</a></p></li>
+<li><p><a href="http://zhibimo.com/read/Ashu/front-end-style-guide/" target="_blank">前端开发规范手册</a></p></li>
+<li><p><a href="https://github.com/yuche/javascript#table-of-contents" target="_blank">Airbnb JavaScript 编码规范（简体中文版）</a></p></li>
+<li><p><a href="http://www.zhihu.com/question/20351507" target="_blank">AMD与CMD规范的区别</a></p></li>
+<li><p><a href="http://www.cnblogs.com/tugenhua0707/p/3507957.html" target="_blank">AMD与CMD规范的区别</a></p></li>
+<li><p><a href="http://docs.kissyui.com/1.4/docs/html/tutorials/style-guide/kissy-source-style.html" target="_blank">KISSY 源码规范</a></p></li>
+<li><p><a href="http://codeguide.bootcss.com/" target="_blank">bt编码规范</a></p></li>
+<li><p><a href="https://github.com/Suxiaogang/Code_Guide" target="_blank">规范加强版</a></p></li>
+<li><p><a href="http://blog.jobbole.com/79075/" target="_blank">前端代码规范 及 最佳实践</a></p></li>
+<li><p><a href="http://coderlmn.github.io/code-standards/" target="_blank">百度前端规范</a></p></li>
+<li><p><a href="http://isobar-idev.github.io/code-standards/" target="_blank">百度前端规范</a></p></li>
+<li><p><a href="http://zhuanlan.zhihu.com/fuyun/19884834" target="_blank">百度前端规范</a></p></li>
+<li><p><a href="https://github.com/gf-rd/es6-coding-style" target="_blank">ECMAScript6 编码规范--广发证券前端团队</a></p></li>
+<li><p><a href="http://blog.jobbole.com/79484/" target="_blank">JavaScript 风格指南/编码规范（Airbnb公司版）</a></p></li>
+<li><p><a href="http://nec.netease.com/standard" target="_blank">网易前端开发规范</a></p></li>
+<li><p><a href="http://www.75team.com/archives/1049" target="_blank">css模块</a></p></li>
+<li><p><a href="https://github.com/ecomfe/spec" target="_blank">前端规范资源列表</a></p></li>
+</ul>
+</li>
+<li>
+<p>PHP</p>
+<ul>
+<li><p><a href="http://segmentfault.com/a/1190000000443795">最流行的PHP 代码规范</a></p></li>
+<li><p><a href="https://github.com/hfcorriez/fig-standards/blob/zh_CN/%E6%8E%A5%E5%8F%97/PSR-2-coding-style-guide.md" target="_blank">最流行的PHP 代码规范</a></p></li>
+</ul>
+</li>
+<li>
+<p>Android</p>
+<ul>
+<li><p><a href="http://www.cnblogs.com/lcw/p/3619181.html" target="_blank">【敏捷开发】Android团队开发规范</a></p></li>
+<li><p><a href="http://www.jianshu.com/p/4390f4fe19b3" target="_blank">Android 开发规范与应用</a></p></li>
+</ul>
+</li>
+</ol>
+<h3 id="articleHeader2">八. 其它收集</h3>
+<h4>1. 各大公司开源项目</h4>
+<ul>
+<li><p><a href="https://code.facebook.com/projects/web/" target="_blank">Facebook Projects</a></p></li>
+<li><p><a href="http://fex.baidu.com/" target="_blank">百度web前端研发部</a></p></li>
+<li><p><a href="http://efe.baidu.com/" target="_blank">百度EFE</a></p></li>
+<li><p><a href="https://github.com/fex-team/" target="_blank">百度github</a></p></li>
+<li><p><a href="http://www.alloyteam.com/" target="_blank">alloyteam</a></p></li>
+<li><p><a href="http://alloyteam.github.io/" target="_blank">alloyteam-github</a></p></li>
+<li><p><a href="https://github.com/AlloyTeam/AlloyGameEngine" target="_blank">alloyteam-AlloyGameEngine</a></p></li>
+<li><p><a href="http://alloyteam.github.io/AlloyDesigner/" target="_blank">AlloyDesigner</a> 即时修改，即时保存，设计稿较正，其它开发辅助工具</p></li>
+<li><p><a href="http://www.alloyteam.com/2015/06/h5-jiao-hu-ye-bian-ji-qi-aeditor-jie-shao/" target="_blank">H5交互页编辑器AEditor介绍</a> H5动画交互页开发的工具介绍</p></li>
+<li><p><a href="http://aeditor.alloyteam.com/" target="_blank">AEditor</a> H5动画交互页开发的工具</p></li>
+<li><p><a href="http://forum.maka.im/wordpress/" target="_blank">maka</a></p></li>
+<li><p><a href="https://github.com/fenbility/weekly-feed" target="_blank">值得订阅的weekly</a></p></li>
+<li><p><a href="http://cube.qq.com/" target="_blank">腾讯html5</a></p></li>
+<li><p><a href="http://75team.github.io/" target="_blank">奇舞团开源项目</a></p></li>
+<li><p><a href="http://ued.qunar.com/" target="_blank">Qunar UED</a></p></li>
+</ul>
+<h4>2. Javascript</h4>
+<ol>
+<li>
+<p>常用</p>
+<ul>
+<li><p><a href="http://www.zhangxinxu.com/wordpress/2013/12/iebetter-js-make-ie6-ie8-like-modern-browser-ie9-chrome/" target="_blank">ieBetter.js-让IE6-IE8拥有IE9+,Chrome等浏览器特性</a></p></li>
+<li><p><a href="http://mottie.github.io/Keyboard/" target="_blank">模拟键盘</a></p></li>
+<li><p><a href="https://github.com/hotoo/pinyin" target="_blank">拼音</a></p></li>
+<li><p><a href="https://github.com/mc-zone/IDValidator" target="_blank">中国个人身份证号验证</a></p></li>
+</ul>
+</li>
+<li>
+<p>算法</p>
+<ul>
+<li><p><a href="https://github.com/Ralph-Wang/algorithm.in.js" target="_blank">数据结构与算法 JavaScript 描述. 章节练习</a></p></li>
+<li><p><a href="https://github.com/twobin/twobinSort" target="_blank">常见排序算法（JS版）</a></p></li>
+<li><p><a href="https://github.com/luofei2011/jsAgm/blob/master/js/sort.js" target="_blank">经典排序</a></p></li>
+<li><p><a href="https://github.com/hechangmin/jssort" target="_blank">常见排序算法-js版本</a></p></li>
+<li><p><a href="https://github.com/lightningtgc/JavaScript-Algorithms" target="_blank">JavaScript 算法与数据结构 精华集</a></p></li>
+<li><p><a href="http://www.nowcoder.com/live/courses" target="_blank">面试常考算法题精讲</a></p></li>
+<li><p>[]()</p></li>
+</ul>
+</li>
+<li>
+<p>移动端</p>
+<ul>
+<li><p><a href="https://github.com/ftlabs/fastclick" target="_blank">fastclick</a></p></li>
+<li><p><a href="https://github.com/mmastrac/jquery-noclickdelay" target="_blank">no-click-delay</a></p></li>
+</ul>
+</li>
+<li>
+<p>JSON</p>
+<ul>
+<li><p><a href="http://beta.json-generator.com/" target="_blank">模拟生成JSON数据</a></p></li>
+<li><p><a href="http://jsonp.afeld.me/" target="_blank">返回跨域JSONAPI</a></p></li>
+</ul>
+</li>
+</ol>
+<h4>3. Html5</h4>
+<ul><li><p><a href="http://www.zhihu.com/question/24398907" target="_blank">HTML5 有哪些让你惊艳的 demo？</a></p></li></ul>
+<h4>4. CSS</h4>
+<ul>
+<li><p><a href="http://browserhacks.com/" target="_blank">browserhacks</a></p></li>
+<li><p>[]()</p></li>
+</ul>
+<h4>5. jQuery</h4>
+<ol><li>
+<p>焦点图</p>
+<ul>
+<li><p><a href="https://github.com/koen301/myfocus" target="_blank">myfocus</a></p></li>
+<li><p><a href="http://www.chhua.com/myfocus/" target="_blank">myfocus-官方演示站</a></p></li>
+<li><p><a href="http://www.superslide2.com/" target="_blank">SuperSlidev2.1 -- 大话主席</a></p></li>
+<li><p><a href="http://www.bujichong.com/sojs/soChange/index.html" target="_blank">soChange</a></p></li>
+</ul>
+</li></ol>
+<h4>6. Ext, EasyUI, J-UI 及其它各种UI方案</h4>
+<ol>
+<li>
+<p>Ext</p>
+<ul>
+<li><p><a href="https://www.sencha.com/products/extjs/" target="_blank">extjs</a></p></li>
+<li><p><a href="http://docs.sencha.com/extjs/4.0.7/" target="_blank">ext4英文api</a></p></li>
+<li><p><a href="http://extjs-doc-cn.github.io/ext4api/" target="_blank">ext4中文api</a></p></li>
+<li><p>[]()</p></li>
+</ul>
+</li>
+<li>
+<p>EasyUI</p>
+<ul><li><p><a href="http://jquery-easyui.googlecode.com/svn/trunk/src/" target="_blank">jquery easyui 未压缩源代码</a></p></li></ul>
+</li>
+<li>
+<p>J-UI</p>
+<ul><li><p><a href="http://jui.org/" target="_blank">J-UI</a></p></li></ul>
+</li>
+<li>
+<p>Other</p>
+<ul>
+<li><p><a href="http://dcloudio.github.io/mui/" target="_blank">MUI-最接近原生APP体验的高性能前端框架</a></p></li>
+<li><p><a href="http://amazeui.org/" target="_blank">Amaze UI | 中国首个开源 HTML5 跨屏前端框架</a></p></li>
+<li><p><a href="http://m.sui.taobao.org/" target="_blank">淘宝 HTML5 前端框架</a></p></li>
+<li><p><a href="http://docs.kissyui.com/" target="_blank">KISSY - 阿里前端JavaScript库</a></p></li>
+<li><p><a href="http://nej.netease.com/" target="_blank">网易Nej - Nice Easy Javascript</a></p></li>
+<li><p><a href="http://demos.telerik.com/kendo-ui/mvvm/index" target="_blank">Kendo UI MVVM Demo</a></p></li>
+<li><p><a href="http://www.bootcss.com/" target="_blank">Bootstrap</a></p></li>
+<li><p><a href="http://smartui.chinamzz.com/" target="_blank">Smart UI</a></p></li>
+<li><p><a href="http://developer.yahoo.com/yui/grids/" target="_blank">雅虎UI - CSS UI</a></p></li>
+</ul>
+</li>
+</ol>
+<h4>7. 页面 社会化 分享功能</h4>
+<ul>
+<li><p><a href="http://share.baidu.com/" target="_blank">百度分享</a> pc端</p></li>
+<li><p><a href="http://jiathis.com/" target="_blank">JiaThis</a> pc端</p></li>
+<li><p><a href="http://developer.baidu.com/soc/share" target="_blank">社会化分享组件</a> 移动端</p></li>
+<li><p><a href="http://www.mob.com/#/index" target="_blank">ShareSDK 轻松实现社会化功能</a> 移动端</p></li>
+<li><p><a href="http://dev.umeng.com/social/android/quick-integration" target="_blank">友盟分享</a> 移动端</p></li>
+</ul>
+<h4>8. 富文本编辑器</h4>
+<ul>
+<li><p><a href="http://ueditor.baidu.com/website/" target="_blank">百度 ueditor</a></p></li>
+<li><p><a href="http://ckeditor.com/" target="_blank">经典的ckeditor</a></p></li>
+<li><p><a href="http://kindeditor.net/" target="_blank">经典的kindeditor</a></p></li>
+<li><p><a href="http://www.bootcss.com/p/bootstrap-wysiwyg/" target="_blank">wysiwyg</a></p></li>
+<li><p><a href="http://integ.github.io/BachEditor/" target="_blank">一个有情怀的编辑器。Bach's Editor</a></p></li>
+<li><p><a href="https://github.com/mycolorway/simditor" target="_blank">tower用的编辑器</a></p></li>
+<li><p><a href="https://github.com/summernote/summernote" target="_blank">summernote 编辑器</a></p></li>
+<li><p><a href="http://neilj.github.io/Squire/" target="_blank">html5编辑器</a></p></li>
+<li><p><a href="http://lab.hustlzp.com/XEditor/" target="_blank">XEditor</a></p></li>
+<li><p><a href="https://github.com/wangfupeng1988/wangEditor%20" target="_blank">wangEditor</a></p></li>
+</ul>
+<h4>9. 日历</h4>
+<ol>
+<li>
+<p>PC</p>
+<ul>
+<li><p><a href="http://www.my97.net/dp/demo/index.htm" target="_blank">经典my97</a></p></li>
+<li><p><a href="http://www.cnblogs.com/gbin1/archive/2012/04/16/2452105.html" target="_blank">强大的独立日期选择器</a></p></li>
+<li><p><a href="http://fullcalendar.io/" target="_blank">fullcalendar</a></p></li>
+<li><p><a href="http://blog.csdn.net/francislaw/article/details/7740630" target="_blank">fullcalendar日历控件知识点集合 </a></p></li>
+<li><p><a href="http://blog.sina.com.cn/s/blog_9475b1c101012c5f.html" target="_blank">中文api</a></p></li>
+<li><p><a href="https://github.com/zzyss86/LunarCalendar" target="_blank">农历日历</a></p></li>
+<li><p><a href="http://www.sucaisj.com/jiaoben/date/201509/16856.html" target="_blank">超酷的仿百度带节日日历老黄历控件</a></p></li>
+<li><p><a href="http://momentjs.com/" target="_blank">日期格式化</a></p></li>
+<li><p><a href="https://github.com/Johnqing/QPAYCalendar/" target="_blank">大牛日历控件</a></p></li>
+<li><p><a href="https://github.com/Iamlars/dateMarker" target="_blank">我群某管理作品</a></p></li>
+<li><p><a href="http://digitalbush.com/projects/masked-input-plugin/" target="_blank">input按位替换-官网</a></p></li>
+<li><p><a href="https://github.com/digitalBush/jquery.maskedinput/tree/1.2.2" target="_blank">input按位替换-github</a></p></li>
+<li><p><a href="https://github.com/dangrossman/bootstrap-daterangepicker" target="_blank">bootstrap-daterangepicker</a></p></li>
+<li><p><a href="http://www.vandelaydesign.com/30-best-free-jquery-plugins/" target="_blank">国外30个插件集合</a></p></li>
+<li><p><a href="http://dbushell.com/2012/10/09/pikaday-javascript-datepicker/" target="_blank">JavaScript datepicker</a></p></li>
+<li><p><a href="http://jonthornton.github.io/Datepair.js/" target="_blank">Datepair.js</a></p></li>
+<li><p><a href="https://github.com/glad/glDatePicker" target="_blank">一个风格多样的日历</a></p></li>
+<li><p><a href="http://amsul.ca/pickadate.js/date/" target="_blank">弹出层式的全日历</a></p></li>
+<li><p><a href="http://www.daterangepicker.com/" target="_blank">jquery双日历</a></p></li>
+</ul>
+</li>
+<li>
+<p>移动</p>
+<ul>
+<li><p><a href="http://www.frankdemo.cn/index.php?c=content&amp;a=show&amp;id=115" target="_blank">大气实用jQuery手机移动端日历日期选择插件</a></p></li>
+<li><p><a href="https://mobiscroll.com/" target="_blank">jQuery Mobile 移动开发中的日期插件Mobiscroll </a></p></li>
+</ul>
+</li>
+<li>
+<p>Date library</p>
+<ul>
+<li><p><a href="https://github.com/datejs/Datejs" target="_blank">Datejs</a></p></li>
+<li><p><a href="http://sugarjs.com/api/Date" target="_blank">sugarjs</a></p></li>
+</ul>
+</li>
+</ol>
+<h4>10. 综合效果搜索平台</h4>
+<ul>
+<li><p><a href="http://www.jq22.com/" target="_blank">效果网</a></p></li>
+<li><p><a href="http://www.17sucai.com/" target="_blank">17素材</a></p></li>
+<li><p><a href="http://microjs.com/" target="_blank">常用的JavaScript代码片段</a></p></li>
+</ul>
+<h4>11. 前端工程化</h4>
+<ol>
+<li>
+<p>概述</p>
+<ul>
+<li><p><a href="http://www.awesomes.cn/" target="_blank">前端工具大全</a></p></li>
+<li><p><a href="https://github.com/fouber/blog/issues/10?from=timeline&amp;isappinstalled=0#" target="_blank">什么是前端工程化</a></p></li>
+</ul>
+</li>
+<li>
+<p>Gulp</p>
+<ul>
+<li><p><a href="http://gulpjs.com/" target="_blank">Gulp官网</a></p></li>
+<li><p><a href="http://www.gulpjs.com.cn/" target="_blank">Gulp中文网</a></p></li>
+<li><p><a href="https://github.com/Platform-CUF/use-gulp" target="_blank">gulp资料收集</a></p></li>
+<li><p><a href="http://javascript.ruanyifeng.com/tool/gulp.html" target="_blank">Gulp：任务自动管理工具 - ruanyifeng</a></p></li>
+<li><p><a href="http://gulpjs.com/plugins/" target="_blank">Gulp插件</a></p></li>
+<li><p><a href="http://www.ido321.com/1622.html" target="_blank">Gulp不完全入门教程</a></p></li>
+<li><p><a href="https://github.com/hjzheng/CUF_meeting_knowledge_share/issues/33" target="_blank">为什么使用gulp?</a></p></li>
+<li><p><a href="http://www.dbpoo.com/getting-started-with-gulp/" target="_blank">Gulp安装及配合组件构建前端开发一体化</a></p></li>
+<li><p><a href="https://github.com/nimojs/gulp-book" target="_blank">Gulp 入门指南</a></p></li>
+<li><p><a href="https://github.com/nimojs/blog/issues/19" target="_blank">Gulp 入门指南 - nimojs</a></p></li>
+<li><p><a href="http://markpop.github.io/2014/09/17/Gulp%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/" target="_blank">Gulp入门教程</a></p></li>
+<li><p><a href="http://www.imooc.com/video/5692" target="_blank">Gulp in Action</a></p></li>
+<li><p><a href="http://www.w3ctech.com/topic/134" target="_blank">Gulp开发教程（翻译）</a></p></li>
+<li><p><a href="http://www.cnblogs.com/2050/p/4198792.html" target="_blank">前端构建工具gulpjs的使用介绍及技巧</a></p></li>
+</ul>
+</li>
+<li>
+<p>Grunt</p>
+<ul>
+<li><p><a href="http://gruntjs.com/" target="_blank">gruntjs</a></p></li>
+<li><p><a href="http://www.gruntjs.net/" target="_blank">Grunt中文网</a></p></li>
+</ul>
+</li>
+<li>
+<p>Fis</p>
+<ul>
+<li><p><a href="http://fex-team.github.io/fis-site/index.html" target="_blank">fis 官网</a></p></li>
+<li><p><a href="http://fis.baidu.com/" target="_blank">fis</a></p></li>
+</ul>
+</li>
+</ol>
+<h4>12. 轮播图</h4>
+<ol>
+<li>
+<p>pc图轮</p>
+<ul>
+<li><p><a href="http://www.jsfoot.com/jquery/demo/2011-09-20/192.html" target="_blank">单屏轮播sochange</a></p></li>
+<li><p><a href="http://bxslider.com/examples/carousel-demystified" target="_blank">左右按钮多图切换</a></p></li>
+<li><p><a href="https://github.com/alvarotrigo/fullPage.js/" target="_blank">fullpage全屏轮播</a></p></li>
+</ul>
+</li>
+<li>
+<p>移动端</p>
+<ul>
+<li><p><a href="http://www.swipejs.com/" target="_blank">无缝切换</a></p></li>
+<li><p><a href="http://www.idangero.us/swiper/" target="_blank">滑屏效果</a></p></li>
+<li><p><a href="https://github.com/peunzhang/fullpage" target="_blank">全屏fullpage</a></p></li>
+<li><p><a href="https://github.com/qiqiboy/touchslider" target="_blank">单个图片切换</a></p></li>
+<li><p><a href="https://github.com/peunzhang/slip.js" target="_blank">单个全屏切换</a></p></li>
+<li><p><a href="http://touch.code.baidu.com/examples.html?qq-pf-to=pcqq.group" target="_blank">百度的切换库</a></p></li>
+<li><p><a href="https://github.com/peunzhang/iSlider" target="_blank">单个全屏切换</a></p></li>
+<li><p><a href="https://github.com/saw/touch-interfaces" target="_blank">滑屏效果</a></p></li>
+<li><p><a href="http://baijs.com/tinycircleslider/" target="_blank">旋转拖动设置</a></p></li>
+<li><p><a href="http://touchslider.com/" target="_blank">类似于swipe切换</a></p></li>
+<li><p><a href="http://www.swiper.com.cn/demo/index.html" target="_blank">支持多种形式的触摸滑动</a></p></li>
+<li><p><a href="https://github.com/joker-ye/main/blob/master/wap/index.html" target="_blank">滑屏效果</a></p></li>
+<li><p><a href="http://www.superslide2.com/" target="_blank">大话主席pc移动图片轮换</a></p></li>
+<li><p><a href="https://github.com/hahnzhu/parallax.js" target="_blank">滑屏效果</a></p></li>
+<li><p><a href="https://github.com/yanhaijing/zepto.fullpage" target="_blank">基于zepto的fullpage</a></p></li>
+<li><p><a href="http://www.cnblogs.com/plums/archive/2013/01/10/WebApp-fixed-width-layout-of-multi-terminal-adapter-since.html" target="_blank">[WebApp]定宽网页设计下，固定宽度布局开发WebApp并实现多终端下WebApp布局自适应</a></p></li>
+<li><p><a href="http://loo2k.com/blog/detecting-wechat-client/" target="_blank">判断微信客户端的那些坑</a></p></li>
+<li><p><a href="https://github.com/JefferyWang/nativeShare.js" target="_blank">可以通过javascript直接调用原生分享的工具</a></p></li>
+<li><p><a href="http://www.jiathis.com/help/html/weixin-share-code" target="_blank">JiaThis 分享到微信代码</a></p></li>
+<li><p><a href="http://fex.baidu.com/blog/2015/05/cross-mobile/" target="_blank">聊聊移动端跨平台开发的各种技术</a></p></li>
+<li><p><a href="http://www.zhihu.com/question/29922082" target="_blank">前端自动化测试</a></p></li>
+<li><p><a href="http://ajccom.github.io/niceslider/" target="_blank">多种轮换图片</a></p></li>
+<li><p><a href="https://mango.github.io/slideout/" target="_blank">滑动侧边栏</a></p></li>
+</ul>
+</li>
+</ol>
+<h4>13. 文件上传</h4>
+<ul>
+<li><p><a href="http://fex.baidu.com/webuploader/" target="_blank">百度上传组件</a></p></li>
+<li><p><a href="https://blueimp.github.io/jQuery-File-Upload/" target="_blank">上传</a></p></li>
+<li><p><a href="http://www.hdfu.net/" target="_blank">flash 头像上传</a></p></li>
+<li><p><a href="http://www.dropzonejs.com/" target="_blank">图片上传预览</a></p></li>
+<li><p><a href="http://elemefe.github.io/image-cropper/" target="_blank">图片裁剪</a></p></li>
+<li><p><a href="http://www.shearphoto.com/" target="_blank">图片裁剪-shearphoto</a></p></li>
+<li><p><a href="http://www.oschina.net/project/tag/284/jquery-image-tools?lang=0&amp;os=0&amp;sort=view&amp;p=2" target="_blank">jQuery图片处理</a></p></li>
+<li><p>[]()</p></li>
+</ul>
+<h4>14. 模拟select</h4>
+<ul>
+<li><p><a href="http://aui.github.io/popupjs/doc/selectbox.html" target="_blank">糖饼 select</a></p></li>
+<li><p><a href="https://github.com/rmm5t/jquery-flexselect" target="_blank">flexselect</a></p></li>
+<li><p><a href="http://loudev.com/" target="_blank">双select</a></p></li>
+<li><p><a href="http://select2.github.io/" target="_blank">select2</a></p></li>
+<li><p>[]()</p></li>
+</ul>
+<h4>15. 取色插件</h4>
+<ul>
+<li><p><a href="http://www.jq22.com/plugin/367" target="_blank">类似 Photoshop 的界面取色插件</a></p></li>
+<li><p><a href="https://github.com/jquery/jquery-color/" target="_blank">jquery color</a></p></li>
+<li><p><a href="http://www.oschina.net/project/tag/287/color-picker" target="_blank">取色插件集合</a></p></li>
+<li><p><a href="https://github.com/mattfarina/farbtastic" target="_blank">farbtastic 圆环＋正方形</a></p></li>
+<li><p>[]()</p></li>
+</ul>
+<h4>16. 城市联动</h4>
+<ul>
+<li><p><a href="http://www.ijquery.cn/?p=360" target="_blank">jquery.cityselect.js基于jQuery+JSON的省市或自定义联动效果</a></p></li>
+<li><p>[]()</p></li>
+</ul>
+<h4>17. 剪贴板</h4>
+<ul>
+<li><p><a href="https://github.com/zeroclipboard/zeroclipboard" target="_blank">剪贴板</a></p></li>
+<li><p><a href="http://zenorocha.github.io/clipboard.js/" target="_blank">clipboard 最新的剪切方案</a></p></li>
+<li><p><a href="https://github.com/zenorocha/clipboard.js" target="_blank">不是Flash的剪贴板</a></p></li>
+</ul>
+<h4>18. 简繁转换</h4>
+<ul><li><p><a href="https://github.com/BYVoid/OpenCC" target="_blank">简繁转换</a></p></li></ul>
+<h4>19. 表格 Grid</h4>
+<ul>
+<li><p><a href="http://facebook.github.io/fixed-data-table/" target="_blank">facebook表格</a></p></li>
+<li><p><a href="http://handsontable.com/" target="_blank">类似于Excel编辑表格-handsontable</a></p></li>
+<li><p><a href="http://bootstrap-table.wenzhixin.net.cn/" target="_blank">bootstrap-table插件</a></p></li>
+<li><p><a href="https://www.datatables.net/" target="_blank">datatables</a></p></li>
+</ul>
+<h4>20. 在线演示</h4>
+<ul>
+<li><p><a href="http://runjs.cn/" target="_blank">js 在线编辑 - runjs</a></p></li>
+<li><p><a href="http://jsbin.com/" target="_blank">js 在线编辑 - jsbin</a></p></li>
+<li><p><a href="http://codepen.io/" target="_blank">js 在线编辑 - codepen</a></p></li>
+<li><p><a href="http://jsfiddle.net/" target="_blank">js 在线编辑 - jsfiddle</a></p></li>
+<li><p><a href="http://ideone.com/" target="_blank">java 在线编辑 - runjs</a></p></li>
+<li><p><a href="http://code.hcharts.cn/" target="_blank">js 在线编辑 - hcharts</a></p></li>
+<li><p><a href="http://jsdm.com/" target="_blank">js 在线编辑 - jsdm</a></p></li>
+<li><p><a href="http://sqlfiddle.com/" target="_blank">sql 在线编辑 - sqlfiddle</a></p></li>
+<li><p><a href="https://thimble.mozilla.org/" target="_blank">mozilla 在线编辑器</a></p></li>
+</ul>
+<h4>21. 播放器</h4>
+<ul><li><p><a href="https://github.com/zmmbreeze/DeadSimpleVideoPlayer" target="_blank">Html5 VideoPlayer</a></p></li></ul>
+<h4>22. 粒子动画</h4>
+<ul><li><p><a href="http://a-jie.github.io/Proton/#example" target="_blank">Proton 烟花</a></p></li></ul>
+<h3 id="articleHeader3">九. Nodejs</h3>
+<ul>
+<li><p><a href="http://liuqing.pw/" target="_blank">nodejs 篇幅比较巨大</a></p></li>
+<li><p><a href="https://github.com/alsotang/node-lessons" target="_blank">Node.js 包教不包会</a></p></li>
+<li><p><a href="http://www.rainweb.cn/article/category/Nodejs" target="_blank">篇幅比较少</a></p></li>
+<li><p><a href="http://www.w3cfuns.com/article-5598538-1-1.html" target="_blank">node express 入门教程</a></p></li>
+<li><p><a href="http://my.oschina.net/u/568264/blog/193773" target="_blank">nodejs定时任务</a></p></li>
+<li><p><a href="http://60sky.com/" target="_blank">一个nodejs博客</a></p></li>
+<li><p><a href="http://www.cnblogs.com/yexiaochai/p/3536547.html" target="_blank">【NodeJS 学习笔记04】新闻发布系统</a></p></li>
+<li><p><a href="http://www.cnblogs.com/qqloving/p/3541099.html" target="_blank">过年7天乐，学nodejs 也快乐</a></p></li>
+<li><p><a href="https://github.com/nqdeng/7-days-nodejs" target="_blank">七天学会NodeJS</a></p></li>
+<li><p><a href="http://www.cnblogs.com/zhongweiv/p/nodejs_events.html" target="_blank">Nodejs学习笔记（二）--- 事件模块</a></p></li>
+<li><p><a href="http://www.cnblogs.com/liusuqi/p/3735491.html" target="_blank">nodejs入门</a></p></li>
+<li><p><a href="https://github.com/zensh/jsgen" target="_blank">angularjs nodejs</a></p></li>
+<li><p><a href="http://blog.fens.me/series-nodejs/" target="_blank">从零开始nodejs系列文章</a></p></li>
+<li><p><a href="http://debuggable.com/posts/understanding-node-js:4bd98440-45e4-4a9a-8ef7-0f7ecbdd56cb" target="_blank">理解nodejs</a></p></li>
+<li><p><a href="http://blog.mixu.net/2011/02/01/understanding-the-node-js-event-loop/" target="_blank">nodejs事件轮询</a></p></li>
+<li><p><a href="http://www.nodebeginner.org/index-zh-cn.html" target="_blank">node入门</a></p></li>
+<li><p><a href="http://ourjs.com/detail/53e1f281c5910a9806000001" target="_blank">nodejs cms</a></p></li>
+<li><p><a href="http://ourjs.com/detail/529ca5950cb6498814000005" target="_blank">Node初学者入门，一本全面的NodeJS教程</a></p></li>
+<li><p><a href="http://www.barretlee.com/blog/2015/10/07/debug-nodejs-in-command-line/" target="_blank">NodeJS的代码调试和性能调优</a></p></li>
+</ul>
+<h3 id="articleHeader4">十. 性能优化</h3>
+<ol>
+<li>
+<p>常规优化</p>
+<ul>
+<li><p><a href="http://www.infoq.com/cn/articles/javascript-high-performance-animation-and-page-rendering" target="_blank">Javascript高性能动画与页面渲染</a></p></li>
+<li><p><a href="http://isux.tencent.com/h5-performance.html" target="_blank">移动H5前端性能优化指南</a></p></li>
+<li><p><a href="http://ued.5173.com/?p=1731" target="_blank">5173首页前端性能优化实践</a></p></li>
+<li><p><a href="http://www.uisdc.com/front-end-performance-for-web-designers-and-front-end-developers" target="_blank">给网页设计师和前端开发者看的前端性能优化</a></p></li>
+<li><p><a href="http://www.orzpoint.com/profiling-css-and-optimization-notes/" target="_blank">复杂应用的 CSS 性能分析和优化建议</a></p></li>
+<li><p><a href="http://www.zhangxinxu.com/wordpress/tag/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD/" target="_blank">张鑫旭——前端性能</a></p></li>
+<li><p><a href="http://www.xiaoqiang.org/javascript/font-end-performance-monitor.html" target="_blank">前端性能监控总结</a></p></li>
+<li><p><a href="http://udc.weibo.com/2013/05/%E7%BD%91%E7%AB%99%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E4%B9%8Bcss%E6%97%A0%E5%9B%BE%E7%89%87%E6%8A%80%E6%9C%AF/" target="_blank">网站性能优化之CSS无图片技术</a></p></li>
+<li><p><a href="http://www.aliued.cn/2013/01/20/web%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E8%BF%9B%E9%98%B6%E8%B7%AF.html" target="_blank">web前端性能优化进阶路</a></p></li>
+<li><p><a href="http://my.eoe.cn/tuwandou/archive/4544.html" target="_blank">前端技术：网站性能优化之CSS无图片技术</a></p></li>
+<li><p><a href="http://www.baiduux.com/blog/2011/02/15/browser-loading/" target="_blank">浏览器的加载与页面性能优化</a></p></li>
+<li><p><a href="http://www.w3ctech.com/p/1503" target="_blank">页面加载中的图片性能优化</a></p></li>
+<li><p><a href="http://www.feelcss.com/tag/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD" target="_blank">Hey——前端性能</a></p></li>
+<li><p><a href="http://www.baiduux.com/blog/2010/03/15/html%E4%BC%98%E5%8C%96-2/" target="_blank">html优化</a></p></li>
+<li><p><a href="http://www.99css.com/tag/%e6%80%a7%e8%83%bd" target="_blank">99css——性能</a></p></li>
+<li><p><a href="http://www.yslow.net/category.php?cid=20" target="_blank">Yslow——性能优化</a></p></li>
+<li><p><a href="http://www.cnblogs.com/yslow/" target="_blank">YSLOW中文介绍</a></p></li>
+<li><p><a href="http://www.360ito.com/article/40.html" target="_blank">转一篇Yahoo关于网站性能优化的文章，兼谈本站要做的优化</a></p></li>
+<li><p><a href="http://www.360doc.com/content/10/0928/09/2588264_56971287.shtml" target="_blank">Yahoo!团队实践分享：网站性能</a></p></li>
+<li><p><a href="http://blog.jiasule.com/i/153" target="_blank">网站性能优化指南：什么使我们的网站变慢？</a></p></li>
+<li><p><a href="http://www.powereasy.net/helpyou/knowledge/ecommerce/9593.html" target="_blank">网站性能优化实践，减少加载时间，提高用户体验</a></p></li>
+<li><p><a href="http://www.umtry.com/archives/747.html" target="_blank">浅谈网站性能优化 前端篇</a></p></li>
+<li><p><a href="http://www.adinnet.cn/blog/designview/2012-7-12/678.html" target="_blank">前端重构实践之如何对网站性能优化？</a></p></li>
+<li><p><a href="http://www.gbin1.com/technology/javascript/20130708-front-end-performance-optimization-9/" target="_blank">前端性能优化：使用媒体查询加载指定大小的背景图片</a></p></li>
+<li><p><a href="http://www.mykuer.com/post/factors-that-affect-the-speed-of-web-site-open.html" target="_blank">网站性能系列博文</a></p></li>
+<li><p><a href="http://tgideas.qq.com/webplat/info/news_version3/804/808/811/m579/201109/41355.shtml" target="_blank">加载，不只是少一点点</a></p></li>
+<li><p><a href="http://mzhou.me/article/95310/" target="_blank">前端性能的测试与优化</a></p></li>
+<li><p><a href="http://www.gbin1.com/technology/html/20130217-tips-for-speed-up-page-loading/" target="_blank">分享网页加载速度优化的一些技巧？</a></p></li>
+<li><p><a href="http://www.f2es.com/images-bytes-opt/" target="_blank">页面加载中的图片性能优化</a></p></li>
+<li><p><a href="http://www.tcreator.info/webSchool/website/Front-end-Opt-Yslow.html" target="_blank">web前端优化(基于Yslow)</a></p></li>
+<li><p><a href="https://www.qianduan.net/website-performance-optimization-tool.html" target="_blank">网站性能优化工具大全</a></p></li>
+<li><p><a href="http://www.alloyteam.com/2012/10/high-performance-html/" target="_blank">【高性能前端1】高性能HTML</a></p></li>
+<li><p><a href="http://www.alloyteam.com/2012/10/high-performance-css/" target="_blank">【高性能前端2】高性能CSS</a></p></li>
+<li><p><a href="http://coolshell.cn/articles/6470.html" target="_blank">由12306谈谈网站前端性能和后端性能优化</a></p></li>
+<li><p><a href="http://www.alloyteam.com/webfrontend/%E5%89%8D%E7%AB%AF%E4%BC%98%E5%8C%96/" target="_blank">AlloyTeam——前端优化</a></p></li>
+<li><p><a href="http://www.cnblogs.com/developersupport/p/3248695.html" target="_blank">毫秒必争，前端网页性能最佳实践</a></p></li>
+<li><p><a href="http://blog.sina.com.cn/s/blog_6e9d2e0701017kvu.html" target="_blank">网站性能工具Yslow的使用方法</a></p></li>
+<li><p><a href="http://www.infoq.com/cn/articles/front-end-engineering-and-performance-optimization-part1" target="_blank">前端工程与性能优化（上）：静态资源版本更新与缓存</a></p></li>
+<li><p><a href="http://www.infoq.com/cn/articles/front-end-engineering-and-performance-optimization-part2" target="_blank">前端工程与性能优化（下）：静态资源管理与模板框架</a></p></li>
+<li><p><a href="http://blog.jobbole.com/48369/" target="_blank">HTTPS连接的前几毫秒发生了什么</a></p></li>
+<li><p><a href="http://uicss.cn/yslow/#more-12319" target="_blank">Yslow</a></p></li>
+<li><p><a href="http://blog.smartbear.com/web-performance/essential-web-performance-metrics-a-primer-part-1/" target="_blank">Essential Web Performance Metrics — A Primer, Part 1</a></p></li>
+<li><p><a href="http://blog.smartbear.com/performance/essential-web-performance-metrics-part-2/" target="_blank">Essential Web Performance Metrics — Part 2</a></p></li>
+<li><p><a href="http://jayli.github.io/blog/data/2011/12/23/yuislide.html" target="_blank">YUISlide,针对移动设备的动画性能优化</a></p></li>
+<li><p><a href="http://joelglovier.com/improving-site-performance/" target="_blank">Improving Site Performance</a></p></li>
+<li><p><a href="http://segmentfault.com/a/1190000000367899">让网站提速的最佳前端实践</a></p></li>
+<li><p><a href="http://sixrevisions.com/web-development/why-website-speed-is-important/" target="_blank">Why Website Speed is Important</a></p></li>
+<li><p><a href="https://www.devbridge.com/articles/need-for-speed-how-to-improve-your-website-performance/" target="_blank">Need for Speed – How to Improve your Website Performance</a></p></li>
+<li><p><a href="https://github.com/amfe/article/issues/1" target="_blank">阿里无线前端性能优化指南 (Pt.1 加载期优化) </a></p></li>
+<li><p>[]()</p></li>
+</ul>
+</li>
+<li>
+<p>优化工具</p>
+<ul>
+<li><p><a href="http://www.html-js.com/article/3083" target="_blank">JavaScript 性能分析新工具 OneProfile</a></p></li>
+<li><p><a href="http://www.html-js.com/article/3091" target="_blank">JavaScript 堆内存分析新工具 OneHeap</a></p></li>
+</ul>
+</li>
+<li>
+<p>在线工具</p>
+<ul>
+<li><p><a href="https://developers.google.com/speed/pagespeed/insights/" target="_blank">google在线工具</a></p></li>
+<li><p><a href="http://www.alibench.com/" target="_blank">阿里测</a></p></li>
+<li><p><a href="http://itest.aliyun.com/" target="_blank">阿里-免费测试服务</a></p></li>
+<li><p><a href="https://github.com/alibaba/f2etest" target="_blank">阿里-F2etest多浏览器兼容性测试解决方案</a></p></li>
+<li><p><a href="http://jsperf.com/" target="_blank">js性能测试</a></p></li>
+<li><p>[]()</p></li>
+</ul>
+</li>
+</ol>
+<h3 id="articleHeader5">十一. 前端架构</h3>
+<ul>
+<li><p><a href="http://www.zhihu.com/topic/19612641" target="_blank">技术架构</a></p></li>
+<li><p><a href="http://saito.im/note/The-Architecture-of-F2E/" target="_blank">前端架构</a></p></li>
+<li><p><a href="http://www.zhihu.com/question/24092572" target="_blank">如何成为前端架构师</a></p></li>
+<li><p><a href="http://hikejun.com/sharing/2010webrebuild/?file=fe-infrastructure.html" target="_blank">关于前端架构-张克军</a></p></li>
+<li><p><a href="http://www.zhihu.com/question/25583350" target="_blank">百度腾讯offer比较（腾讯游戏VS百度基础架构）</a></p></li>
+<li><p>[]()</p></li>
+</ul>
+<h3 id="articleHeader6">十二. 个人作品</h3>
+<h4>1. 推荐作品</h4>
+<ul>
+<li><p><a href="https://gist.github.com/wintercn" target="_blank">winter代码片段需要翻墙</a><button class="btn btn-xs btn-default ml10 preview" data-url="wintercn" data-typeid="1">点击预览</button></p></li>
+<li><p><a href="http://www.fgm.cc/learn/" target="_blank">fgm</a></p></li>
+<li><p><a href="https://github.com/hongru/hongru.github.com" target="_blank">岑安作品集</a></p></li>
+<li><p><a href="http://kmdjs.github.io/" target="_blank">当耐特demo集合</a></p></li>
+<li><p><a href="http://www.laoshu133.com/Lab/" target="_blank">米空格 js作品</a></p></li>
+<li><p><a href="http://koen301.github.io/" target="_blank">myFocus</a></p></li>
+<li><p><a href="http://panxuepeng.github.io/seajslib/" target="_blank">SeaJS组件库</a></p></li>
+<li><p><a href="http://yanhaijing.com/myProject/" target="_blank">颜海镜作品</a></p></li>
+<li><p><a href="http://jo2.org/category/myworks/" target="_blank">脚儿网作品</a></p></li>
+<li><p><a href="http://www.cnitblog.com/yemoo/category/3107.html" target="_blank">javascript个人作品</a></p></li>
+<li><p><a href="http://bbs.miaov.com/forum.php?mod=viewthread&amp;tid=7790" target="_blank">妙味的雷东升游戏作品</a></p></li>
+<li><p><a href="http://bbs.csdn.net/topics/380227212" target="_blank">javascript作品集</a></p></li>
+<li><p><a href="https://github.com/TooBug/works" target="_blank">云五笔，灰度产生生成工具</a></p></li>
+<li><p><a href="http://koen301.github.io/" target="_blank">项目主页</a></p></li>
+<li><p><a href="http://zaole.net/" target="_blank">个性的作品主页</a></p></li>
+<li><p><a href="http://static.tingall.com/v2/player/" target="_blank">播放器</a></p></li>
+<li><p><a href="http://ucren.com/blog/demos" target="_blank">ucren js demos 集</a></p></li>
+<li><p><a href="http://www.zhinengshe.com/works_list.html" target="_blank">智能社</a></p></li>
+<li><p><a href="http://demos.shizuwu.cn/" target="_blank">实例陈列架</a></p></li>
+<li><p><a href="http://zoye.sinaapp.com/demo" target="_blank">zoye demo</a></p></li>
+<li><p><a href="http://lab.yuanwai.wang/" target="_blank">王员外</a></p></li>
+<li><p><a href="http://pingfan1990.sinaapp.com/" target="_blank">平凡</a></p></li>
+<li><p><a href="http://www.lovewebgames.com/" target="_blank">jyg 游戏案例</a></p></li>
+<li><p><a href="http://www.helloweba.com/list.html" target="_blank">很多jquery插件</a></p></li>
+<li><p><a href="http://www.bujichong.com/sojs/api/index.html" target="_blank">不羁虫 - soJs 作品系列</a></p></li>
+<li><p><a href="http://frozenui.github.io/case.html" target="_blank">frozenui</a></p></li>
+<li><p><a href="http://js-game.github.io/othello/" target="_blank">黑白棋</a></p></li>
+<li><p><a href="http://yansm.github.io/fromone/index.html" target="_blank">fromone</a></p></li>
+</ul>
+<h4>2. 群员作品</h4>
+<ul>
+<li><p><a href="http://demo.webjyh.com/" target="_blank">MDialog - [合肥-M.J]</a></p></li>
+<li><p><a href="http://sandbox.runjs.cn/show/do6zlrrk%20" target="_blank">轮播图 - [上海－冷静]</a></p></li>
+<li><p><a href="http://www.replace5.com/" target="_blank">[广州—坚壳]</a></p></li>
+<li><p><a href="http://www.seejs.com/demos/" target="_blank">[成都 - 无痕]　感恩节专题</a></p></li>
+<li><p><a href="http://hacke2.github.io/works" target="_blank">[球霸天]</a></p></li>
+<li><p><a href="http://www.cnblogs.com/mcat/" target="_blank">[北京-小数]</a></p></li>
+<li><p><a href="http://thx.github.io/magix/" target="_blank">[ptf] Magix 工具</a></p></li>
+<li><p><a href="http://thx.github.io/magix/" target="_blank">[杭州-Pft] Magix 基于 MVC 结构和 Hash 驱动的 OPOA（One Page One Application）应用</a></p></li>
+<li><p><a href="http://bh-lay.com/labs/" target="_blank">[上海-剧中人]-实验室</a></p></li>
+<li><p><a href="http://jikeytang.github.io/" target="_blank">[上海-豪情 ] 作品集合</a></p></li>
+<li><p><a href="http://guoshan.sinaapp.com/" target="_blank">[成都-feeling]</a></p></li>
+<li><p><a href="http://www.cnblogs.com/liyunhua/" target="_blank">[上海-angela]</a></p></li>
+<li><p><a href="http://hcjp.github.io/work/demo/" target="_blank">[海南-hank]作品</a></p></li>
+<li><p><a href="https://github.com/yibuyisheng/blogs/issues" target="_blank">[上海-张力]博客</a></p></li>
+<li><p><a href="http://zkske121.github.io/" target="_blank">[上海-zenki]作品</a></p></li>
+<li><p><a href="http://01google.sinaapp.com/locker.html" target="_blank">移动端图案解锁</a></p></li>
+<li><p><a href="https://github.com/webjyh/MPreview.mobile" target="_blank">[合肥-M.J] - MPreview 移动端图片预览组</a></p></li>
+<li><p><a href="https://github.com/webjyh/Mexam" target="_blank">[合肥-M.J] - Mexam 移动端在线做题组</a></p></li>
+<li><p><a href="http://letyougo.github.io/dancer/" target="_blank">[北京-苏瑞] - dancer小人</a></p></li>
+<li><p><a href="http://k.swao.cn/js/" target="_blank">[上海-玄沐]- 个人网站</a></p></li>
+<li><p><a href="http://www.meckodo.com/" target="_blank">[厦门-二哲]- 个人博客</a></p></li>
+</ul>
+<h4>3. 国外大牛精品</h4>
+<ul><li><p><a href="http://pazguille.me/" target="_blank">pazguille</a></p></li></ul>
+<h3 id="articleHeader7">十三. 简历模板</h3>
+<ul>
+<li><p><a href="http://learnshare.github.io/about/index.html" target="_blank">不错的个人简历</a></p></li>
+<li><p><a href="http://hcy2367.github.io/resume/" target="_blank">简历</a></p></li>
+<li><p><a href="http://ncuey.sinaapp.com/CrispElite/%20" target="_blank">张伦</a></p></li>
+<li><p><a href="https://github.com/hacke2/ResumeSample" target="_blank">简历</a></p></li>
+<li><p><a href="http://blog.dandyweng.com/2013/07/how-my-website-was-created/" target="_blank">翁天信</a></p></li>
+<li><p><a href="http://www.webhek.com/misc/interactive-resume/" target="_blank">动画方式的简历</a></p></li>
+<li><p><a href="http://www.linqing07.com/resume.html" target="_blank">组件丰富简历</a></p></li>
+<li><p><a href="http://www.mojianli.com/resume/view" target="_blank">简历池</a></p></li>
+<li><p><a href="http://www.haorooms.com/about" target="_blank">haorooms博客</a></p></li>
+<li><p><a href="http://cv.youngdze.com/" target="_blank">Justin Young</a></p></li>
+<li><p>[]()</p></li>
+</ul>
+<h3 id="articleHeader8">十四. 面试题</h3>
+<ul>
+<li><p><a href="http://www.nowcoder.com/discuss/3196" target="_blank">那几个月在找工作（百度，网易游戏）</a></p></li>
+<li><p><a href="http://www.html-js.com/article/1743" target="_blank">2014最新面试题</a></p></li>
+<li><p><a href="http://www.w3cfuns.com/thread-5598563-2-1.html" target="_blank">阿里前端面试题</a></p></li>
+<li><p><a href="http://www.cnblogs.com/imwtr/p/4685546.html" target="_blank">2016校招内推 -- 阿里巴巴前端 -- 三面面试经历 </a></p></li>
+<li><p><a href="http://www.w3cfuns.com/article-5599657-1-1.html" target="_blank">腾讯面试题</a></p></li>
+<li><p><a href="http://www.cnblogs.com/lvdabao/p/3660707.html" target="_blank">年后跳槽那点事：乐视+金山+360面试之行</a></p></li>
+<li><p><a href="http://fatesinger.com/2722.html" target="_blank">阿里前端面试题上线</a></p></li>
+<li><p><a href="http://www.cnblogs.com/52cik/p/js-question-lg.html" target="_blank">拉勾网js面试题</a></p></li>
+<li><p><a href="http://www.cnblogs.com/allenxing/p/3724382.html" target="_blank">前端面试</a></p></li>
+<li><p><a href="http://mianshiti.diandian.com/" target="_blank">Web开发笔试面试题 大全</a></p></li>
+<li><p><a href="http://segmentfault.com/a/1190000000465431">前端开发面试题</a></p></li>
+<li><p><a href="https://github.com/markyun/My-blog/tree/master/Front-end-Developer-Questions" target="_blank">2014最新前端面试题</a></p></li>
+<li><p><a href="https://github.com/fex-team/interview-questions" target="_blank">百度面试</a></p></li>
+<li><p><a href="http://www.w3cfuns.com/forum.php?mod=forumdisplay&amp;fid=51&amp;filter=typeid&amp;typeid=177" target="_blank">面试题</a></p></li>
+<li><p><a href="https://github.com/darcyclarke/Front-end-Developer-Interview-Questions/tree/master/Chinese" target="_blank">前端工作面试问题</a></p></li>
+<li><p><a href="http://segmentfault.com/a/1190000000465431">前端开发面试题</a></p></li>
+<li><p><a href="http://ourjs.com/detail/5%E4%B8%AA%E7%BB%8F%E5%85%B8%E7%9A%84%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98" target="_blank">5个经典的前端面试问题</a></p></li>
+<li><p><a href="http://segmentfault.com/a/1190000002562454">最全前端面试问题及答案总结 </a></p></li>
+<li><p><a href="http://www.html-js.com/article/Large-search-front-team-column%202961" target="_blank">如何面试一名前端开发工程师？</a></p></li>
+<li><p><a href="https://github.com/hawx1993/Front-end-Interview-questions" target="_blank">史上最全 前端开发面试问题及答案整理</a></p></li>
+<li><p><a href="http://www.cnblogs.com/xiaoruo/p/4665163.html" target="_blank">前端实习生面试总结 </a></p></li>
+<li><p><a href="https://github.com/hawx1993/Front-end-Interview-questions" target="_blank">史上最全 前端开发面试问题及答案整理</a></p></li>
+<li><p><a href="http://blog.jobbole.com/78738/" target="_blank">BAT及各大互联网公司2014前端笔试面试题：JavaScript篇</a></p></li>
+<li><p><a href="https://github.com/paddingme/Front-end-Web-Development-Interview-Question" target="_blank">前端开发面试题大收集</a></p></li>
+<li><p><a href="https://github.com/qiu-deqing/FE-interview" target="_blank">收集的前端面试题和答案</a></p></li>
+<li><p><a href="http://www.zhihu.com/question/19568008" target="_blank">如何面试前端工程师</a></p></li>
+<li><p><a href="https://github.com/markyun/My-blog/blob/master/Front-end-Developer-Questions/Questions-and-Answers/README.md" target="_blank">前端开发面试题</a></p></li>
+<li><p><a href="http://www.nowcoder.com/discuss?type=2" target="_blank">牛客网-笔试面经</a></p></li>
+</ul>
+<h3 id="articleHeader9">十五. iconfont</h3>
+<ul>
+<li><p><a href="http://www.zhihu.com/question/21253343" target="_blank">中文字体</a></p></li>
+<li><p><a href="http://iconfont.cn/" target="_blank">淘宝字库</a></p></li>
+<li><p><a href="http://mux.alimama.com/fonts" target="_blank">字体</a></p></li>
+<li><p><a href="http://iconfont.cn/help/platform.html" target="_blank">制作教程</a></p></li>
+<li><p><a href="http://www.zhangxinxu.com/wordpress/?s=icomoon" target="_blank">zhangxinxu-icommon</a></p></li>
+<li><p><a href="https://icomoon.io/app/" target="_blank">icommon</a></p></li>
+<li><p><a href="http://imooc.com/learn/243" target="_blank">用字体在网页中画ICON图标(推荐教程)</a></p></li>
+<li><p><a href="http://font-spider.org/" target="_blank">字体压缩工具</a> 感谢初级群　[深圳-小鱼] 的推荐</p></li>
+</ul>
+<h3 id="articleHeader10">十六. 开发工具类</h3>
+<ol>
+<li>
+<p>前端开发工具</p>
+<ul>
+<li><p><a href="https://github.com/judasn/IntelliJ-IDEA-Tutorial" target="_blank">IntelliJ IDEA 简体中文专题教程</a></p></li>
+<li><p><a href="http://t.cn/8kZZ1Uy" target="_blank">Webstorm,InterllIdea,Phpstorm</a></p></li>
+<li><p><a href="https://github.com/jikeytang/sublime-text" target="_blank">SublimeText</a></p></li>
+<li><p><a href="https://atom.io/" target="_blank">Atom</a></p></li>
+<li><p><a href="https://code.visualstudio.com/" target="_blank">visual studio code</a></p></li>
+</ul>
+</li>
+<li>
+<p>Chrome, Firebug, Filddle 调试</p>
+<ol>
+<li>
+<p>Fiddler</p>
+<ul>
+<li><p><a href="http://www.cnblogs.com/tugenhua0707/p/4623317.html" target="_blank">Fiddler调式使用知多少(一)深入研究</a></p></li>
+<li><p><a href="http://www.cnblogs.com/strick/p/4570006.html" target="_blank">微信fiddle</a></p></li>
+<li><p><a href="http://gaoboy.com/article/26.html" target="_blank">微信fiddle</a></p></li>
+<li><p>[]()</p></li>
+</ul>
+</li>
+<li>
+<p>Chrome</p>
+<ul>
+<li><p><a href="https://developer.chrome.com/devtools" target="_blank">Google Chrome 官方</a></p></li>
+<li><p><a href="http://www.cnblogs.com/constantince/p/4565261.html" target="_blank">Chrome - 基础</a></p></li>
+<li><p><a href="http://www.cnblogs.com/constantince/p/4579121.html" target="_blank">Chrome - 进阶</a></p></li>
+<li><p><a href="http://www.cnblogs.com/constantince/p/4585983.html" target="_blank">Chrome - 性能</a></p></li>
+<li><p><a href="http://www.cnblogs.com/constantince/p/4607497.html" target="_blank">Chrome - 性能进阶</a></p></li>
+<li><p><a href="http://www.cnblogs.com/constantince/p/4624241.html" target="_blank">Chrome - 移动</a></p></li>
+<li><p><a href="http://www.cnblogs.com/liyunhua/p/4544738.html" target="_blank">Chrome - 使用技巧</a></p></li>
+<li><p><a href="http://www.cnblogs.com/Wayou/p/chrome-console-tips-and-tricks.html" target="_blank">Chrome - Console控制台不完全指南</a></p></li>
+<li><p><a href="http://c7sky.com/chrome-devtools-workspace.html" target="_blank">Chrome - Workspace使浏览器变成IDE</a></p></li>
+<li><p><a href="http://www.html-js.com/article/Nothing-blind%202975" target="_blank">network面板</a></p></li>
+<li><p><a href="http://anti-code.com/devtools-cheatsheet/" target="_blank">chrome开发工具快捷键</a></p></li>
+<li><p><a href="http://www.html-js.com/article/2327" target="_blank">chrome调试工具常用功能整理</a></p></li>
+<li><p><a href="http://www.iinterest.net/2014/05/09/chrome-dev-tool-workspace/" target="_blank">Chrome 开发工具 Workspace 使用</a></p></li>
+<li><p><a href="http://www.cppblog.com/deercoder/archive/2011/10/22/158886.html" target="_blank">Chrome神器Vimium快捷键学习记录 </a></p></li>
+<li><p><a href="http://www.w3cplus.com/sassguide/debug.html" target="_blank">sass调试-w3cplus</a></p></li>
+<li><p><a href="http://www.w3cplus.com/tools/how-to-use-chrome-devtools-like-a-pro.html" target="_blank">如何更专业的使用Chrome开发者工具-w3cplus</a></p></li>
+<li><p><a href="http://sentsin.com/web/253.html" target="_blank">chrome调试canvas</a></p></li>
+<li><p><a href="https://developer.chrome.com/devtools/index" target="_blank">chrome profiles1</a></p></li>
+<li><p><a href="http://h5dev.uc.cn/article-25-1.html" target="_blank">chrome profiles2</a></p></li>
+<li><p><a href="http://www.oschina.net/translate/performance-optimisation-with-timeline-profiles" target="_blank">chrome profiles3</a></p></li>
+<li><p><a href="https://developer.chrome.com/devtools/docs/mobile-emulation" target="_blank">chrome移动版调试</a></p></li>
+<li><p><a href="http://ued.taobao.org/blog/2012/06/debug-with-chrome-dev-tool/" target="_blank">chrome调试</a></p></li>
+<li><p><a href="http://www.cnblogs.com/QLeelulu/archive/2011/08/28/2156402.html" target="_blank">chrome的调试</a></p></li>
+<li><p><a href="https://developer.chrome.com/devtools/docs/commandline-api" target="_blank">chrome console 命令详解</a></p></li>
+<li><p><a href="http://www.cnblogs.com/leonkao/p/3809655.html" target="_blank">查看事件绑定1</a></p></li>
+<li><p><a href="http://www.cnblogs.com/xiaoyao2011/p/3447421.html" target="_blank">查看事件绑定2</a></p></li>
+<li><p><a href="http://segmentfault.com/a/1190000000683599">神器——Chrome开发者工具(一)</a></p></li>
+<li><p><a href="https://xinranliu.me/2015-05-22-qiqu-performance/" target="_blank">奇趣百科性能优化(Chrome DevTools 中的 Timeline Profils 等工具使用介绍)</a></p></li>
+<li><p><a href="http://frontenddev.org/link/15-tips-of-chrome-developer-tools.html" target="_blank">chrome 开发者工具的 15 个小技巧</a></p></li>
+<li><p><a href="http://1ke.co/course/361" target="_blank">Chrome开发者工具不完全指南</a></p></li>
+<li><p><a href="http://segmentfault.com/a/1190000003882567">Chrome 开发者工具使用技巧</a></p></li>
+</ul>
+</li>
+<li>
+<p>Firebug</p>
+<ul>
+<li><p><a href="http://www.imooc.com/learn/137" target="_blank">firebug视频教程</a></p></li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Tools/WebIDE" target="_blank">firefox 模拟器</a></p></li>
+<li><p><a href="http://www.cnblogs.com/ctriphire/p/4116207.html" target="_blank">console.log 命令详解</a></p></li>
+<li><p><a href="http://www.ruanyifeng.com/blog/2008/06/firebug_tutorial.html" target="_blank">Firebug入门指南</a></p></li>
+<li><p><a href="http://www.ruanyifeng.com/blog/2011/03/firebug_console_tutorial.html" target="_blank">Firebug控制台详解</a></p></li>
+<li><p>[]()</p></li>
+</ul>
+</li>
+<li>
+<p>移动,微信调试</p>
+<ul>
+<li><p><a href="https://openstf.github.io/" target="_blank">浏览器端调试安卓</a></p></li>
+<li><p><a href="http://yujiangshui.com/multidevice-frontend-debug/" target="_blank">移动端前端开发调试</a></p></li>
+<li><p><a href="https://github.com/yujiangshui/CN-Chrome-DevTools/blob/remote-debugging/md/Use-Tools/remote-debugging.md" target="_blank">使用 Chrome 远程调试 Android 设备</a></p></li>
+<li><p><a href="http://plus.uc.cn/document/webapp/doc5.html" target="_blank">mac移动端调试</a></p></li>
+<li><p><a href="http://www.mihtool.com/" target="_blank">mac移动端调试</a></p></li>
+<li><p><a href="http://thx.github.io/mobile/debugging-in-mobile/" target="_blank">无线调试攻略</a></p></li>
+<li><p><a href="http://yanhaijing.com/mobile/2014/12/17/web-debug-for-mobile/" target="_blank">无线调试攻略</a></p></li>
+<li><p><a href="http://www.jianshu.com/p/ccf124f1f74b" target="_blank">屌爆了,完美调试 微信webview(x5)</a></p></li>
+<li><p><a href="http://liyaodong.com/2015/07/06/%E5%BE%AE%E4%BF%A1%E8%B0%83%E8%AF%95%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/" target="_blank">微信调试的那些事</a></p></li>
+<li><p><a href="http://jsconsole.com/" target="_blank">远程console</a></p></li>
+<li><p><a href="http://blog.qqbrowser.cc/" target="_blank">微信调试工具</a></p></li>
+<li><p><a href="https://github.com/jieyou/remote_inspect_web_on_real_device" target="_blank">各种真机远程调试方法汇总</a></p></li>
+</ul>
+</li>
+<li>
+<p>iOS Simulator</p>
+<ul>
+<li><p><a href="https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/iOS_Simulator_Guide/Introduction/Introduction.html" target="_blank">Simulator</a></p></li>
+<li><p><a href="http://www.crifan.com/intro_ios_simulator_in_xcode_and_usage_summary/" target="_blank">Xcode中的iOS模拟器(iOS Simulator)的介绍和使用心得</a></p></li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p>img</p>
+<ul>
+<li><p><a href="http://preloaders.net/en/circular" target="_blank">loading img</a></p></li>
+<li><p><a href="http://zhitu.isux.us/" target="_blank">智图-图片优化平台</a></p></li>
+<li><p><a href="https://tinypng.com/" target="_blank">在线png优化</a></p></li>
+</ul>
+</li>
+<li>
+<p>生成二维码</p>
+<ul><li><p><a href="http://cli.im/" target="_blank">生成二维码</a></p></li></ul>
+</li>
+<li>
+<p>浏览器同步</p>
+<ul>
+<li><p><a href="https://github.com/leeluolee/puer" target="_blank">puer</a></p></li>
+<li><p><a href="http://livereload.com/" target="_blank">liveReload</a></p></li>
+<li><p><a href="http://getf5.com/" target="_blank">f5</a></p></li>
+<li><p><a href="http://geek100.com/2608/" target="_blank">File Watchers</a></p></li>
+</ul>
+</li>
+<li>
+<p>在线PPT制作</p>
+<ul>
+<li><p><a href="http://js8.in/2013/11/16/%E6%8E%A8%E8%8D%90nodeppt%EF%BC%9A%E4%BD%BF%E7%94%A8markdown%E8%AF%AD%E6%B3%95%E6%9D%A5%E5%86%99%E7%BD%91%E9%A1%B5ppt/" target="_blank">nodePPT</a></p></li>
+<li><p><a href="https://github.com/ksky521/nodePPT" target="_blank">PPT</a></p></li>
+<li><p><a href="https://github.com/hakimel/reveal.js/" target="_blank">reveal</a></p></li>
+<li><p><a href="https://github.com/Seldaek/slippy" target="_blank">slippy</a></p></li>
+</ul>
+</li>
+</ol>
+<h3 id="articleHeader11">十七. 前端导航网站</h3>
+<ul>
+<li><p><a href="http://uxbees.com/index.html" target="_blank">界面清爽的前端导航</a></p></li>
+<li><p><a href="http://whycss.com/" target="_blank">前端导航</a></p></li>
+<li><p><a href="http://www.daqianduan.com/nav" target="_blank">前端网址导航</a></p></li>
+<li><p><a href="http://sentsin.com/daohang/" target="_blank">前端名录</a></p></li>
+<li><p><a href="http://123.jser.us/" target="_blank">前端导航</a></p></li>
+<li><p><a href="http://www.css88.com/nav/" target="_blank">前端开发资源</a></p></li>
+<li><p><a href="http://www.haourl.cn/" target="_blank">网址导航</a></p></li>
+<li><p><a href="http://code.ciaoca.com/" target="_blank">前端开发仓库 - 众多效果的收集地</a></p></li>
+<li><p><a href="https://github.com/jnoodle/f2e-collect" target="_blank">前端资源导航</a></p></li>
+<li><p><a href="http://f2e.im/static/pages/nav/index.html" target="_blank">F2E 前端导航</a></p></li>
+</ul>
+<h3 id="articleHeader12">十八. 常用CDN</h3>
+<ul>
+<li><p><a href="http://lib.sinaapp.com/" target="_blank">新浪CDN</a></p></li>
+<li><p><a href="http://cdn.code.baidu.com/" target="_blank">百度静态资源公共库</a></p></li>
+<li><p><a href="http://libs.useso.com/" target="_blank">360网站卫士常用前端公共库CDN服务</a></p></li>
+<li><p><a href="http://www.bootcdn.cn/" target="_blank">Bootstrap中文网开源项目免费 CDN 服务</a></p></li>
+<li><p><a href="http://staticfile.org/" target="_blank">开放静态文件 CDN - 七牛</a></p></li>
+<li><p><a href="http://www.jq22.com/cdn/" target="_blank">CDN加速 - jq22</a></p></li>
+<li><p><a href="http://code.jquery.com/" target="_blank">jQuery CDN</a></p></li>
+<li><p><a href="http://www.google-jquery-cdn.com/" target="_blank">Google jQuery CDN</a></p></li>
+<li><p><a href="http://www.asp.net/ajax/cdn" target="_blank">微软CDN</a></p></li>
+</ul>
+<h3 id="articleHeader13">十九. Git,SVN,Github</h3>
+<ol><li>
+<p>Git</p>
+<ul>
+<li><p><a href="http://git-scm.com/" target="_blank">git-scm</a></p></li>
+<li><p><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank">廖雪峰-Git教程</a></p></li>
+<li><p><a href="https://git-for-windows.github.io/" target="_blank">git-for-windows</a></p></li>
+<li><p><a href="http://daemon369.github.io/git/2015/03/10/add-ssh-keys-for-github/" target="_blank">GitHub 添加 SSH keys</a></p></li>
+<li><p><a href="http://www.worldhello.net/gotgithub/index.html" target="_blank">gogithub</a></p></li>
+<li><p><a href="http://pcottle.github.io/learnGitBranching/" target="_blank">git常规命令练习</a></p></li>
+<li><p><a href="https://github.com/xirong/my-git" target="_blank">git的资料整理</a></p></li>
+<li><p><a href="http://www.cnblogs.com/fanfan259/p/4810517.html" target="_blank">我所记录的git命令（非常实用）</a></p></li>
+<li><p><a href="https://github.com/xirong/my-git/blob/master/git-workflow-tutorial.md" target="_blank">企业开发git工作流模式探索部分休整</a></p></li>
+<li><p><a href="https://github.com/phodal/github-roam" target="_blank">GitHub 漫游指南</a></p></li>
+<li><p><a href="https://github.com/tiimgreen/github-cheat-sheet/blob/master/README.zh-cn.md" target="_blank">GitHub秘籍</a></p></li>
+<li><p><a href="http://livoras.com/post/28" target="_blank">使用git和github进行协同开发流程</a></p></li>
+<li><p><a href="http://onlywei.github.io/explain-git-with-d3/" target="_blank">动画方式练习git</a></p></li>
+</ul>
+</li></ol>
+
+                </div>
+                                                
+                <div class="clearfix mt10">
+
+                    <ul class="article-operation list-inline pull-left">
+                        <li><a href="https://segmentfault.com/a/1190000004070468" class="text-muted">2015年11月30日发布</a></li>
+                                                                                                                            <li class="dropdown js__content-ops" data-module="article" data-id="1190000004070468" data-typetext="文章">
+                                <a href="javascript:void(0);" class="dropdown-toggle text-muted" data-toggle="dropdown">更多<b class="caret"></b></a>
+                                <ul class="dropdown-menu dropdown-menu-left">
+                                    <li><a href="https://segmentfault.com/a/1190000004070468#911" data-toggle="modal" data-target="#911" data-action="report">举报</a></li>
+                                                                            
+                                                                                                                        
+                                        
+                                                                    </ul>
+                            </li>
+                                            </ul>
+                </div>
+                <div class="mt10 text-center"><button type="button" id="mainLike" data-id="1190000004070468" class="btn btn-success btn-lg mr15 ">
+                                21 推荐
+                            </button><button type="button" id="mainBookmark" data-type="article" data-id="1190000004070468" class="btn btn-default btn-lg mr15 ">
+                                收藏
+                            </button></div>
+                                    <div class="recommend-post pt30 mt40 mb30 border-top">
+                        <div class="row">
+                            <div class="col-md-8">
+                                                                    <h4 class="mt0">你可能感兴趣的文章</h4>
+                                    <ul class="widget-links list-unstyled">
+                                                                                    <li class="widget-links__item">
+                                                <a href="https://segmentfault.com/a/1190000003067541" title="不讲段子的前端不是好的设计师（兼专栏目录）">不讲段子的前端不是好的设计师（兼专栏目录）</a>
+                                                <small class="text-muted">
+                                                    1 收藏，1.3k
+                                                    浏览
+                                                </small>
+                                            </li>
+                                                                                    <li class="widget-links__item">
+                                                <a href="https://segmentfault.com/a/1190000004317463" title="飞龙的程序员书单 – 前端">飞龙的程序员书单 – 前端</a>
+                                                <small class="text-muted">
+                                                    48 收藏，2.1k
+                                                    浏览
+                                                </small>
+                                            </li>
+                                                                                    <li class="widget-links__item">
+                                                <a href="https://segmentfault.com/a/1190000004118774" title="『译』前端开发者手册">『译』前端开发者手册</a>
+                                                <small class="text-muted">
+                                                    31 收藏，2.6k
+                                                    浏览
+                                                </small>
+                                            </li>
+                                                                            </ul>
+                                                            </div>
+                            <div class="col-md-4">
+                                                                    <div class="article-license">
+                                                                                                                            <img class="mb5" src="./前端涉及的所有知识体系 - 前端技术 - SegmentFault_files/creativecommons-sa.svg" height="24"><br>
+                                                                                <div class="license-item text-muted">
+                                            本作品采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" class="alert-link">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a> 进行许可
+                                            。
+                                        </div>
+
+                                    </div>
+                                                            </div>
+                        </div>
+
+                    </div>
+                                <!-- <ul class="list-unstyled text-muted mt30">
+                                                            <li class="mt5">下一篇：<a href="/a/1190000004071610">前端开发面试问题及答案整理</a></li>
+                                    </ul> -->
+
+                <h2 class="h4 post-comment-title"></h2>
+                        <div class="comments--news comments--default" data-id="1190000004070468" data-user-id="" data-author-id="1030000004066284 " data-is-admin="null">
+        <div class="mb10">
+            <strong class="comments-stat pull-left mr10">11 条评论</strong>
+            <div class="btn-group comments-sort">
+                <button type="button" class="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown">
+                    <span class="comments-sort-text">默认排序</span> <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="javascript:;" data-sort="default">默认排序</a></li>
+                    <li><a href="javascript:;" data-sort="asc">时间排序</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="comments-container">
+                                <div class="comments-list">
+                <div class="comments-item" data-id="1050000004075560">
+            <div class="pull-left">
+                <a href="https://segmentfault.com/u/Nanedo" target="_blank"><img class="avatar-32 " src="./前端涉及的所有知识体系 - 前端技术 - SegmentFault_files/user-40.png" alt=""></a>
+            </div>
+            <div class="comments-content">
+                <div class="comment-trigger">
+                    <div class="pull-right comment-option">
+                        <a href="https://segmentfault.com/a/1190000004070468#911" class="ml10" data-toggle="modal" data-target="#911" data-action="report" data-action-text="举报" data-module="comment" data-id="1050000004075560" data-typetext="评论" data-placement="top" title="举报"><span class="glyphicon glyphicon-flag" aria-hidden="true"></span></a>
+                                            </div>
+                    <strong><a target="_blank" href="https://segmentfault.com/u/Nanedo">Nanedo</a></strong>
+                    <span class="comments-isAuthor hide"></span>
+                    <span class="comments-date">  ·  2015年12月01日</span>
+                </div>
+
+                <div class="fmt mb10"><p>略重复，但仍非常有帮助。</p></div>
+
+                <p class="comment-ops not-reply">
+                    <span class="comments-zan ">
+                        <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                        <span class="comments-zan-text">赞</span>
+                        <span class="comments-zan-value"></span>
+                    </span>
+                    <span class="ml15 comments-reply-btn">回复</span>
+                </p>
+
+                <div class="reply-list reply-list--empty">
+
+                    
+                    <div class="reply-item reply-item--ops">
+                        <a class="reply-inner-btn" href="javascript:;">添加回复</a>
+                        
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+                <div class="comments-item" data-id="1050000004126132">
+            <div class="pull-left">
+                <a href="https://segmentfault.com/u/findendorphin" target="_blank"><img class="avatar-32 " src="./前端涉及的所有知识体系 - 前端技术 - SegmentFault_files/1404206235-55669dbf9207e_medium40" alt=""></a>
+            </div>
+            <div class="comments-content">
+                <div class="comment-trigger">
+                    <div class="pull-right comment-option">
+                        <a href="https://segmentfault.com/a/1190000004070468#911" class="ml10" data-toggle="modal" data-target="#911" data-action="report" data-action-text="举报" data-module="comment" data-id="1050000004126132" data-typetext="评论" data-placement="top" title="举报"><span class="glyphicon glyphicon-flag" aria-hidden="true"></span></a>
+                                            </div>
+                    <strong><a target="_blank" href="https://segmentfault.com/u/findendorphin">寻找安多芬</a></strong>
+                    <span class="comments-isAuthor hide"></span>
+                    <span class="comments-date">  ·  2015年12月10日</span>
+                </div>
+
+                <div class="fmt mb10"><p>全！</p></div>
+
+                <p class="comment-ops not-reply">
+                    <span class="comments-zan ">
+                        <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                        <span class="comments-zan-text">赞</span>
+                        <span class="comments-zan-value"></span>
+                    </span>
+                    <span class="ml15 comments-reply-btn">回复</span>
+                </p>
+
+                <div class="reply-list reply-list--empty">
+
+                    
+                    <div class="reply-item reply-item--ops">
+                        <a class="reply-inner-btn" href="javascript:;">添加回复</a>
+                        
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+                <div class="comments-item" data-id="1050000004147361">
+            <div class="pull-left">
+                <a href="https://segmentfault.com/u/jkhhuse" target="_blank"><img class="avatar-32 " src="./前端涉及的所有知识体系 - 前端技术 - SegmentFault_files/1414802483-56c43f58c5f41_medium40" alt=""></a>
+            </div>
+            <div class="comments-content">
+                <div class="comment-trigger">
+                    <div class="pull-right comment-option">
+                        <a href="https://segmentfault.com/a/1190000004070468#911" class="ml10" data-toggle="modal" data-target="#911" data-action="report" data-action-text="举报" data-module="comment" data-id="1050000004147361" data-typetext="评论" data-placement="top" title="举报"><span class="glyphicon glyphicon-flag" aria-hidden="true"></span></a>
+                                            </div>
+                    <strong><a target="_blank" href="https://segmentfault.com/u/jkhhuse">jkhhuse</a></strong>
+                    <span class="comments-isAuthor hide"></span>
+                    <span class="comments-date">  ·  2015年12月15日</span>
+                </div>
+
+                <div class="fmt mb10"><p>厉害，大开眼界</p></div>
+
+                <p class="comment-ops not-reply">
+                    <span class="comments-zan ">
+                        <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                        <span class="comments-zan-text">赞</span>
+                        <span class="comments-zan-value"></span>
+                    </span>
+                    <span class="ml15 comments-reply-btn">回复</span>
+                </p>
+
+                <div class="reply-list reply-list--empty">
+
+                    
+                    <div class="reply-item reply-item--ops">
+                        <a class="reply-inner-btn" href="javascript:;">添加回复</a>
+                        
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+                <div class="comments-item" data-id="1050000004269548">
+            <div class="pull-left">
+                <a href="https://segmentfault.com/u/xiumuzidiao_" target="_blank"><img class="avatar-32 " src="./前端涉及的所有知识体系 - 前端技术 - SegmentFault_files/2031933475-568fb2263355b_medium40" alt=""></a>
+            </div>
+            <div class="comments-content">
+                <div class="comment-trigger">
+                    <div class="pull-right comment-option">
+                        <a href="https://segmentfault.com/a/1190000004070468#911" class="ml10" data-toggle="modal" data-target="#911" data-action="report" data-action-text="举报" data-module="comment" data-id="1050000004269548" data-typetext="评论" data-placement="top" title="举报"><span class="glyphicon glyphicon-flag" aria-hidden="true"></span></a>
+                                            </div>
+                    <strong><a target="_blank" href="https://segmentfault.com/u/xiumuzidiao_">朽木自雕_</a></strong>
+                    <span class="comments-isAuthor hide"></span>
+                    <span class="comments-date">  ·  2016年01月08日</span>
+                </div>
+
+                <div class="fmt mb10"><p>感谢总结</p></div>
+
+                <p class="comment-ops not-reply">
+                    <span class="comments-zan ">
+                        <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                        <span class="comments-zan-text">赞</span>
+                        <span class="comments-zan-value"></span>
+                    </span>
+                    <span class="ml15 comments-reply-btn">回复</span>
+                </p>
+
+                <div class="reply-list reply-list--empty">
+
+                    
+                    <div class="reply-item reply-item--ops">
+                        <a class="reply-inner-btn" href="javascript:;">添加回复</a>
+                        
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+                <div class="comments-item" data-id="1050000004495252">
+            <div class="pull-left">
+                <a href="https://segmentfault.com/u/anjor" target="_blank"><img class="avatar-32 " src="./前端涉及的所有知识体系 - 前端技术 - SegmentFault_files/577771058-570c88f29042a_medium40" alt=""></a>
+            </div>
+            <div class="comments-content">
+                <div class="comment-trigger">
+                    <div class="pull-right comment-option">
+                        <a href="https://segmentfault.com/a/1190000004070468#911" class="ml10" data-toggle="modal" data-target="#911" data-action="report" data-action-text="举报" data-module="comment" data-id="1050000004495252" data-typetext="评论" data-placement="top" title="举报"><span class="glyphicon glyphicon-flag" aria-hidden="true"></span></a>
+                                            </div>
+                    <strong><a target="_blank" href="https://segmentfault.com/u/anjor">呦呦烈鸟</a></strong>
+                    <span class="comments-isAuthor hide"></span>
+                    <span class="comments-date">  ·  2016年02月26日</span>
+                </div>
+
+                <div class="fmt mb10"><p>大而全。。。好屌~</p></div>
+
+                <p class="comment-ops not-reply">
+                    <span class="comments-zan ">
+                        <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                        <span class="comments-zan-text">赞</span>
+                        <span class="comments-zan-value"></span>
+                    </span>
+                    <span class="ml15 comments-reply-btn">回复</span>
+                </p>
+
+                <div class="reply-list reply-list--empty">
+
+                    
+                    <div class="reply-item reply-item--ops">
+                        <a class="reply-inner-btn" href="javascript:;">添加回复</a>
+                        
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+                <div class="comments-item" data-id="1050000004627837">
+            <div class="pull-left">
+                <a href="https://segmentfault.com/u/meahu" target="_blank"><img class="avatar-32 " src="./前端涉及的所有知识体系 - 前端技术 - SegmentFault_files/3878952635-5703803478d30_medium40" alt=""></a>
+            </div>
+            <div class="comments-content">
+                <div class="comment-trigger">
+                    <div class="pull-right comment-option">
+                        <a href="https://segmentfault.com/a/1190000004070468#911" class="ml10" data-toggle="modal" data-target="#911" data-action="report" data-action-text="举报" data-module="comment" data-id="1050000004627837" data-typetext="评论" data-placement="top" title="举报"><span class="glyphicon glyphicon-flag" aria-hidden="true"></span></a>
+                                            </div>
+                    <strong><a target="_blank" href="https://segmentfault.com/u/meahu">meahu</a></strong>
+                    <span class="comments-isAuthor hide"></span>
+                    <span class="comments-date">  ·  2016年03月17日</span>
+                </div>
+
+                <div class="fmt mb10"><p>这么多啊</p></div>
+
+                <p class="comment-ops not-reply">
+                    <span class="comments-zan ">
+                        <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                        <span class="comments-zan-text">赞</span>
+                        <span class="comments-zan-value"></span>
+                    </span>
+                    <span class="ml15 comments-reply-btn">回复</span>
+                </p>
+
+                <div class="reply-list reply-list--empty">
+
+                    
+                    <div class="reply-item reply-item--ops">
+                        <a class="reply-inner-btn" href="javascript:;">添加回复</a>
+                        
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+                <div class="comments-item" data-id="1050000004867994">
+            <div class="pull-left">
+                <a href="https://segmentfault.com/u/chang1ng" target="_blank"><img class="avatar-32 " src="./前端涉及的所有知识体系 - 前端技术 - SegmentFault_files/1730305287-5530aa0c8b988_medium40" alt=""></a>
+            </div>
+            <div class="comments-content">
+                <div class="comment-trigger">
+                    <div class="pull-right comment-option">
+                        <a href="https://segmentfault.com/a/1190000004070468#911" class="ml10" data-toggle="modal" data-target="#911" data-action="report" data-action-text="举报" data-module="comment" data-id="1050000004867994" data-typetext="评论" data-placement="top" title="举报"><span class="glyphicon glyphicon-flag" aria-hidden="true"></span></a>
+                                            </div>
+                    <strong><a target="_blank" href="https://segmentfault.com/u/chang1ng">Chang1ng</a></strong>
+                    <span class="comments-isAuthor hide"></span>
+                    <span class="comments-date">  ·  2016年04月05日</span>
+                </div>
+
+                <div class="fmt mb10"><p>我的天哪。。。</p></div>
+
+                <p class="comment-ops not-reply">
+                    <span class="comments-zan ">
+                        <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                        <span class="comments-zan-text">赞</span>
+                        <span class="comments-zan-value"></span>
+                    </span>
+                    <span class="ml15 comments-reply-btn">回复</span>
+                </p>
+
+                <div class="reply-list reply-list--empty">
+
+                    
+                    <div class="reply-item reply-item--ops">
+                        <a class="reply-inner-btn" href="javascript:;">添加回复</a>
+                        
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+                <div class="comments-item" data-id="1050000005622523">
+            <div class="pull-left">
+                <a href="https://segmentfault.com/u/chz" target="_blank"><img class="avatar-32 " src="./前端涉及的所有知识体系 - 前端技术 - SegmentFault_files/user-40.png" alt=""></a>
+            </div>
+            <div class="comments-content">
+                <div class="comment-trigger">
+                    <div class="pull-right comment-option">
+                        <a href="https://segmentfault.com/a/1190000004070468#911" class="ml10" data-toggle="modal" data-target="#911" data-action="report" data-action-text="举报" data-module="comment" data-id="1050000005622523" data-typetext="评论" data-placement="top" title="举报"><span class="glyphicon glyphicon-flag" aria-hidden="true"></span></a>
+                                            </div>
+                    <strong><a target="_blank" href="https://segmentfault.com/u/chz">chz</a></strong>
+                    <span class="comments-isAuthor hide"></span>
+                    <span class="comments-date">  ·  2016年06月02日</span>
+                </div>
+
+                <div class="fmt mb10"><p>看完后我想转后端开发了</p></div>
+
+                <p class="comment-ops not-reply">
+                    <span class="comments-zan ">
+                        <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                        <span class="comments-zan-text">赞</span>
+                        <span class="comments-zan-value"></span>
+                    </span>
+                    <span class="ml15 comments-reply-btn">回复</span>
+                </p>
+
+                <div class="reply-list reply-list--empty">
+
+                    
+                    <div class="reply-item reply-item--ops">
+                        <a class="reply-inner-btn" href="javascript:;">添加回复</a>
+                        
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+                <div class="comments-item" data-id="1050000005654486">
+            <div class="pull-left">
+                <a href="https://segmentfault.com/u/eyea" target="_blank"><img class="avatar-32 " src="./前端涉及的所有知识体系 - 前端技术 - SegmentFault_files/3515285058-5707432aba359_medium40" alt=""></a>
+            </div>
+            <div class="comments-content">
+                <div class="comment-trigger">
+                    <div class="pull-right comment-option">
+                        <a href="https://segmentfault.com/a/1190000004070468#911" class="ml10" data-toggle="modal" data-target="#911" data-action="report" data-action-text="举报" data-module="comment" data-id="1050000005654486" data-typetext="评论" data-placement="top" title="举报"><span class="glyphicon glyphicon-flag" aria-hidden="true"></span></a>
+                                            </div>
+                    <strong><a target="_blank" href="https://segmentfault.com/u/eyea">eyea</a></strong>
+                    <span class="comments-isAuthor hide"></span>
+                    <span class="comments-date">  ·  2016年06月06日</span>
+                </div>
+
+                <div class="fmt mb10"><p>赞，很棒的总结与分享！</p></div>
+
+                <p class="comment-ops not-reply">
+                    <span class="comments-zan ">
+                        <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                        <span class="comments-zan-text">赞</span>
+                        <span class="comments-zan-value"></span>
+                    </span>
+                    <span class="ml15 comments-reply-btn">回复</span>
+                </p>
+
+                <div class="reply-list reply-list--empty">
+
+                    
+                    <div class="reply-item reply-item--ops">
+                        <a class="reply-inner-btn" href="javascript:;">添加回复</a>
+                        
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+                <div class="comments-item" data-id="1050000006123354">
+            <div class="pull-left">
+                <a href="https://segmentfault.com/u/magix" target="_blank"><img class="avatar-32 " src="./前端涉及的所有知识体系 - 前端技术 - SegmentFault_files/1947056363-57a2ea6ea16b1_medium40" alt=""></a>
+            </div>
+            <div class="comments-content">
+                <div class="comment-trigger">
+                    <div class="pull-right comment-option">
+                        <a href="https://segmentfault.com/a/1190000004070468#911" class="ml10" data-toggle="modal" data-target="#911" data-action="report" data-action-text="举报" data-module="comment" data-id="1050000006123354" data-typetext="评论" data-placement="top" title="举报"><span class="glyphicon glyphicon-flag" aria-hidden="true"></span></a>
+                                            </div>
+                    <strong><a target="_blank" href="https://segmentfault.com/u/magix">行列</a></strong>
+                    <span class="comments-isAuthor hide"></span>
+                    <span class="comments-date">  ·  2016年07月30日</span>
+                </div>
+
+                <div class="fmt mb10"><p>不错，很多</p></div>
+
+                <p class="comment-ops not-reply">
+                    <span class="comments-zan ">
+                        <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                        <span class="comments-zan-text">赞</span>
+                        <span class="comments-zan-value"></span>
+                    </span>
+                    <span class="ml15 comments-reply-btn">回复</span>
+                </p>
+
+                <div class="reply-list reply-list--empty">
+
+                    
+                    <div class="reply-item reply-item--ops">
+                        <a class="reply-inner-btn" href="javascript:;">添加回复</a>
+                        
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+                <div class="comments-item" data-id="1050000006911433">
+            <div class="pull-left">
+                <a href="https://segmentfault.com/u/vanishcode" target="_blank"><img class="avatar-32 " src="./前端涉及的所有知识体系 - 前端技术 - SegmentFault_files/2848137633-57c40d2333071_medium40" alt=""></a>
+            </div>
+            <div class="comments-content">
+                <div class="comment-trigger">
+                    <div class="pull-right comment-option">
+                        <a href="https://segmentfault.com/a/1190000004070468#911" class="ml10" data-toggle="modal" data-target="#911" data-action="report" data-action-text="举报" data-module="comment" data-id="1050000006911433" data-typetext="评论" data-placement="top" title="举报"><span class="glyphicon glyphicon-flag" aria-hidden="true"></span></a>
+                                            </div>
+                    <strong><a target="_blank" href="https://segmentfault.com/u/vanishcode">vanishcode</a></strong>
+                    <span class="comments-isAuthor hide"></span>
+                    <span class="comments-date">  ·  2016年09月15日</span>
+                </div>
+
+                <div class="fmt mb10"><p>太棒啦-~</p></div>
+
+                <p class="comment-ops not-reply">
+                    <span class="comments-zan ">
+                        <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                        <span class="comments-zan-text">赞</span>
+                        <span class="comments-zan-value"></span>
+                    </span>
+                    <span class="ml15 comments-reply-btn">回复</span>
+                </p>
+
+                <div class="reply-list reply-list--empty">
+
+                    
+                    <div class="reply-item reply-item--ops">
+                        <a class="reply-inner-btn" href="javascript:;">添加回复</a>
+                        
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+            </div>
+    <div class="comments-loading hide">载入中...</div>
+    <div class="comments-more hide"><a href="javascript:;">显示更多评论</a></div>
+
+                        <div class="comments-box">
+                <div class="pull-left">
+                    <img class="avatar-32 " src="./前端涉及的所有知识体系 - 前端技术 - SegmentFault_files/user-128.png" alt="">
+                </div>
+                <div class="comments-box-content">
+                    <form action="https://segmentfault.com/api/article/[id]/comments/add">
+                        <div class="form-group mb0">
+                                            <textarea name="text" rows="3" class="form-control" placeholder="文明社会，理性评论"></textarea>
+
+                            <div class="mt15 text-right">
+                                <button type="button" class="hide"></button>
+                                <button class=" btn btn-primary" type="button">发布评论</button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+                    </div>
+    </div>
+
+
+
+
+
+
+                                    
+                
+            </div><!-- /.main -->
+
+
+            <div class="col-xs-12 col-md-3 side">
+                <div class="sfad-sidebar">
+      <div class="sfad-item">
+    <ins><style>
+.sfad-item ins {
+position: relative;
+display: inline-block;
+}
+.ad-sign {
+position: absolute;
+right: 8px;
+bottom: 8px;
+padding: 0 3px;
+background: rgba(0,0,0,.15);
+color: #fff;
+font-size: 12px;
+text-decoration: none;
+height: 16px;
+line-height: 16px;
+border-radius: 3px;
+}
+</style><a href="https://sponsor.segmentfault.com/ck.php?oaparams=2__bannerid=132__zoneid=2__cb=5d53fdd0e4__oadest=https%3A%2F%2Fsegmentfault.com%2Fuser%2Flogin" target="_blank"><img src="./前端涉及的所有知识体系 - 前端技术 - SegmentFault_files/4ea23eebe5bf3d21b6a8cfe99591a734.gif" width="255" height="165" alt="" title="" border="0"></a><div id="beacon_5d53fdd0e4" style="position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="https://sponsor.segmentfault.com/lg.php?bannerid=132&amp;campaignid=2&amp;zoneid=2&amp;loc=https%3A%2F%2Fsegmentfault.com%2Fa%2F1190000004070468&amp;referer=https%3A%2F%2Fwww.baidu.com%2Flink%3Furl%3D4TdXBUFLMZaEAd8CaP37BT0J13_fLBw6_dZz95IzP0X4Rh1ARtp0MX-YFgYfNujaaZJEXi0cOMnyvN7AhpkBva%26wd%3D%26eqid%3Ddfed1f98000191c000000006591bde4c&amp;cb=5d53fdd0e4" width="0" height="0" alt="" style="width: 0px; height: 0px;"></div><span class="ad-sign">广告</span></ins>
+    <button class="close" type="button" aria-hidden="true">×</button>
+</div>
+
+  </div>
+
+
+                <div class="widget-box widget-box--blog-info">
+                    <div class="blog__sidebar-author ">
+                                                    <button type="button" class="btn btn-sm btn-success follow-user ml10 pull-right" data-do="follow" data-type="user" data-id="1030000004066284">关注作者
+                            </button>
+                        
+                        <div class="article__widget--author">
+                            <a href="https://segmentfault.com/u/autumnswind">
+                                <img class="avatar-40" src="./前端涉及的所有知识体系 - 前端技术 - SegmentFault_files/3213301393-565beb12b56e5_big64" alt="autumnswind">
+                            </a>
+                            <a class="article__widget-author-name" href="https://segmentfault.com/u/autumnswind">
+                                <strong>autumnswind</strong>
+                            </a>
+                            <p class="article__widget-author-text-muted mb0">
+                                <span>1.2k 声望</span>
+
+                            </p>
+
+
+                        </div>
+
+
+                    </div>
+                                        <div class="blog__sidebar-blog-name">
+                        <p class="article__widget-author-text-muted mt15 mb5">发布于专栏</p>
+
+                        <h4 class="fz16"><a href="https://segmentfault.com/blog/loveme">前端技术</a></h4>
+                        <p class="article__widget-author-desc">分享个人前端心得</p>
+
+                        <p>
+                            <span class="article__widget-author-text-muted">26 人关注</span>
+                            
+                                                                    <button type="button mb20" class="btn btn-sm btn-default follow-article pull-right" data-do="follow" data-type="blog" data-id="1200000004070396">关注专栏
+                                    </button>
+                                
+                                                    </p>
+
+                    </div>
+                    
+
+                </div>
+
+
+                
+                    <div data-type="widget" data-api="/api/bookmarkArchive/hots" data-api-overwrite="/api/bookmarkArchive/1190000004070468/related">
+        <script src="./前端涉及的所有知识体系 - 前端技术 - SegmentFault_files/hm.js.下载"></script><script async="" src="./前端涉及的所有知识体系 - 前端技术 - SegmentFault_files/analytics.js.下载"></script><script type="text/template">
+            <div class="widget-box widget-box--bookmark no-border">
+                <h4 class="widget-box__title">相关收藏夹 <a id="widgetBookmarkRefresh" class="userstab pull-right"
+                                                          href="javascript:;">换一组</a></h4>
+                <ul class="widget-links list-unstyled media">
+                    <% _.each(data,function(d){ %>
+                    <li class="widget-links__item">
+                        <img class="pull-left pattern pattern-<%= d.id%19 %> mr10" src="https://static.segmentfault.com/v-59192c02/global/img/pattern/<%= d.id%10 ? d.id%10 : 10 %>.svg" width="32">
+                        <div class="media-body">
+                            <a target="_blank" class="ellipsis mr0" href="<%- d.url %>"><%= d.name %></a>
+                            <p class="mb0">
+                                <span><%- d.num %></span> 个条目 <span class="division">|</span> <span><%- d.followers %></span> 人关注
+                            </p>
+                        </div>
+                    </li>
+                    <% }) %>
+                </ul>
+            </div>
+        </script>
+    
+            <div class="widget-box widget-box--bookmark no-border">
+                <h4 class="widget-box__title">相关收藏夹 <a id="widgetBookmarkRefresh" class="userstab pull-right" href="javascript:;">换一组</a></h4>
+                <ul class="widget-links list-unstyled media">
+                    
+                    <li class="widget-links__item">
+                        <img class="pull-left pattern pattern-10 mr10" src="./前端涉及的所有知识体系 - 前端技术 - SegmentFault_files/1.svg" width="32">
+                        <div class="media-body">
+                            <a target="_blank" class="ellipsis mr0" href="https://segmentfault.com/bookmark/1230000007062421">CSS3</a>
+                            <p class="mb0">
+                                <span>4</span> 个条目 <span class="division">|</span> <span>0</span> 人关注
+                            </p>
+                        </div>
+                    </li>
+                    
+                    <li class="widget-links__item">
+                        <img class="pull-left pattern pattern-18 mr10" src="./前端涉及的所有知识体系 - 前端技术 - SegmentFault_files/2.svg" width="32">
+                        <div class="media-body">
+                            <a target="_blank" class="ellipsis mr0" href="https://segmentfault.com/bookmark/1230000005894822">前端文章</a>
+                            <p class="mb0">
+                                <span>5</span> 个条目 <span class="division">|</span> <span>0</span> 人关注
+                            </p>
+                        </div>
+                    </li>
+                    
+                    <li class="widget-links__item">
+                        <img class="pull-left pattern pattern-2 mr10" src="./前端涉及的所有知识体系 - 前端技术 - SegmentFault_files/8.svg" width="32">
+                        <div class="media-body">
+                            <a target="_blank" class="ellipsis mr0" href="https://segmentfault.com/bookmark/1230000004643048">布局在我心</a>
+                            <p class="mb0">
+                                <span>4</span> 个条目 <span class="division">|</span> <span>3</span> 人关注
+                            </p>
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+
+                <div class="widget-share__full" data-text="前端涉及的所有知识体系" data-url="https://segmentfault.com/a/1190000004070468" data-shorturl="http://sfau.lt/b5re4S"><div style="margin-bottom:10px;">分享扩散：</div><div class="widget-share-network sharer-0" style="display: block;"><ul class="sn-inline"><li data-network="weibo"><a href="javascript:void(0);" class="entypo-weibo icon-sn-weibo share-1" data-toggle="tooltip" data-placement="top" title="" data-original-title="分享至新浪微博">新浪微博</a></li><li data-network="wechart"><a href="javascript:void(0);" class="entypo-wechart icon-sn-weixin share-2" data-toggle="tooltip" data-placement="top" title="" data-original-title="分享至微信">微信</a></li><li data-network="twitter"><a href="javascript:void(0);" class="entypo-twitter icon-sn-twitter share-3" data-toggle="tooltip" data-placement="top" title="" data-original-title="分享至 Twitter">Twitter</a></li><li data-network="facebook"><a href="javascript:void(0);" class="entypo-facebook icon-sn-facebook share-4" data-toggle="tooltip" data-placement="top" title="" data-original-title="分享至 Facebook">Facebook</a></li></ul></div><a type="button" class="btn btn-sm shareMore btn-sn-more" data-toggle="popover" data-placement="top" data-url="https://segmentfault.com/a/1190000004070468" data-shorturl="http://sfau.lt/b5re4S"><span class="icon-sn-dotted" data-original-title="" title=""></span><strong class="visible-xs-inline">•••</strong></a></div>
+
+                <div class="post-nav hidden-xs side-outline hidden-sm fixed" style="display: block; width: 255px; top: 0px;">
+                    <div class="panel panel-default widget-outline">
+                        <div class="panel-heading">文章目录</div>
+                        <div class="panel-body">
+                            <div class="nav-body" style="top: 0px;">
+                                <div class="highlight-title" style="display: block; top: 108px; height: 27px;"></div>
+                                <ul class="articleIndex"><li class=""><a href="https://segmentfault.com/a/1190000004070468#articleHeader0">六. API:</a></li><li class=""><a href="https://segmentfault.com/a/1190000004070468#articleHeader1">七. 开发规范</a></li><li class=""><a href="https://segmentfault.com/a/1190000004070468#articleHeader2">八. 其它收集</a></li><li class=""><a href="https://segmentfault.com/a/1190000004070468#articleHeader3">九. Nodejs</a></li><li class="active"><a href="https://segmentfault.com/a/1190000004070468#articleHeader4">十. 性能优化</a></li><li><a href="https://segmentfault.com/a/1190000004070468#articleHeader5">十一. 前端架构</a></li><li><a href="https://segmentfault.com/a/1190000004070468#articleHeader6">十二. 个人作品</a></li><li><a href="https://segmentfault.com/a/1190000004070468#articleHeader7">十三. 简历模板</a></li><li><a href="https://segmentfault.com/a/1190000004070468#articleHeader8">十四. 面试题</a></li><li><a href="https://segmentfault.com/a/1190000004070468#articleHeader9">十五. iconfont</a></li><li><a href="https://segmentfault.com/a/1190000004070468#articleHeader10">十六. 开发工具类</a></li><li><a href="https://segmentfault.com/a/1190000004070468#articleHeader11">十七. 前端导航网站</a></li><li><a href="https://segmentfault.com/a/1190000004070468#articleHeader12">十八. 常用CDN</a></li><li><a href="https://segmentfault.com/a/1190000004070468#articleHeader13">十九. Git,SVN,Github</a></li></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.side -->
+        </div>
+    </div>
+</div>
+
+<div id="shareToWeiboModal" class="modal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">×</span><span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title">分享</h4>
+            </div>
+            <div class="modal-body">
+                <p class="sfModal-content">
+                    分享到微博？
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default dont-likeweibo" data-dismiss="modal">取消</button>
+                <a href="https://segmentfault.com/a/1190000004070468" id="shareLink" class="btn btn-primary done-btn" target="_blank" onclick="$(&#39;#shareToWeiboModal&#39;).modal(&#39;hide&#39;)">分享</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+<script type="text/template" id="regNext">
+        <div class="row flex-vertical-center">
+        <div class="col-md-12">
+            <p class="mb0" style="font-size: 14px; margin-right:50px; font-family: Source Code Pro,Consolas,Menlo,Monaco,Courier New,monospace;">
+                    为了理解递归，则必须首先理解递归。
+            </p>
+            <button class="btn btn-primary SFLogin mr10"
+                    onclick='ga("send", "event", "join button", "clicked", "footer welcome popup");'>投入组织怀抱
+            </button>
+            <button class="btn  btn-default  tomorrow"><img width="22" src="https://static.segmentfault.com/v-59192c02/global/img/emojis/mengbi.jpg"/></button>
+        </div>
+
+    </div>
+</script>
+
+<div class="widget-register widget-welcome-question mt20 hidden-xs hidden-sm widget-welcome widget-register-slideUp">
+    <div class="container">
+        <div class="row flex-vertical-center">
+        <div class="col-md-12">
+            <p class="mb0" style="font-size: 14px; margin-right:50px; font-family: Source Code Pro,Consolas,Menlo,Monaco,Courier New,monospace;">
+                    为了理解递归，则必须首先理解递归。
+            </p>
+            <button class="btn btn-primary SFLogin mr10" onclick="ga(&quot;send&quot;, &quot;event&quot;, &quot;join button&quot;, &quot;clicked&quot;, &quot;footer welcome popup&quot;);">投入组织怀抱
+            </button>
+            <button class="btn  btn-default  tomorrow"><img width="22" src="./前端涉及的所有知识体系 - 前端技术 - SegmentFault_files/mengbi.jpg"></button>
+        </div>
+
+    </div>
+</div>
+</div>
+
+<div class="modal widget-911" id="911" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal" type="button">
+          <span aria-hidden="true">×</span>
+          <span class="sr-only">Close</span>
+        </button>
+        <h4 class="modal-title"><span data-model="action"></span><span data-model="type"></span></h4>
+      </div>
+      <div class="modal-body">
+        <form id="reportForm">
+          <!-- 后台返回信息 -->
+          <p class="alert alert-warning" data-model="returnMsg"></p>
+          <div data-role="base">
+            <p>
+              <strong class="required">我要<span data-model="action"></span>该<span data-model="type"></span>，理由是：</strong>
+            </p>
+            <ul class="list-unstyled" data-model="list"></ul>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-default pull-left" type="button" data-role="back" style="display:none">返回重选</button>
+                <button class="btn btn-default" data-dismiss="modal" type="button">取消</button>
+        <button class="btn btn-primary" data-role="submit" type="button">提交</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<footer id="footer">
+    <div class="container">
+        <div class="row hidden-xs">
+            <dl class="col-sm-2 site-link">
+                <dt>网站相关</dt>
+                <dd><a href="https://segmentfault.com/about">关于我们</a></dd>
+                <dd><a href="https://segmentfault.com/tos">服务条款</a></dd>
+                <dd><a href="https://segmentfault.com/faq">帮助中心</a></dd>
+                <dd><a href="https://segmentfault.com/repu">声望与权限</a></dd>
+                <dd><a href="https://segmentfault.com/markdown">编辑器语法</a></dd>
+                <dd><a href="https://weekly.segmentfault.com/">每周精选</a></dd>
+                <dd><a href="https://segmentfault.com/app">App 下载</a></dd>
+                <dd><a href="https://segmentfault.com/community">社区服务中心</a></dd>
+            </dl>
+            <dl class="col-sm-2 site-link">
+                <dt>联系合作</dt>
+                <dd><a href="https://segmentfault.com/contact">联系我们</a></dd>
+                <dd><a href="https://segmentfault.com/hiring">加入我们</a></dd>
+                <dd><a href="https://segmentfault.com/link">合作伙伴</a></dd>
+                <dd><a href="https://segmentfault.com/press">媒体报道</a></dd>
+                <dd><a href="https://board.segmentfault.com/">建议反馈</a></dd>
+                            </dl>
+            <dl class="col-sm-2 site-link">
+                <dt>常用链接</dt>
+                                                <dd><a href="https://chrome.google.com/webstore/detail/segmentfault-%E7%AC%94%E8%AE%B0/pjklfdmleagfaekibdccmhlhellefcfo" target="_blank">笔记插件: Chrome</a></dd>
+                                                                <dd><a href="https://addons.mozilla.org/zh-CN/firefox/addon/sf-note-ext/" target="_blank">笔记插件: Firefox</a></dd>
+                                                                <dd>订阅：<a href="https://segmentfault.com/feeds">问答</a> / <a href="https://segmentfault.com/feeds/blogs">文章</a></dd>
+                                                                <dd><a href="https://mirrors.segmentfault.com/" target="_blank">文档镜像</a></dd>
+                                                                <dd><a href="https://segmentfault.com/blog/interview" target="_blank">社区访谈</a></dd>
+                                                                <dd><a href="https://segmentfault.com/d-day" target="_blank">D-DAY 技术沙龙</a></dd>
+                                                                <dd><a href="https://segmentfault.com/hackathon" target="_blank">黑客马拉松 Hackathon</a></dd>
+                                                                <dd><a href="https://namebeta.com/" target="_blank">域名搜索注册</a></dd>
+                                                                <dd><a href="https://shop165859711.taobao.com/" target="_blank">周边店铺</a></dd>
+                                            </dl>
+            <dl class="col-sm-2 site-link">
+                <dt>关注我们</dt>
+                                <dd><a href="https://github.com/SegmentFault" target="_blank">Github</a></dd>
+                                <dd><a href="https://twitter.com/segment_fault" target="_blank">Twitter</a></dd>
+                                <dd><a href="http://weibo.com/segmentfault" target="_blank">新浪微博</a></dd>
+                                <dd><a href="https://segmentfault.com/blog/segmentfault_team" target="_blank">团队日志</a></dd>
+                                <dd><a href="https://segmentfault.com/blog/segmentfault" target="_blank">产品技术日志</a></dd>
+                                <dd><a href="https://segmentfault.com/blog/community_admin" target="_blank">社区运营日志</a></dd>
+                                <dd><a href="https://segmentfault.com/blog/segmentfault_news" target="_blank">市场运营日志</a></dd>
+                            </dl>
+            <dl class="col-sm-4 site-link" id="license">
+                <dt>内容许可</dt>
+                <dd>除特别说明外，用户内容均采用 <a rel="license" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a> 进行许可
+                </dd>
+                <dd>本站由 <a target="_blank" href="https://www.upyun.com/?utm_source=segmentfault&amp;utm_medium=link&amp;utm_campaign=upyun&amp;md=segmentfault">又拍云</a> 提供 CDN 存储服务
+                </dd>
+            </dl>
+        </div>
+        <div class="copyright">
+            Copyright © 2011-2017 SegmentFault. 当前呈现版本 17.02.05<br>
+            <a href="http://www.miibeian.gov.cn/" rel="nofollow">浙ICP备 15005796号-2</a> &nbsp;
+            <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010602002000" rel="nofollow">浙公网安备 33010602002000号</a>
+        </div>
+        <p class="text-center">
+            <a class="js__view--selector hidden-sm hidden-md hidden-lg" data-action="mobile" href="javascript:;">移动版</a>
+            <a class="js__view--selector hidden-sm hidden-md hidden-lg" data-action="desktop" href="javascript:;">桌面版</a>
+        </p>
+    </div>
+</footer>
+
+<div id="fixedTools" class="hidden-xs hidden-sm">
+    <a id="backtop" class="border-bottom" href="https://segmentfault.com/a/1190000004070468#">回顶部</a>
+
+    <div class="qrcodeWraper">
+        <a href="https://segmentfault.com/app#qrcode"><span class="glyphicon glyphicon-qrcode"></span></a>
+        <img id="qrcode" class="border" alt="sf-wechat" src="./前端涉及的所有知识体系 - 前端技术 - SegmentFault_files/appQrcode.png">
+
+        <p class="qrcode-text">扫扫下载 App</p>
+    </div>
+</div>
+
+<script id="loginModal" type="text/template">
+    <div class="row bg-white login-modal">
+        <div class="col-md-4 col-sm-12 col-md-push-7 login-wrap">
+            <h1 class="h4 text-muted login-title">用户登录</h1>
+            <form action="/api/user/login" method="POST" role="form" class="mt30">
+                <div class="form-group">
+                    <label for="username" class="control-label">手机号 或 Email</label>
+                    <input type="text" class="form-control" name="username" required placeholder="11 位手机号 或 Email"
+                           autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label class="control-label">密码</label><span class="pull-right"><a
+                                href="/user/forgot">忘记密码</a></span>
+                    <input type="password" class="form-control" name="password" required placeholder="密码">
+                </div>
+                <div class="form-group clearfix">
+                    <div class="checkbox pull-left">
+                        <label><input name="remember" type="checkbox" value="1" checked> 记住登录状态</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary pull-right pl20 pr20"
+                            onclick='ga("send", "event", "email login button", "clicked", "login modal");'>登录
+                    </button>
+                </div>
+            </form>
+            <p class="h4 text-muted visible-xs-block h4">快速登录</p>
+            <div class="widget-login mt30">
+                <p class="text-muted mt5 mr10 pull-left hidden-xs">快速登录</p>
+                <a href="/user/oauth/google" class=""
+                   onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "google"});'><span
+                            class="icon-sn-google"></span> <strong class="visible-xs-inline">Google 账号</strong></a>
+                <a href="/user/oauth/github" class=""
+                   onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "github"});");'><span
+                            class="icon-sn-github"></span> <strong class="visible-xs-inline">Github 账号</strong></a>
+                <a href="/user/oauth/weibo" class=""
+                   onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "weibo"});'><span
+                            class="icon-sn-weibo"></span> <strong class="visible-xs-inline">新浪微博账号</strong></a>
+                <a href="/user/oauth/qq" class=""
+                   onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "qq"});'><span
+                            class="icon-sn-qq"></span> <strong class="visible-xs-inline">QQ 账号</strong></a>
+                <a href="/user/oauth/weixin" class=""
+                   onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "qq"});'><span
+                            class="icon-sn-weixin"></span> <strong class="visible-xs-inline">微信账号</strong></a>
+                <a href="/user/oauth/linkedin" class=""
+                   onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "linkedin"});'><span
+                            class="icon-sn-linkedin"></span> <strong class="visible-xs-inline">LinkedIn 账号</strong></a>
+                <span id="loginShowMore" style="cursor: pointer" class="mb5"><span class="icon-sn-dotted"></span><strong
+                            class="visible-xs-inline">•••</strong></span>
+                <a href="/user/oauth/twitter" class=" hidden"
+                   onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "twitter"});'><span
+                            class="icon-sn-twitter"></span> <strong class="visible-xs-inline">Twitter 账号</strong></a>
+                <a href="/user/oauth/facebook" class=" hidden"
+                   onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "facebook"});'><span
+                            class="icon-sn-facebook"></span> <strong class="visible-xs-inline">Facebook 账号</strong></a>
+                <a href="/user/oauth/douban" class=" hidden"
+                   onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "douban"});'><span
+                            class="icon-sn-douban"></span> <strong class="visible-xs-inline">豆瓣账号</strong></a>
+            </div>
+        </div>
+        <div class="login-vline hidden-xs hidden-sm"></div>
+        <div class="col-md-4 col-md-pull-3 col-sm-12 login-wrap">
+            <h1 class="h4 text-muted login-title">注册新账号</h1>
+            <form action="/api/user/phone/register" method="POST" role="form" class="mt30">
+                <div class="form-group">
+                    <label for="name" class="control-label">名字</label>
+                    <input type="text" class="form-control" name="name" required placeholder="真实姓名或常用昵称">
+                </div>
+
+
+                <div class="form-group js-register-switch-box">
+                    <div class="mb10">
+                        <label class="radio-inline">
+                            <input type="radio" name="register_type" value="phone" checked> 用手机号注册
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="register_type" value="mail"> 用 Email 注册
+                        </label>
+                    </div>
+                    <div class="js-register-switch-content">
+                        <input type="phone" class="form-control mb15" name="phone" required placeholder="仅支持大陆手机号"
+                               autocomplete="off">
+                        <div class="input-group"><input name="code" type="text"
+                                                        class="form-control js-user-login__phone-code-value"
+                                                        placeholder="短信验证码">
+                            <span class="input-group-btn"><button class="btn btn-default js-user-login__phone-vaild-btn"
+                                                                  style="width:96px;" type="button">获取验证码</button></span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="password" class="control-label">密码</label>
+                    <input type="password" class="form-control" name="password" required placeholder="不少于 6 位">
+                </div>
+                <div class="form-group" style="display:none;">
+                    <label class="required control-label">验证码</label>
+                    <input type="text" class="form-control" id="captcha" name="captcha" placeholder="请输入下方的验证码">
+                    <div class="mt10"><a id="loginReloadCaptcha" href="javascript:void(0)"><img
+                                    data-src="/user/captcha?w=240&h=50" class="captcha" width="240" height="50"/></a>
+                    </div>
+                </div>
+                <div class="form-group clearfix">
+                    <div class="checkbox pull-left">
+                        同意并接受<a href="/tos" target="_blank">《服务条款》</a>
+                    </div>
+                    <button type="submit" class="btn btn-primary pl20 pr20 pull-right"
+                            onclick='ga("send", "event", "email register button", "clicked", "login modal");'>注册
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div style="position: absolute;transform: scale(0.5,0.5) translate(136%,-114%);">
+        <img src="https://static.segmentfault.com/v-59192c02/global/img/fool/login@2x.png">
+    </div>
+
+    <div class="text-center text-muted mt30">
+    </div>
+</script>
+<script id="bindPhoneModal" type="text/template">
+    <div class="row bg-white bindphone-model">
+        <div class="col-md-12">
+            <div class="alert alert-warning" role="alert">
+                为了保证账号安全，请先绑定手机
+            </div>
+            <div>
+                <form class="form-horizontal form__bindphone-apply" style="background-color:#fff;padding:0;">
+                    <div class="form-group ">
+                        <label for="phoneNumber" class="col-sm-3 control-label required" >手机号码</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control bindphone--phone" id="phoneNumber" name="phone" placeholder="仅只支持大陆手机号">
+                        </div>
+                        <div class="col-sm-3"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="authCode" class="col-sm-3 control-label required">验证码</label>
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <input type="text" class="form-control bindphone--code" name="code" placeholder="短信验证码">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default user-bind__phone-vaild-btn" type="button">获取验证码</button>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-sm-3"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</script>
+
+
+
+<script>
+    (function (w) {
+        w.SF = {
+            staticUrl: "https://static.segmentfault.com/v-59192c02"
+        };
+        w.SF.token = (function () {
+    var _qFk = '08c'//'o'
++'7'//'yZL'
++'3'//'nsD'
++'c9e'//'n'
++//'E'
+'1'+'63a'//'j'
++//'w'
+'fe1'+'9'//'g1'
++//'aOk'
+'6'+'1a9'//'zl'
++//'zf'
+'e0'+//'zb5'
+'6d5'+//'b'
+'21f'+'29'//'Ny'
++/* 'c'//'c' */''+'24'//'Ty1'
+, _y6nA22n = [];
+
+    for (var i = 0; i < _y6nA22n.length; i ++) {
+        _qFk = _qFk.substring(0, _y6nA22n[i][0]) + _qFk.substring(_y6nA22n[i][1]);
+    }
+
+    return _qFk;
+})();;
+    })(window);
+
+                var lock = {
+        type: "",
+        text: '',
+        table: {"ban_post":[1,"\u4f60\u5df2\u7ecf\u88ab\u7981\u8a00, \u65e0\u6cd5\u8fdb\u884c\u6b64\u64cd\u4f5c, \u5982\u6709\u7591\u4e49\u8bf7\u63d0\u4ea4\u7533\u8bc9, \u6216\u8005\u53d1\u90ae\u4ef6\u5230pr@segmentfault.com"]}
+    };
+</script>
+    <script crossorigin="" src="./前端涉及的所有知识体系 - 前端技术 - SegmentFault_files/assets.js.下载"></script>
+    <script crossorigin="" src="./前端涉及的所有知识体系 - 前端技术 - SegmentFault_files/post.min.js.下载"></script>
+
+<script async="" src="./前端涉及的所有知识体系 - 前端技术 - SegmentFault_files/asyncjs.php"></script>
+
+<script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-918487-8']);
+    _gaq.push(['_trackPageview']);
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            
+        
+
+            
+
+    ga('create', 'UA-918487-8', 'auto', {
+        'userID'
+    : 0,
+        'createdTime'
+    : 0,
+        'now'
+    : 1494998736 });
+    ga('set', 'dimension1', 'guest');
+    ga('send', 'pageview');
+
+</script>
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?e23800c454aa573c0ccb16b52665ac26";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+
+
+<iframe id="p_analyse_iframe" src="./前端涉及的所有知识体系 - 前端技术 - SegmentFault_files/saved_resource.html" style="display: none;"></iframe><div id="noteWidget" class="noteWidget hidden hidden-xs">
+    <div class="noteWidget-header clearfix">
+        <h2 class="h4 pull-left">记笔记</h2>
+        <ul class="list-inline pull-right mb0">
+            <li id="noteWidgetMinimize"><span class="icon-minimize"></span></li><li id="noteWidgetZoom"><span class="icon-zoom"></span></li><li id="noteWidgetClose"><span class="icon-close"></span></li>
+        </ul>
+    </div>
+    <form method="POST" action="https://segmentfault.com/api/notes/add" role="form">
+        <div class="form-group">
+            <label for="title" class="sr-only">标题</label>
+            <input type="hidden" value="" id="draftId">
+            <input type="text" name="title" data-error="" autocomplete="off" class="form-control" placeholder="笔记描述" value="">
+        </div>
+        <div class="editor-config clearfix">
+            <select name="lang" class="form-control pull-left input-sm">
+                <optgroup label="文本语法">
+                    <option value="text" data-mode="text">纯文本</option>
+                    <option value="markdown" data-mode="markdown">Markdown</option>
+                    <option value="javascript" data-mode="javascript">Javascript</option>
+                    <option value="css" data-mode="css">CSS</option>
+                    <option value="html5" data-mode="htmlmixed">HTML</option>
+                    <option value="php" data-mode="php">PHP</option>
+                    <option value="python" data-mode="python">Python</option>
+                    <option value="ruby" data-mode="ruby">Ruby</option>
+                    <option value="go" data-mode="go">Go</option>
+                    <option value="c" data-mode="clike">C/C++</option>
+                    <option value="java" data-mode="java">Java</option>
+                    <option value="bash" data-mode="shell">Shell/Bash</option>
+                </optgroup>
+            </select>
+            <div class="pull-right hidden-xs">
+                <select name="indentWithTabs" class="form-control inline-block input-sm">
+                    <optgroup label="缩进模式">
+                        <option value="false">空格缩进</option>
+                        <option value="true">Tabs 缩进</option>
+                    </optgroup>
+                </select>
+                <select name="tabSize" class="form-control inline-block input-sm">
+                    <optgroup label="缩进大小">
+                        <option value="2">2</option>
+                        <option value="4" selected="">4</option>
+                    </optgroup>
+                </select>
+                <select name="lineWrap" class="form-control inline-block input-sm">
+                    <optgroup label="换行方式">
+                        <option value="true">自动换行</option>
+                        <option value="false">不换行</option>
+                    </optgroup>
+                </select>
+            </div>
+        </div>
+        <textarea id="codeMirror" class="form-control" style="display: none;"></textarea><div class="CodeMirror cm-s-default CodeMirror-wrap"><div style="overflow: hidden; position: relative; width: 3px; height: 0px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; padding: 0px; width: 1000px; height: 1em; outline: none;" tabindex="0"></textarea></div><div class="CodeMirror-hscrollbar" style="left: 0px;"><div style="height: 100%; min-height: 1px;"></div></div><div class="CodeMirror-vscrollbar"><div style="min-width: 1px;"></div></div><div class="CodeMirror-scrollbar-filler"></div><div class="CodeMirror-gutter-filler"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px;"><div style="position: relative;"><div class="CodeMirror-lines"><div style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"></div><div class="CodeMirror-code"></div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px;"></div><div class="CodeMirror-gutters"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 1px;"></div></div></div></div>
+        <div class="mt20 clearfix">
+            <div class="pull-right">
+                <span class="text-muted hidden" id="editorStatus">已保存</span>
+                <a id="dropIt" href="javascript:void(0);" class="mr10 hidden">[舍弃]</a>
+                <button data-type="note" id="publishIt2" class="btn btn-default ml10" data-id="" data-do="add" data-url="" data-text="保存私密笔记" data-name="">保存私密笔记</button>
+                <button data-type="note" id="publishIt" class="btn btn-primary ml10" data-id="" data-do="add" data-url="" data-text="保存公开笔记" data-name="">保存公开笔记</button>
+                </div>
+            </div>
+        </form></div>
+    
+<div id="atwho-container"><div id="atwho-ground-635c68d61494998651814"><div class="atwho-view" id="at-view-64"><ul class="atwho-view-ul"></ul></div></div></div></body></html>

@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)http://www.cnblogs.com/zhcncn/p/4330112.html -->
+<html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JavaScript单元测试框架-Jasmine - 金石开 - 博客园</title>
+<link type="text/css" rel="stylesheet" href="./JavaScript单元测试框架-Jasmine - 金石开 - 博客园_files/blog-common.css">
+<link type="text/css" rel="stylesheet" href="./JavaScript单元测试框架-Jasmine - 金石开 - 博客园_files/126695.css">
+<link id="mobile-style" media="only screen and (max-width: 768px)" type="text/css" rel="stylesheet" href="./JavaScript单元测试框架-Jasmine - 金石开 - 博客园_files/bundle-LessIsMore-mobile.css">
+<link title="RSS" type="application/rss+xml" rel="alternate" href="http://www.cnblogs.com/zhcncn/rss">
+<link title="RSD" type="application/rsd+xml" rel="EditURI" href="http://www.cnblogs.com/zhcncn/rsd.xml">
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="http://www.cnblogs.com/zhcncn/wlwmanifest.xml">
+<script async="" src="./JavaScript单元测试框架-Jasmine - 金石开 - 博客园_files/analytics.js.下载"></script><script src="./JavaScript单元测试框架-Jasmine - 金石开 - 博客园_files/jquery.js.下载" type="text/javascript"></script>  
+<script type="text/javascript">var currentBlogApp = 'zhcncn', cb_enable_mathjax=false;var isLogined=false;</script>
+<script src="./JavaScript单元测试框架-Jasmine - 金石开 - 博客园_files/blog-common.js.下载" type="text/javascript"></script>
+<style type="text/css">
+.c_ad_block,[id^="div-gpt-ad-"],#ibanner��#banner_right,[id^="ad_b"],#banner_right,[id^="cnblogs_a"],[id^="cnblogs_b"],#ad_right_text {display:none!important;display:none}[id="bb9c190068b8405587e5006f905e790c"]{display:none;position:absolute;top:-1000000px;visibility:hidden}</style>
+<script language="javascript" type="text/javascript" src="./JavaScript单元测试框架-Jasmine - 金石开 - 博客园_files/35ff706fd57d11c141cdefcd58d6562b.js.下载" charset="gb2312"></script><script type="text/javascript">
+hQGHuMEAyLn('[id="bb9c190068b8405587e5006f905e790c"]');</script></head>
+<body>
+<a name="top"></a>
+<!--PageBeginHtml Block Begin-->
+<style type="text/css">
+    .Abstract
+    {
+        padding: 15px;
+        border: dotted 2px #999;
+        color: #999;
+        font-family: 'Microsoft Yahei';
+        border-radius: 4px;
+    }
+        
+    .First
+    {
+        margin: 10px 0;
+        font-family: 'Microsoft Yahei';
+        text-align: left;
+        padding: 6px 20px;
+        color: #fff;
+        background: #55895B;
+        font-size: 20px;
+        border-radius: 4px;
+        clear: both;
+    }
+        
+        
+    .Second
+    {
+        margin: 10px 0;
+        font-family: 'Microsoft Yahei';
+        padding: 6px 20px;
+        background: #93C8A2;
+        color: #fff;
+        font-size: 18px;
+        border-radius: 4px;
+        clear: both;
+    }
+        
+        
+    .Third
+    {
+        margin: 10px 0;
+        padding: 6px 20px;
+        font-family: 'Microsoft Yahei';
+        margin: 15px 0;
+        font-size: 16px;
+        color: fff;
+        background: #C6EFD2;
+        color: #999;
+        border-radius: 4px;
+        clear: both;
+    }
+    .note
+    {
+        margin: 10px 0;
+        padding: 15px 20px 15px 60px;
+        background: #FCFAA9 url('http://images.cnblogs.com/cnblogs_com/libaoheng/305804/o_yellow-pin.png') no-repeat 20px 0;
+        font-size: 15px;
+        font-family: 'Microsoft Yahei';
+        box-shadow: 0 0 8px #aaa;
+        clear: both;
+    }
+        
+    .demo
+    {
+        text-align: left;
+        padding: 6px 20px;
+        overflow: auto;
+        border-radius: 4px;
+        background: orange;
+        color: #fff;
+        font-size: 16px;
+        clear: both;
+    }
+        
+    .cnblogs_Highlighter
+    {
+        border: solid 1px #ccc;
+        clear: both;
+    }
+        
+    .cnblogs_code
+    {
+        background: #EFFFF4;
+        border: solid 0px #939393;
+        font-size: 14px;
+        clear: both;
+        padding: 10px 20px;
+    }
+    .cnblogs_code pre
+    {
+        font-size: 14px;
+    }
+    .cnblogs_code span
+    {
+        font-family: Courier New;
+        font-size: 14px;
+    }
+</style>
+<!--PageBeginHtml Block End-->
+
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+		
+<!--done-->
+<div class="title"><a id="Header1_HeaderTitle" class="headermaintitle" href="http://www.cnblogs.com/zhcncn/">金石开</a></div>
+<div class="subtitle"></div>
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li id="nav_sitehome"></li>
+<li id="nav_myhome"></li>
+<li id="nav_newpost"></li>
+<li id="nav_contact"></li>
+<li id="nav_rss">
+<!----></li>
+<li id="nav_admin"><a id="blog_nav_admin" class="menu" rel="nofollow" href="https://i.cnblogs.com/">管理</a></li>
+</ul>
+
+		<div class="blogStats">
+			
+			<div id="blog_stats">
+<!--done-->
+随笔-48&nbsp;
+文章-76&nbsp;
+评论-55&nbsp;
+</div>
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		
+<div id="post_detail">
+<!--done-->
+<div id="topics">
+	<div class="post">
+		<h1 class="postTitle">
+			<a id="cb_post_title_url" class="postTitle2" href="http://www.cnblogs.com/zhcncn/p/4330112.html">JavaScript单元测试框架-Jasmine</a>
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			<div id="cnblogs_post_body" class="cnblogs-markdown"><p>Jasmine的开发团队来自PivotalLabs，他们一开始开发的JavaScript测试框架是JsUnit，来源于著名的JAVA测试框架JUnit。JsUnit是xUnit的JavaScript实现。但是JsUnit在2009年后就已经停止维护了，他们推出了一个新的BDD框架Jasmine。Jasmine不依赖于任何框架，所以适用于所有的Javascript代码。</p>
+<p>所谓BDD（行为驱动开发，Behaviour Driven Development），是一种新的敏捷开发方法。Dan North对BDD给出的定义为：</p>
+<pre><code class="hljs">BDD是第二代的、由外及内的、基于拉(pull)的、多方利益相关者的(stakeholder)、多种可扩展的、高自动化的敏捷方法。它描述了一个交互循环，可以具有带有良好定义的输出（即工作中交付的结果）：已测试过的软件。</code></pre>
+<p>BDD与TDD（Test Driven Development ）的主要区别是，使得非程序人员也能参与到测试用例的编写中来，大大降低了客户、用户、项目管理者与开发者之间来回翻译的成本。所以BDD更加注重业务需求而不是技术[1]。</p>
+<h2 id="下载">下载</h2>
+<p>在Jasmine的Github官方主页：<a href="https://github.com/jasmine/jasmine" class="uri">https://github.com/jasmine/jasmine</a><br>
+找到上方的releases，点击会跳转到https://github.com/jasmine/jasmine/releases。<br>
+下载已发布的zip包，比如下载当前（2015-03-09）的最新版本为：jasmine-standalone-2.2.0.zip</p>
+<h2 id="目录结构">目录结构</h2>
+<p>解压之后，可以看到有1个html文件和3个文件夹。</p>
+<ul>
+<li><strong>lib</strong>：存放了运行测试案例所必须的文件，其内包含<code>jasmine-2.2.0</code>文件夹。可以将不同版本的Jasmine放在lib下，以便使用时切换。
+<ul>
+<li>jasmine.js：整个框架的核心代码。</li>
+<li>jasmine-html.js：用来展示测试结果的js文件。</li>
+<li>boot.js：jasmine框架的的启动脚本。需要注意的是，这个脚本应该放在jasmine.js之后，自己的js测试代码之前加载。</li>
+<li>jasmine.css：用来美化测试结果。</li>
+</ul></li>
+<li><strong>spec</strong>：存放测试脚本。
+<ul>
+<li>PlayerSpec.js：就是针对src文件夹下的Player.js所写的测试用例。</li>
+<li>SpecHelper.js：用来添加自定义的检验规则，如果框架本身提供的规则（诸如<code>toBe</code>,<code>toNotBe</code>等）不适用，就可以额外添加自己的规则（在本文件中添加了自定义的规则<code>toBePlaying</code>）。</li>
+</ul></li>
+<li><strong>src</strong>：存放需要测试的js文件。Jasmine提供了一个Example（Player.js，Song.js）。</li>
+<li><strong>SpecRunner.html</strong>：运行测试用例的环境。它将上面3个文件夹中一些必要的文件都包含了进来。如果你想将自己的测试添加进来的话，那么就修改相应的路径。</li>
+</ul>
+<p>其中，spec文件夹，src文件夹和SpecRunner.html文件是Jasmine提供的一个完整示例，用浏览器打开 SpecRunner.html，即可看到执行的结果。</p>
+<p><code>SpecRunner.html</code>运行测试用例的例子：</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html hljs xml"><span class="kw"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span></span>
+<span class="kw"><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span></span>
+  <span class="kw"><span class="hljs-tag">&lt;<span class="hljs-name">meta</span></span></span><span class="ot"><span class="hljs-tag"> <span class="hljs-attr">charset</span>=</span></span><span class="st"><span class="hljs-tag"><span class="hljs-string">"utf-8"</span></span></span><span class="kw"><span class="hljs-tag">&gt;</span></span>
+  <span class="kw"><span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span></span>Jasmine Spec Runner v2.2.0<span class="kw"><span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span></span>
+
+  <span class="kw"><span class="hljs-tag">&lt;<span class="hljs-name">link</span></span></span><span class="ot"><span class="hljs-tag"> <span class="hljs-attr">rel</span>=</span></span><span class="st"><span class="hljs-tag"><span class="hljs-string">"shortcut icon"</span></span></span><span class="ot"><span class="hljs-tag"> <span class="hljs-attr">type</span>=</span></span><span class="st"><span class="hljs-tag"><span class="hljs-string">"image/png"</span></span></span><span class="ot"><span class="hljs-tag"> <span class="hljs-attr">href</span>=</span></span><span class="st"><span class="hljs-tag"><span class="hljs-string">"lib/jasmine-2.2.0/jasmine_favicon.png"</span></span></span><span class="kw"><span class="hljs-tag">&gt;</span></span>
+  <span class="kw"><span class="hljs-tag">&lt;<span class="hljs-name">link</span></span></span><span class="ot"><span class="hljs-tag"> <span class="hljs-attr">rel</span>=</span></span><span class="st"><span class="hljs-tag"><span class="hljs-string">"stylesheet"</span></span></span><span class="ot"><span class="hljs-tag"> <span class="hljs-attr">href</span>=</span></span><span class="st"><span class="hljs-tag"><span class="hljs-string">"lib/jasmine-2.2.0/jasmine.css"</span></span></span><span class="kw"><span class="hljs-tag">&gt;</span></span>
+
+  <span class="kw"><span class="hljs-tag">&lt;<span class="hljs-name">script</span></span></span><span class="ot"><span class="hljs-tag"> <span class="hljs-attr">src</span>=</span></span><span class="st"><span class="hljs-tag"><span class="hljs-string">"lib/jasmine-2.2.0/jasmine.js"</span></span></span><span class="kw"><span class="hljs-tag">&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span>
+  <span class="kw"><span class="hljs-tag">&lt;<span class="hljs-name">script</span></span></span><span class="ot"><span class="hljs-tag"> <span class="hljs-attr">src</span>=</span></span><span class="st"><span class="hljs-tag"><span class="hljs-string">"lib/jasmine-2.2.0/jasmine-html.js"</span></span></span><span class="kw"><span class="hljs-tag">&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span>
+  <span class="kw"><span class="hljs-tag">&lt;<span class="hljs-name">script</span></span></span><span class="ot"><span class="hljs-tag"> <span class="hljs-attr">src</span>=</span></span><span class="st"><span class="hljs-tag"><span class="hljs-string">"lib/jasmine-2.2.0/boot.js"</span></span></span><span class="kw"><span class="hljs-tag">&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span>
+
+  <span class="co"><span class="hljs-comment">&lt;!-- include source files here... --&gt;</span></span>
+  <span class="kw"><span class="hljs-tag">&lt;<span class="hljs-name">script</span></span></span><span class="ot"><span class="hljs-tag"> <span class="hljs-attr">src</span>=</span></span><span class="st"><span class="hljs-tag"><span class="hljs-string">"src/Player.js"</span></span></span><span class="kw"><span class="hljs-tag">&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span>
+  <span class="kw"><span class="hljs-tag">&lt;<span class="hljs-name">script</span></span></span><span class="ot"><span class="hljs-tag"> <span class="hljs-attr">src</span>=</span></span><span class="st"><span class="hljs-tag"><span class="hljs-string">"src/Song.js"</span></span></span><span class="kw"><span class="hljs-tag">&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span>
+
+  <span class="co"><span class="hljs-comment">&lt;!-- include spec files here... --&gt;</span></span>
+  <span class="kw"><span class="hljs-tag">&lt;<span class="hljs-name">script</span></span></span><span class="ot"><span class="hljs-tag"> <span class="hljs-attr">src</span>=</span></span><span class="st"><span class="hljs-tag"><span class="hljs-string">"spec/SpecHelper.js"</span></span></span><span class="kw"><span class="hljs-tag">&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span>
+  <span class="kw"><span class="hljs-tag">&lt;<span class="hljs-name">script</span></span></span><span class="ot"><span class="hljs-tag"> <span class="hljs-attr">src</span>=</span></span><span class="st"><span class="hljs-tag"><span class="hljs-string">"spec/PlayerSpec.js"</span></span></span><span class="kw"><span class="hljs-tag">&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span>
+<span class="kw"><span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span></span>
+<span class="kw"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span></span>
+<span class="kw"><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></span></code></pre></div>
+<h2 id="核心概念">核心概念</h2>
+<p>框架中的一些核心概念，可以参考官方文档中的介绍[2]。下面进入搬砖模式：</p>
+<h3 id="suites">Suites</h3>
+<p>Suite表示一个测试集，以函数<code>describe(string, function)</code>封装，它包含2个参数：<br>
+<code>string</code>：测试组名称，<br>
+<code>function</code>：测试组函数。</p>
+<p>一个Suite(<code>describe</code>)包含多个Specs(<code>it</code>)，一个Specs(<code>it</code>)包含多个断言（<code>expect</code>）。</p>
+<h4 id="setup和teardown操作">Setup和Teardown操作</h4>
+<p>Jasmine的Setup和Teardown操作（Setup在每个测试用例Spec执行之前做一些初始化操作，Teardown在每个Sepc执行完之后做一些清理操作，这两个函数名称来自于JUnit），是由一组全局<code>beforeEach</code>，<code>afterEach</code>， <code>beforeAll</code>，<code>afterAll</code>函数来实现的。</p>
+<ul>
+<li>beforeEach()：在<code>describe</code>函数中每个Spec执行之前执行。</li>
+<li>afterEach()： 在<code>describe</code>函数中每个Spec数执行之后执行。</li>
+<li>beforeAll()：在<code>describe</code>函数中所有的Specs执行之前执行，但只执行一次，在Sepc之间并不会被执行。</li>
+<li>afterAll()： 在<code>describe</code>函数中所有的Specs执行之后执行，但只执行一次，在Sepc之间并不会被执行。</li>
+</ul>
+<p><code>beforeAll</code> 和 <code>afterAll</code>适用于执行比较耗时或者耗资源的一些共同的初始化和清理工作。而且在使用时还要注意，它们不会在每个Spec之间执行，所以不适用于每次执行前都需要干净环境的Spec。</p>
+<h4 id="this值">this值</h4>
+<p>除了在<code>describe</code>函数开始定义变量，用于各<code>it</code>函数共享数据外，还可以通过<code>this</code>关键字来共享数据。</p>
+<p>在在每一个Spec的生命周期（<code>beforeEach-&gt;it-&gt;afterEach</code>）的开始，都将有一个空的<code>this</code>对象（在开始下一个Spec周期时，<code>this</code>会被重置为空对象）。</p>
+<h4 id="嵌套suite">嵌套Suite</h4>
+<p><code>describe</code>函数可以嵌套，每层都可以定义Specs。这样就可以让一个Suite由一组树状的方法组成。</p>
+<p>每个嵌套的<code>describe</code>函数，都可以有自己的<code>beforeEach</code>，<code>afterEach</code>函数。<br>
+在执行每个内层Spec时，都会按嵌套的由外及内的顺序执行每个<code>beforeEach</code>函数，所以内层Sepc可以访问到外层Sepc中的<code>beforeEach</code>中的数据。类似的，当内层Spec执行完成后，会按由内及外的顺序执行每个<code>afterEach</code>函数。</p>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript hljs"><span class="at">describe</span>(<span class="st"><span class="hljs-string">"A spec"</span></span><span class="op">,</span> <span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params"></span>) </span><span class="op">{</span>
+  <span class="kw"><span class="hljs-keyword">var</span></span> foo<span class="op">;</span>
+
+  <span class="at">beforeEach</span>(<span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params"></span>) </span><span class="op">{</span>
+    foo <span class="op">=</span> <span class="dv"><span class="hljs-number">0</span></span><span class="op">;</span>
+    foo <span class="op">+=</span> <span class="dv"><span class="hljs-number">1</span></span><span class="op">;</span>
+  <span class="op">}</span>)<span class="op">;</span>
+
+  <span class="at">afterEach</span>(<span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params"></span>) </span><span class="op">{</span>
+    foo <span class="op">=</span> <span class="dv"><span class="hljs-number">0</span></span><span class="op">;</span>
+  <span class="op">}</span>)<span class="op">;</span>
+
+  <span class="at">it</span>(<span class="st"><span class="hljs-string">"is just a function, so it can contain any code"</span></span><span class="op">,</span> <span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params"></span>) </span><span class="op">{</span>
+    <span class="at">expect</span>(foo).<span class="at">toEqual</span>(<span class="dv"><span class="hljs-number">1</span></span>)<span class="op">;</span>
+  <span class="op">}</span>)<span class="op">;</span>
+
+  <span class="at">it</span>(<span class="st"><span class="hljs-string">"can have more than one expectation"</span></span><span class="op">,</span> <span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params"></span>) </span><span class="op">{</span>
+    <span class="at">expect</span>(foo).<span class="at">toEqual</span>(<span class="dv"><span class="hljs-number">1</span></span>)<span class="op">;</span>
+    <span class="at">expect</span>(<span class="kw"><span class="hljs-literal">true</span></span>).<span class="at">toEqual</span>(<span class="kw"><span class="hljs-literal">true</span></span>)<span class="op">;</span>
+  <span class="op">}</span>)<span class="op">;</span>
+
+  <span class="at">describe</span>(<span class="st"><span class="hljs-string">"nested inside a second describe"</span></span><span class="op">,</span> <span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params"></span>) </span><span class="op">{</span>
+    <span class="kw"><span class="hljs-keyword">var</span></span> bar<span class="op">;</span>
+
+    <span class="at">beforeEach</span>(<span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params"></span>) </span><span class="op">{</span>
+      bar <span class="op">=</span> <span class="dv"><span class="hljs-number">1</span></span><span class="op">;</span>
+    <span class="op">}</span>)<span class="op">;</span>
+
+    <span class="at">it</span>(<span class="st"><span class="hljs-string">"can reference both scopes as needed"</span></span><span class="op">,</span> <span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params"></span>) </span><span class="op">{</span>
+      <span class="at">expect</span>(foo).<span class="at">toEqual</span>(bar)<span class="op">;</span>
+    <span class="op">}</span>)<span class="op">;</span>
+  <span class="op">}</span>)<span class="op">;</span>
+<span class="op">}</span>)<span class="op">;</span></code></pre></div>
+<h3 id="specs">Specs</h3>
+<p>Spec表示测试用例，以<code>it(string, function)</code>函数封装，它也包含2个参数：<br>
+<code>string</code>：测试用例名称，<br>
+<code>function</code>：测试用例函数。</p>
+<h3 id="expectations">Expectations</h3>
+<p>Expectation就是一个断言，以<code>expect</code>语句表示，返回<code>true</code>或<code>false</code>。<code>expect</code>语句有1个参数，代表要测试的实际值（the actual）。</p>
+<p>只有当一个Spec中的所有Expectations全为<code>ture</code>时，这个Spec才通过，否则失败。</p>
+<p>Expectation带实际值，它和表示匹配规则的Matcher链接在一起，Matcher带有期望值。</p>
+<h3 id="matchers">Matchers</h3>
+<p>Matcher实现了断言的比较操作，将Expectation传入的实际值和Matcher传入的期望值比较。<br>
+任何Matcher都能通过在<code>expect</code>调用Matcher前加上<code>not</code>来实现一个否定的断言（<code>expect(a).not().toBe(false);</code>）。</p>
+<p>常用的Matchers有：</p>
+<ul>
+<li>toBe()：相当于<code>===</code>比较。</li>
+<li>toNotBe()</li>
+<li>toBeDefined()：检查变量或属性是否已声明且赋值。</li>
+<li>toBeUndefined()</li>
+<li>toBeNull()：是否是<code>null</code>。</li>
+<li>toBeTruthy()：如果转换为布尔值，是否为<code>true</code>。</li>
+<li>toBeFalsy()</li>
+<li>toBeLessThan()：数值比较，小于。</li>
+<li>toBeGreaterThan()：数值比较，大于。</li>
+<li><p>toEqual()：相当于<code>==</code>，注意与<code>toBe()</code>的区别。<br>
+一个新建的Object不是（not to be）另一个新建的Object，但是它们是相等（to equal）的。</p>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript hljs"><span class="at">expect</span>(<span class="op">{}</span>).<span class="at">not</span>().<span class="at">toBe</span>(<span class="op">{}</span>)<span class="op">;</span>
+<span class="at">expect</span>(<span class="op">{}</span>).<span class="at">toEqual</span>(<span class="op">{}</span>)<span class="op">;</span></code></pre></div></li>
+<li>toNotEqual()</li>
+<li>toContain()：数组中是否包含元素（值）。只能用于数组，不能用于对象。</li>
+<li><p>toBeCloseTo()：数值比较时定义精度，先四舍五入后再比较。</p>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript hljs">  <span class="at">it</span>(<span class="st"><span class="hljs-string">"The 'toBeCloseTo' matcher is for precision math comparison"</span></span><span class="op">,</span> <span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params"></span>) </span><span class="op">{</span>
+<span class="kw"><span class="hljs-keyword">var</span></span> pi <span class="op">=</span> <span class="fl"><span class="hljs-number">3.1415926</span></span><span class="op">,</span>
+  e <span class="op">=</span> <span class="fl"><span class="hljs-number">2.78</span></span><span class="op">;</span>
+
+<span class="at">expect</span>(pi).<span class="va">not</span>.<span class="at">toBeCloseTo</span>(e<span class="op">,</span> <span class="dv"><span class="hljs-number">2</span></span>)<span class="op">;</span>
+<span class="at">expect</span>(pi).<span class="at">toBeCloseTo</span>(e<span class="op">,</span> <span class="dv"><span class="hljs-number">0</span></span>)<span class="op">;</span>
+  <span class="op">}</span>)<span class="op">;</span></code></pre></div></li>
+<li>toHaveBeenCalled()</li>
+<li>toHaveBeenCalledWith()</li>
+<li>toMatch()：按正则表达式匹配。</li>
+<li>toNotMatch()</li>
+<li><p>toThrow()：检验一个函数是否会抛出一个错误</p></li>
+</ul>
+<h4 id="自定义matchers的实现">自定义Matchers的实现</h4>
+<p>自定义Matcher（被称为Matcher Factories）实质上是一个函数（该函数的参数可以为空），该函数返回一个闭包，该闭包的本质是一个<code>compare</code>函数，<code>compare</code>函数接受2个参数：actual value 和 expected value。</p>
+<p><code>compare</code>函数必须返回一个带<code>pass</code>属性的结果Object，<code>pass</code>属性是一个Boolean值，表示该Matcher的结果（为<code>true</code>表示该Matcher实际值与预期值匹配，为<code>false</code>表示不匹配），也就是说，实际值与预期值具体的比较操作的结果，存放于<code>pass</code>属性中。</p>
+<p>最后测试输出的失败信息应该在返回结果Object中的<code>message</code>属性中来定义。</p>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript hljs"><span class="kw"><span class="hljs-keyword">var</span></span> customMatchers <span class="op">=</span> <span class="op">{</span>
+  <span class="dt">toBeGoofy</span><span class="op">:</span> <span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params">util</span></span><span class="op"><span class="hljs-function"><span class="hljs-params">,</span></span></span><span class="hljs-function"><span class="hljs-params"> customEqualityTesters</span>) </span><span class="op">{</span>
+    <span class="cf"><span class="hljs-keyword">return</span></span> <span class="op">{</span>
+      <span class="dt">compare</span><span class="op">:</span> <span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params">actual</span></span><span class="op"><span class="hljs-function"><span class="hljs-params">,</span></span></span><span class="hljs-function"><span class="hljs-params"> expected</span>) </span><span class="op">{</span>
+        <span class="cf"><span class="hljs-keyword">if</span></span> (expected <span class="op">===</span> <span class="kw"><span class="hljs-literal">undefined</span></span>) <span class="op">{</span>
+          expected <span class="op">=</span> <span class="st"><span class="hljs-string">''</span></span><span class="op">;</span>
+        <span class="op">}</span>
+        <span class="kw"><span class="hljs-keyword">var</span></span> result <span class="op">=</span> <span class="op">{};</span>
+        <span class="va">result</span>.<span class="at">pass</span> <span class="op">=</span> <span class="va">util</span>.<span class="at">equals</span>(<span class="va">actual</span>.<span class="at">hyuk</span><span class="op">,</span> <span class="st"><span class="hljs-string">"gawrsh"</span></span> <span class="op">+</span> expected<span class="op">,</span> customEqualityTesters)<span class="op">;</span>
+        <span class="cf"><span class="hljs-keyword">if</span></span> (<span class="va">result</span>.<span class="at">pass</span>) <span class="op">{</span>
+          <span class="va">result</span>.<span class="at">message</span> <span class="op">=</span> <span class="st"><span class="hljs-string">"Expected "</span></span> <span class="op">+</span> actual <span class="op">+</span> <span class="st"><span class="hljs-string">" not to be quite so goofy"</span></span><span class="op">;</span>
+        <span class="op">}</span> <span class="cf"><span class="hljs-keyword">else</span></span> <span class="op">{</span>
+          <span class="va">result</span>.<span class="at">message</span> <span class="op">=</span> <span class="st"><span class="hljs-string">"Expected "</span></span> <span class="op">+</span> actual <span class="op">+</span> <span class="st"><span class="hljs-string">" to be goofy, but it was not very goofy"</span></span><span class="op">;</span>
+        <span class="op">}</span>
+        <span class="cf"><span class="hljs-keyword">return</span></span> result<span class="op">;</span>
+      <span class="op">}</span>
+    <span class="op">};</span>
+  <span class="op">}</span>
+<span class="op">};</span></code></pre></div>
+<h4 id="自定义matchers的使用">自定义Matchers的使用</h4>
+<p>对自定义Matcher有2种使用方法：</p>
+<ul>
+<li>将该函数添加到一个特定的<code>describe</code>函数的<code>beforeEach</code>中，以便该<code>describe</code>函数中的所有Spec都能调用到它。但其他<code>describe</code>中并不能使用该Matcher。<br>
+该方法的例子可以参考官网提供的<code>custom_matcher.js</code>的实现[3]。</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript hljs"><span class="at">describe</span>(<span class="st"><span class="hljs-string">"Custom matcher: 'toBeGoofy'"</span></span><span class="op">,</span> <span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params"></span>) </span><span class="op">{</span>
+  <span class="at">beforeEach</span>(<span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params"></span>) </span><span class="op">{</span>
+    <span class="va">jasmine</span>.<span class="at">addMatchers</span>(customMatchers)<span class="op">;</span>
+  <span class="op">}</span>)<span class="op">;</span>
+
+  <span class="at">it</span>(<span class="st"><span class="hljs-string">"can take an 'expected' parameter"</span></span><span class="op">,</span> <span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params"></span>) </span><span class="op">{</span>
+    <span class="at">expect</span>(<span class="op">{</span>
+      <span class="dt">hyuk</span><span class="op">:</span> <span class="st"><span class="hljs-string">'gawrsh is fun'</span></span>
+    <span class="op">}</span>).<span class="at">toBeGoofy</span>(<span class="st"><span class="hljs-string">' is fun'</span></span>)<span class="op">;</span>
+  <span class="op">}</span>)<span class="op">;</span>
+<span class="op">}</span>)<span class="op">;</span></code></pre></div>
+<ul>
+<li>将该函数添加到全局的<code>beforeEach</code>函数中，这样所有的Suites中的所有的Specs，都可以使用该Matcher。<br>
+该方法的例子可以参考Jasmine提供的Demo中的<code>SpecHelper.js</code>文件中的<code>toBePlaying</code>自定义的规则的实现。</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript hljs"><span class="co"><span class="hljs-comment">//定义</span></span>
+<span class="at">beforeEach</span>(<span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function"> (<span class="hljs-params"></span>) </span><span class="op">{</span>
+  <span class="va">jasmine</span>.<span class="at">addMatchers</span>(<span class="op">{</span>
+    <span class="dt">toBePlaying</span><span class="op">:</span> <span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function"> (<span class="hljs-params"></span>) </span><span class="op">{</span>
+      <span class="co"><span class="hljs-comment">// 自定义Matcher：toBePlaying</span></span>
+      <span class="cf"><span class="hljs-keyword">return</span></span> <span class="op">{</span>
+        <span class="co"><span class="hljs-comment">//要返回的compare函数</span></span>
+        <span class="dt">compare</span><span class="op">:</span> <span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function"> (<span class="hljs-params">actual</span></span><span class="op"><span class="hljs-function"><span class="hljs-params">,</span></span></span><span class="hljs-function"><span class="hljs-params"> expected</span>) </span><span class="op">{</span>
+          <span class="kw"><span class="hljs-keyword">var</span></span> player <span class="op">=</span> actual<span class="op">;</span>
+          <span class="co"><span class="hljs-comment">//compare函数中要返回的结果Object，这里是一个匿名Object，包含一个pass属性。</span></span>
+          <span class="cf"><span class="hljs-keyword">return</span></span> <span class="op">{</span>
+            <span class="dt">pass</span><span class="op">:</span> <span class="va">player</span>.<span class="at">currentlyPlayingSong</span> <span class="op">===</span> expected <span class="op">&amp;&amp;</span> <span class="va">player</span>.<span class="at">isPlaying</span>
+          <span class="op">}</span>
+        <span class="op">}</span>
+      <span class="op">};</span>
+    <span class="op">}</span>
+  <span class="op">}</span>)<span class="op">;</span>
+<span class="op">}</span>)<span class="op">;</span>
+<span class="co"><span class="hljs-comment">//使用</span></span>
+<span class="at">describe</span>(<span class="st"><span class="hljs-string">"Player"</span></span><span class="op">,</span> <span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params"></span>) </span><span class="op">{</span>
+  <span class="at">it</span>(<span class="st"><span class="hljs-string">"should be able to play a Song"</span></span><span class="op">,</span> <span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params"></span>) </span><span class="op">{</span>
+    <span class="va">player</span>.<span class="at">play</span>(song)<span class="op">;</span>
+    <span class="co"><span class="hljs-comment">//demonstrates use of custom matcher</span></span>
+    <span class="at">expect</span>(player).<span class="at">toBePlaying</span>(song)<span class="op">;</span>
+  <span class="op">}</span>)<span class="op">;</span>
+
+  <span class="at">describe</span>(<span class="st"><span class="hljs-string">"when song has been paused"</span></span><span class="op">,</span> <span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params"></span>) </span><span class="op">{</span>
+    <span class="at">it</span>(<span class="st"><span class="hljs-string">"should indicate that the song is currently paused"</span></span><span class="op">,</span> <span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params"></span>) </span><span class="op">{</span>
+      <span class="co"><span class="hljs-comment">// demonstrates use of 'not' with a custom matcher</span></span>
+      <span class="at">expect</span>(player).<span class="va">not</span>.<span class="at">toBePlaying</span>(song)<span class="op">;</span>
+    <span class="op">}</span>)<span class="op">;</span>
+)<span class="op">};</span></code></pre></div>
+<h3 id="禁用suites">禁用Suites</h3>
+<p>Suites可以被Disabled。在<code>describe</code>函数名之前添加<code>x</code>即可将Suite禁用。<br>
+被Disabled的Suites在执行中会被跳过，该Suite的结果也不会显示在结果集中。</p>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript hljs"><span class="at">xdescribe</span>(<span class="st"><span class="hljs-string">"A spec"</span></span><span class="op">,</span> <span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params"></span>) </span><span class="op">{</span>
+  <span class="kw"><span class="hljs-keyword">var</span></span> foo<span class="op">;</span>
+
+  <span class="at">beforeEach</span>(<span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params"></span>) </span><span class="op">{</span>
+    foo <span class="op">=</span> <span class="dv"><span class="hljs-number">0</span></span><span class="op">;</span>
+    foo <span class="op">+=</span> <span class="dv"><span class="hljs-number">1</span></span><span class="op">;</span>
+  <span class="op">}</span>)<span class="op">;</span>
+
+  <span class="at">it</span>(<span class="st"><span class="hljs-string">"is just a function, so it can contain any code"</span></span><span class="op">,</span> <span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params"></span>) </span><span class="op">{</span>
+    <span class="at">expect</span>(foo).<span class="at">toEqual</span>(<span class="dv"><span class="hljs-number">1</span></span>)<span class="op">;</span>
+  <span class="op">}</span>)<span class="op">;</span>
+<span class="op">}</span>)<span class="op">;</span></code></pre></div>
+<h3 id="挂起specs">挂起Specs</h3>
+<p>有3种方法可以将一个Spec标记为Pending。被Pending的Spec不会被执行，但是Spec的名字会在结果集中显示，只是标记为Pending。</p>
+<ul>
+<li>如果在Spec函数<code>it</code>的函数名之前添加<code>x</code>（<code>xit</code>），那么该Spec就会被标记为Pending。</li>
+<li>一个没有定义函数体的Sepc也会在结果集中被标记为Pending。</li>
+<li>如果在Spec的函数体中调用<code>pending()</code>函数，那么该Spec也会被标记为Pending。<code>pending()</code>函数接受一个字符串参数，该参数会在结果集中显示在<code>PENDING WITH MESSAGE:</code>之后，作为为何被Pending的原因。</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript hljs"><span class="at">describe</span>(<span class="st"><span class="hljs-string">"Pending specs"</span></span><span class="op">,</span> <span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params"></span>) </span><span class="op">{</span>
+
+  <span class="at">xit</span>(<span class="st"><span class="hljs-string">"can be declared 'xit'"</span></span><span class="op">,</span> <span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params"></span>) </span><span class="op">{</span>
+    <span class="at">expect</span>(<span class="kw"><span class="hljs-literal">true</span></span>).<span class="at">toBe</span>(<span class="kw"><span class="hljs-literal">false</span></span>)<span class="op">;</span>
+  <span class="op">}</span>)<span class="op">;</span>
+
+  <span class="at">it</span>(<span class="st"><span class="hljs-string">"can be declared with 'it' but without a function"</span></span>)<span class="op">;</span>
+  
+  <span class="at">it</span>(<span class="st"><span class="hljs-string">"can be declared by calling 'pending' in the spec body"</span></span><span class="op">,</span> <span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params"></span>) </span><span class="op">{</span>
+    <span class="at">expect</span>(<span class="kw"><span class="hljs-literal">true</span></span>).<span class="at">toBe</span>(<span class="kw"><span class="hljs-literal">false</span></span>)<span class="op">;</span>
+    <span class="at">pending</span>(<span class="st"><span class="hljs-string">'this is why it is pending'</span></span>)<span class="op">;</span>
+  <span class="op">}</span>)<span class="op">;</span>
+<span class="op">}</span>)<span class="op">;</span></code></pre></div>
+<h2 id="高级特性">高级特性</h2>
+<h3 id="spy">Spy</h3>
+<p>Spy能监测任何function的调用和方法参数的调用痕迹。需使用2个特殊的Matcher：</p>
+<ul>
+<li><code>toHaveBeenCalled</code>：可以检查function是否被调用过，</li>
+<li><code>toHaveBeenCalledWith</code>： 可以检查传入参数是否被作为参数调用过。</li>
+</ul>
+<h4 id="spyon">spyOn</h4>
+<p>使用<code>spyOn(obj,'function')</code>来为<code>obj</code>的<code>function</code>方法声明一个Spy。不过要注意的一点是，对Spy函数的调用并不会影响真实的值。</p>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript hljs"><span class="at">describe</span>(<span class="st"><span class="hljs-string">"A spy"</span></span><span class="op">,</span> <span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params"></span>) </span><span class="op">{</span>
+  <span class="kw"><span class="hljs-keyword">var</span></span> foo<span class="op">,</span> bar <span class="op">=</span> <span class="kw"><span class="hljs-literal">null</span></span><span class="op">;</span>
+
+  <span class="at">beforeEach</span>(<span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params"></span>) </span><span class="op">{</span>
+    foo <span class="op">=</span> <span class="op">{</span>
+      <span class="dt">setBar</span><span class="op">:</span> <span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params">value</span>) </span><span class="op">{</span>
+        bar <span class="op">=</span> value<span class="op">;</span>
+      <span class="op">}</span>
+    <span class="op">};</span>
+
+    <span class="at">spyOn</span>(foo<span class="op">,</span> <span class="st"><span class="hljs-string">'setBar'</span></span>)<span class="op">;</span>
+
+    <span class="va">foo</span>.<span class="at">setBar</span>(<span class="dv"><span class="hljs-number">123</span></span>)<span class="op">;</span>
+    <span class="va">foo</span>.<span class="at">setBar</span>(<span class="dv"><span class="hljs-number">456</span></span><span class="op">,</span> <span class="st"><span class="hljs-string">'another param'</span></span>)<span class="op">;</span>
+  <span class="op">}</span>)<span class="op">;</span>
+
+  <span class="at">it</span>(<span class="st"><span class="hljs-string">"tracks that the spy was called"</span></span><span class="op">,</span> <span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params"></span>) </span><span class="op">{</span>
+    <span class="at">expect</span>(<span class="va">foo</span>.<span class="at">setBar</span>).<span class="at">toHaveBeenCalled</span>()<span class="op">;</span>
+  <span class="op">}</span>)<span class="op">;</span>
+
+  <span class="at">it</span>(<span class="st"><span class="hljs-string">"tracks all the arguments of its calls"</span></span><span class="op">,</span> <span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params"></span>) </span><span class="op">{</span>
+    <span class="at">expect</span>(<span class="va">foo</span>.<span class="at">setBar</span>).<span class="at">toHaveBeenCalledWith</span>(<span class="dv"><span class="hljs-number">123</span></span>)<span class="op">;</span>
+    <span class="at">expect</span>(<span class="va">foo</span>.<span class="at">setBar</span>).<span class="at">toHaveBeenCalledWith</span>(<span class="dv"><span class="hljs-number">456</span></span><span class="op">,</span> <span class="st"><span class="hljs-string">'another param'</span></span>)<span class="op">;</span>
+  <span class="op">}</span>)<span class="op">;</span>
+
+  <span class="at">it</span>(<span class="st"><span class="hljs-string">"stops all execution on a function"</span></span><span class="op">,</span> <span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params"></span>) </span><span class="op">{</span>
+    <span class="co"><span class="hljs-comment">// Spy的调用并不会影响真实的值，所以bar仍然是null。</span></span>
+    <span class="at">expect</span>(bar).<span class="at">toBeNull</span>()<span class="op">;</span>
+  <span class="op">}</span>)<span class="op">;</span>
+<span class="op">}</span>)<span class="op">;</span></code></pre></div>
+<h4 id="and.callthrough">and.callThrough</h4>
+<p>如果在<code>spyOn</code>之后链式调用<code>and.callThrough</code>，那么Spy除了跟踪所有的函数调用外，还会直接调用函数额真实实现，因此Spy返回的值就是函数调用后实际的值了。</p>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript hljs">  ...
+  <span class="at">spyOn</span>(foo<span class="op">,</span> <span class="st"><span class="hljs-string">'getBar'</span></span>).<span class="va">and</span>.<span class="at">callThrough</span>()<span class="op">;</span>
+  <span class="va">foo</span>.<span class="at">setBar</span>(<span class="dv"><span class="hljs-number">123</span></span>)<span class="op">;</span>
+  fetchedBar <span class="op">=</span> <span class="va">foo</span>.<span class="at">getBar</span>()<span class="op">;</span>
+
+  <span class="at">it</span>(<span class="st"><span class="hljs-string">"tracks that the spy was called"</span></span><span class="op">,</span> <span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params"></span>) </span><span class="op">{</span>
+    <span class="at">expect</span>(<span class="va">foo</span>.<span class="at">getBar</span>).<span class="at">toHaveBeenCalled</span>()<span class="op">;</span>
+  <span class="op">}</span>)<span class="op">;</span>
+
+  <span class="at">it</span>(<span class="st"><span class="hljs-string">"should not effect other functions"</span></span><span class="op">,</span> <span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params"></span>) </span><span class="op">{</span>
+    <span class="at">expect</span>(bar).<span class="at">toEqual</span>(<span class="dv"><span class="hljs-number">123</span></span>)<span class="op">;</span>
+  <span class="op">}</span>)<span class="op">;</span>
+
+  <span class="at">it</span>(<span class="st"><span class="hljs-string">"when called returns the requested value"</span></span><span class="op">,</span> <span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params"></span>) </span><span class="op">{</span>
+    <span class="at">expect</span>(fetchedBar).<span class="at">toEqual</span>(<span class="dv"><span class="hljs-number">123</span></span>)<span class="op">;</span>
+  <span class="op">}</span>)<span class="op">;</span>
+})<span class="op">;</span></code></pre></div>
+<h4 id="and.stub">and.stub</h4>
+<p>在调用and.callThrough后，如果你想阻止spi继续对实际值产生影响，你可以调用and.stub。也就是说，and.stub是将spi对实际实现的影响还原到最终的状态——不影响实际值。</p>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript hljs"><span class="at">spyOn</span>(foo<span class="op">,</span> <span class="st"><span class="hljs-string">'setBar'</span></span>).<span class="va">and</span>.<span class="at">callThrough</span>()<span class="op">;</span>
+
+<span class="va">foo</span>.<span class="at">setBar</span>(<span class="dv"><span class="hljs-number">123</span></span>)<span class="op">;</span>
+<span class="co"><span class="hljs-comment">// 实际的bar=123</span></span>
+<span class="at">expect</span>(bar).<span class="at">toEqual</span>(<span class="dv"><span class="hljs-number">123</span></span>)<span class="op">;</span>
+
+<span class="co"><span class="hljs-comment">// 调用and.stub()后，之后调用foo.setBar将不会影响bar的值。</span></span>
+<span class="va">foo</span>.<span class="va">setBar</span>.<span class="va">and</span>.<span class="at">stub</span>()<span class="op">;</span>
+
+<span class="va">foo</span>.<span class="at">setBar</span>(<span class="dv"><span class="hljs-number">456</span></span>)<span class="op">;</span>
+<span class="at">expect</span>(bar).<span class="at">toBe</span>(<span class="dv"><span class="hljs-number">123</span></span>)<span class="op">;</span>
+
+bar <span class="op">=</span> <span class="kw"><span class="hljs-literal">null</span></span><span class="op">;</span>
+<span class="va">foo</span>.<span class="at">setBar</span>(<span class="dv"><span class="hljs-number">123</span></span>)<span class="op">;</span>
+<span class="at">expect</span>(bar).<span class="at">toBe</span>(<span class="kw"><span class="hljs-literal">null</span></span>)<span class="op">;</span></code></pre></div>
+<h3 id="全局匹配谓词">全局匹配谓词</h3>
+<h4 id="jasmine.any">jasmine.any</h4>
+<p><code>jasmine.any</code>的参数为一个构造函数，用于检测该参数是否与实际值所对应的构造函数相匹配。</p>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript hljs"><span class="at">describe</span>(<span class="st"><span class="hljs-string">"jasmine.any"</span></span><span class="op">,</span> <span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params"></span>) </span><span class="op">{</span>
+  <span class="at">it</span>(<span class="st"><span class="hljs-string">"matches any value"</span></span><span class="op">,</span> <span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params"></span>) </span><span class="op">{</span>
+    <span class="at">expect</span>(<span class="op">{}</span>).<span class="at">toEqual</span>(<span class="va">jasmine</span>.<span class="at">any</span>(<span class="hljs-built_in">Object</span>))<span class="op">;</span>
+    <span class="at">expect</span>(<span class="dv"><span class="hljs-number">12</span></span>).<span class="at">toEqual</span>(<span class="va">jasmine</span>.<span class="at">any</span>(<span class="hljs-built_in">Number</span>))<span class="op">;</span>
+  <span class="op">}</span>)<span class="op">;</span>
+
+  <span class="at">describe</span>(<span class="st"><span class="hljs-string">"when used with a spy"</span></span><span class="op">,</span> <span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params"></span>) </span><span class="op">{</span>
+    <span class="at">it</span>(<span class="st"><span class="hljs-string">"is useful for comparing arguments"</span></span><span class="op">,</span> <span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params"></span>) </span><span class="op">{</span>
+      <span class="kw"><span class="hljs-keyword">var</span></span> foo <span class="op">=</span> <span class="va">jasmine</span>.<span class="at">createSpy</span>(<span class="st"><span class="hljs-string">'foo'</span></span>)<span class="op">;</span>
+      <span class="at">foo</span>(<span class="dv"><span class="hljs-number">12</span></span><span class="op">,</span> <span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params"></span>) </span><span class="op">{</span>
+        <span class="cf"><span class="hljs-keyword">return</span></span> <span class="kw"><span class="hljs-literal">true</span></span><span class="op">;</span>
+      <span class="op">}</span>)<span class="op">;</span>
+
+      <span class="at">expect</span>(foo).<span class="at">toHaveBeenCalledWith</span>(<span class="va">jasmine</span>.<span class="at">any</span>(<span class="hljs-built_in">Number</span>)<span class="op">,</span> <span class="va">jasmine</span>.<span class="at">any</span>(<span class="hljs-built_in">Function</span>))<span class="op">;</span>
+    <span class="op">}</span>)<span class="op">;</span>
+  <span class="op">}</span>)<span class="op">;</span>
+<span class="op">}</span>)<span class="op">;</span></code></pre></div>
+<h4 id="jasmine.anything">jasmine.anything</h4>
+<p><code>jasmine.anything</code>用于检测实际值是否为<code>null</code>或<code>undefined</code>，如果不为<code>null</code>或<code>undefined</code>，则返回<code>true</code>。</p>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript hljs"><span class="at">it</span>(<span class="st"><span class="hljs-string">"matches anything"</span></span><span class="op">,</span> <span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params"></span>) </span><span class="op">{</span>
+    <span class="at">expect</span>(<span class="dv"><span class="hljs-number">1</span></span>).<span class="at">toEqual</span>(<span class="va">jasmine</span>.<span class="at">anything</span>())<span class="op">;</span>
+<span class="op">}</span>)<span class="op">;</span></code></pre></div>
+<h4 id="jasmine.objectcontaining">jasmine.objectContaining</h4>
+<p>用于检测实际Object值中是否存在特定key/value对。</p>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript hljs">  <span class="kw"><span class="hljs-keyword">var</span></span> foo<span class="op">;</span>
+
+  <span class="at">beforeEach</span>(<span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params"></span>) </span><span class="op">{</span>
+    foo <span class="op">=</span> <span class="op">{</span>
+      <span class="dt">a</span><span class="op">:</span> <span class="dv"><span class="hljs-number">1</span></span><span class="op">,</span>
+      <span class="dt">b</span><span class="op">:</span> <span class="dv"><span class="hljs-number">2</span></span><span class="op">,</span>
+      <span class="dt">bar</span><span class="op">:</span> <span class="st"><span class="hljs-string">"baz"</span></span>
+    <span class="op">};</span>
+  <span class="op">}</span>)<span class="op">;</span>
+
+  <span class="at">it</span>(<span class="st"><span class="hljs-string">"matches objects with the expect key/value pairs"</span></span><span class="op">,</span> <span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params"></span>) </span><span class="op">{</span>
+    <span class="at">expect</span>(foo).<span class="at">toEqual</span>(<span class="va">jasmine</span>.<span class="at">objectContaining</span>(<span class="op">{</span>
+      <span class="dt">bar</span><span class="op">:</span> <span class="st"><span class="hljs-string">"baz"</span></span>
+    <span class="op">}</span>))<span class="op">;</span>
+    <span class="at">expect</span>(foo).<span class="va">not</span>.<span class="at">toEqual</span>(<span class="va">jasmine</span>.<span class="at">objectContaining</span>(<span class="op">{</span>
+      <span class="dt">c</span><span class="op">:</span> <span class="dv"><span class="hljs-number">37</span></span>
+    <span class="op">}</span>))<span class="op">;</span>
+  <span class="op">}</span>)<span class="op">;</span></code></pre></div>
+<h4 id="jasmine.arraycontaining">jasmine.arrayContaining</h4>
+<p>用于检测实际Array值中是否存在特定值。</p>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript hljs">  <span class="kw"><span class="hljs-keyword">var</span></span> foo<span class="op">;</span>
+
+  <span class="at">beforeEach</span>(<span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params"></span>) </span><span class="op">{</span>
+    foo <span class="op">=</span> [<span class="dv"><span class="hljs-number">1</span></span><span class="op">,</span> <span class="dv"><span class="hljs-number">2</span></span><span class="op">,</span> <span class="dv"><span class="hljs-number">3</span></span><span class="op">,</span> <span class="dv"><span class="hljs-number">4</span></span>]<span class="op">;</span>
+  <span class="op">}</span>)<span class="op">;</span>
+
+  <span class="at">it</span>(<span class="st"><span class="hljs-string">"matches arrays with some of the values"</span></span><span class="op">,</span> <span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params"></span>) </span><span class="op">{</span>
+    <span class="at">expect</span>(foo).<span class="at">toEqual</span>(<span class="va">jasmine</span>.<span class="at">arrayContaining</span>([<span class="dv"><span class="hljs-number">3</span></span><span class="op">,</span> <span class="dv"><span class="hljs-number">1</span></span>]))<span class="op">;</span>
+    <span class="at">expect</span>(foo).<span class="va">not</span>.<span class="at">toEqual</span>(<span class="va">jasmine</span>.<span class="at">arrayContaining</span>([<span class="dv"><span class="hljs-number">6</span></span>]))<span class="op">;</span>
+  <span class="op">}</span>)<span class="op">;</span></code></pre></div>
+<h3 id="jasmine-clock">Jasmine Clock</h3>
+<p>Jasmine Clock用于<code>setTimeout</code>和<code>setInterval</code>的回调控制，它使<code>timer</code>的回调函数同步化，不再依赖于具体的时间，而是将时间离散化，使测试人员能精确控制具体的时间点。</p>
+<h4 id="安装与卸载">安装与卸载</h4>
+<p>调用<code>jasmine.clock().install()</code>可以在特定的需要操纵时间的Spec或者Suite中安装Jasmine Clock，注意操作完后要调用<code>jasmine.clock().uninstall()</code>进行卸载。</p>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript hljs">  <span class="kw"><span class="hljs-keyword">var</span></span> timerCallback<span class="op">;</span>
+  
+  <span class="at">beforeEach</span>(<span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params"></span>) </span><span class="op">{</span>
+    timerCallback <span class="op">=</span> <span class="va">jasmine</span>.<span class="at">createSpy</span>(<span class="st"><span class="hljs-string">"timerCallback"</span></span>)<span class="op">;</span>
+    <span class="va">jasmine</span>.<span class="at">clock</span>().<span class="at">install</span>()<span class="op">;</span>
+  <span class="op">}</span>)<span class="op">;</span>
+  <span class="at">afterEach</span>(<span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params"></span>) </span><span class="op">{</span>
+    <span class="va">jasmine</span>.<span class="at">clock</span>().<span class="at">uninstall</span>()<span class="op">;</span>
+  <span class="op">}</span>)<span class="op">;</span></code></pre></div>
+<h4 id="模拟超时mocking-timeout">模拟超时（Mocking Timeout）</h4>
+<p>可以调用<code>jasmine.clock().tick(nTime)</code>来模拟计时，一旦<code>tick</code>中设置的时间<code>nTime</code>，其累计设置的值达到<code>setTimeout</code>或<code>setInterval</code>中指定的延时时间，则触发回调函数。</p>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript hljs">  <span class="at">it</span>(<span class="st"><span class="hljs-string">"causes an interval to be called synchronously"</span></span><span class="op">,</span> <span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params"></span>) </span><span class="op">{</span>
+    <span class="at">setInterval</span>(<span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params"></span>) </span><span class="op">{</span>
+      <span class="at">timerCallback</span>()<span class="op">;</span>
+    <span class="op">},</span> <span class="dv"><span class="hljs-number">100</span></span>)<span class="op">;</span>
+
+    <span class="at">expect</span>(timerCallback).<span class="va">not</span>.<span class="at">toHaveBeenCalled</span>()<span class="op">;</span>
+
+    <span class="va">jasmine</span>.<span class="at">clock</span>().<span class="at">tick</span>(<span class="dv"><span class="hljs-number">101</span></span>)<span class="op">;</span>
+    <span class="at">expect</span>(<span class="va">timerCallback</span>.<span class="va">calls</span>.<span class="at">count</span>()).<span class="at">toEqual</span>(<span class="dv"><span class="hljs-number">1</span></span>)<span class="op">;</span>
+
+    <span class="va">jasmine</span>.<span class="at">clock</span>().<span class="at">tick</span>(<span class="dv"><span class="hljs-number">50</span></span>)<span class="op">;</span>
+    <span class="at">expect</span>(<span class="va">timerCallback</span>.<span class="va">calls</span>.<span class="at">count</span>()).<span class="at">toEqual</span>(<span class="dv"><span class="hljs-number">1</span></span>)<span class="op">;</span>
+    <span class="co"><span class="hljs-comment">//tick设置的时间，累计到此201ms，因此会触发setInterval中的毁掉函数被调用2次。</span></span>
+    <span class="va">jasmine</span>.<span class="at">clock</span>().<span class="at">tick</span>(<span class="dv"><span class="hljs-number">50</span></span>)<span class="op">;</span>
+    <span class="at">expect</span>(<span class="va">timerCallback</span>.<span class="va">calls</span>.<span class="at">count</span>()).<span class="at">toEqual</span>(<span class="dv"><span class="hljs-number">2</span></span>)<span class="op">;</span>
+  <span class="op">}</span>)<span class="op">;</span></code></pre></div>
+<h3 id="异步支持asynchronous-support">异步支持（Asynchronous Support）</h3>
+<p>调用<code>beforeEach</code>，<code>it</code>或者<code>afterEach</code>时，可以添加一个可选参数（<code>Function</code>类型，在官方文档的例子中该参数为<code>done</code>）。当<code>done</code>函数被调用，表明异步操作的回调函数调用成功；否则如果没有调用<code>done</code>，表明异步操作的回调函数调用失败，则该Spec不会被调用，且会因为超时退出。<br>
+Jasmine等待异步操作完成的默认时间是5s，如果5s内异步操作没有完成，则Spec会因为超时退出。超时时间也可以通过全局的<code>jasmine.DEFAULT_TIMEOUT_INTERVAL</code>修改[4]。</p>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript hljs"><span class="kw"><span class="hljs-keyword">var</span></span> value<span class="op">;</span>
+
+<span class="co"><span class="hljs-comment">// setTimeout代表一个异步操作。</span></span>
+<span class="at">beforeEach</span>(<span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params">done</span>) </span><span class="op">{</span>
+  <span class="at">setTimeout</span>(<span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params"></span>) </span><span class="op">{</span>
+    value <span class="op">=</span> <span class="dv"><span class="hljs-number">0</span></span><span class="op">;</span>
+    <span class="co"><span class="hljs-comment">// 调用done表示回调成功，否则超时。</span></span>
+    <span class="at">done</span>()<span class="op">;</span>
+  <span class="op">},</span> <span class="dv"><span class="hljs-number">1</span></span>)<span class="op">;</span>
+<span class="op">}</span>)<span class="op">;</span>
+
+<span class="co"><span class="hljs-comment">// 如果在beforeEach中的setTimeout的回调中没有调用done，最终导致下面的it因超时而失败。</span></span>
+<span class="at">it</span>(<span class="st"><span class="hljs-string">"should support async execution of test preparation and expectations"</span></span><span class="op">,</span> <span class="kw"><span class="hljs-function"><span class="hljs-keyword">function</span></span></span><span class="hljs-function">(<span class="hljs-params">done</span>) </span><span class="op">{</span>
+  value<span class="op">++;</span>
+  <span class="at">expect</span>(value).<span class="at">toBeGreaterThan</span>(<span class="dv"><span class="hljs-number">0</span></span>)<span class="op">;</span>
+  <span class="at">done</span>()<span class="op">;</span>
+<span class="op">}</span>)<span class="op">;</span></code></pre></div>
+<h2 id="参考资料">参考资料</h2>
+<p>[1] [Javascript的Unit Test](<a href="http://www.tychio.net/tech/2013/07/10/unit-test.html" class="uri">http://www.tychio.net/tech/2013/07/10/unit-test.html</a>)。<br>
+[2] [官方文档introduction.js](<a href="http://jasmine.github.io/2.2/introduction.html" class="uri">http://jasmine.github.io/2.2/introduction.html</a>)<br>
+[3] [官方文档custom_matcher.js](<a href="http://jasmine.github.io/2.2/custom_matcher.html" class="uri">http://jasmine.github.io/2.2/custom_matcher.html</a>)<br>
+[4] [Jasmine——JavaScript 单元测试框架](<a href="http://inching.org/2014/03/05/javascript-jasmine/" class="uri">http://inching.org/2014/03/05/javascript-jasmine/</a>)</p>
+</div><div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory">分类: <a href="http://www.cnblogs.com/zhcncn/category/480274.html" target="_blank">HTML+CSS+JavaScript</a></div>
+<div id="EntryTag">标签: <a href="http://www.cnblogs.com/zhcncn/tag/HTML%2BCSS%2BJavaScript/">HTML+CSS+JavaScript</a></div>
+<div id="blog_post_info"><div id="green_channel">
+        <a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(4330112,cb_blogId,1);green_channel_success(this,&#39;谢谢推荐！&#39;);">好文要顶</a>
+            <a id="green_channel_follow" onclick="follow(&#39;cbf499ac-8f9d-e111-aa3f-842b2b196315&#39;);" href="javascript:void(0);">关注我</a>
+    <a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a>
+    <a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()"><img src="./JavaScript单元测试框架-Jasmine - 金石开 - 博客园_files/icon_weibo_24.png" alt=""></a>
+    <a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信" onclick="shareOnWechat()"><img src="./JavaScript单元测试框架-Jasmine - 金石开 - 博客园_files/wechat.png" alt=""></a>
+</div>
+<div id="author_profile">
+    <div id="author_profile_info" class="author_profile_info">
+            <a href="http://home.cnblogs.com/u/zhcncn/" target="_blank"><img src="./JavaScript单元测试框架-Jasmine - 金石开 - 博客园_files/u408827.jpg" class="author_avatar" alt=""></a>
+        <div id="author_profile_detail" class="author_profile_info">
+            <a href="http://home.cnblogs.com/u/zhcncn/">金石开</a><br>
+            <a href="http://home.cnblogs.com/u/zhcncn/followees">关注 - 9</a><br>
+            <a href="http://home.cnblogs.com/u/zhcncn/followers">粉丝 - 62</a>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="author_profile_honor"></div>
+    <div id="author_profile_follow">
+                <a href="javascript:void(0);" onclick="follow(&#39;cbf499ac-8f9d-e111-aa3f-842b2b196315&#39;);return false;">+加关注</a>
+    </div>
+</div>
+<div id="div_digg">
+    <div class="diggit" onclick="votePost(4330112,&#39;Digg&#39;)">
+        <span class="diggnum" id="digg_count">8</span>
+    </div>
+    <div class="buryit" onclick="votePost(4330112,&#39;Bury&#39;)">
+        <span class="burynum" id="bury_count">0</span>
+    </div>
+    <div class="clear"></div>
+    <div class="diggword" id="digg_tips">
+    </div>
+</div>
+</div>
+<div class="clear"></div>
+<div id="post_next_prev"><a href="http://www.cnblogs.com/zhcncn/p/4151701.html" class="p_n_p_prefix">« </a> 上一篇：<a href="http://www.cnblogs.com/zhcncn/p/4151701.html" title="发布于2014-12-08 18:31">Win7下安装配置gVim</a><br><a href="http://www.cnblogs.com/zhcncn/p/4689225.html" class="p_n_p_prefix">» </a> 下一篇：<a href="http://www.cnblogs.com/zhcncn/p/4689225.html" title="发布于2015-07-30 14:21">配置算法（第4版）的Java编译环境</a><br></div>
+</div>
+
+
+		</div>
+		<div class="postDesc">posted @ <span id="post-date">2015-03-11 15:44</span> <a href="http://www.cnblogs.com/zhcncn/">金石开</a> 阅读(<span id="post_view_count">12857</span>) 评论(<span id="post_comment_count">5</span>)  <a href="https://i.cnblogs.com/EditPosts.aspx?postid=4330112" rel="nofollow">编辑</a> <a href="http://www.cnblogs.com/zhcncn/p/4330112.html#" onclick="AddToWz(4330112);return false;">收藏</a></div>
+	</div>
+	<script src="./JavaScript单元测试框架-Jasmine - 金石开 - 博客园_files/highlight.min.js.下载"></script><script>markdown_highlight();</script><script type="text/javascript">var allowComments=true,cb_blogId=126695,cb_entryId=4330112,cb_blogApp=currentBlogApp,cb_blogUserGuid='cbf499ac-8f9d-e111-aa3f-842b2b196315',cb_entryCreatedDate='2015/3/11 15:44:00';loadViewCount(cb_entryId);</script>
+	
+</div><!--end: topics 文章、评论容器-->
+</div><a name="!comments"></a><div id="blog-comments-placeholder"><div id="comments_pager_top"></div>
+<!--done-->
+<div class="feedback_area_title">评论列表</div>
+<div class="feedbackNoItems"></div>
+	
+
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;<span class="comment_actions"></span>
+				</div>
+				<a href="http://www.cnblogs.com/zhcncn/p/4330112.html#3170596" class="layer">#1楼</a><a name="3170596" id="comment_anchor_3170596"></a>  <span class="comment_date">2015-04-26 15:40</span> <a id="a_comment_author_3170596" href="http://www.cnblogs.com/cunjieliu/" target="_blank">雷锋叔叔Touch</a> <a href="http://msg.cnblogs.com/send/%E9%9B%B7%E9%94%8B%E5%8F%94%E5%8F%94Touch" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="feedbackCon">
+				<div id="comment_body_3170596" class="blog_comment_body">刚好学习下</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(3170596,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(3170596,&#39;Bury&#39;,this)">反对(0)</a></div><span id="comment_3170596_avatar" style="display:none;">http://pic.cnblogs.com/face/600316/20141026201605.png</span>
+			</div>
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;<span class="comment_actions"></span>
+				</div>
+				<a href="http://www.cnblogs.com/zhcncn/p/4330112.html#3238181" class="layer">#2楼</a><a name="3238181" id="comment_anchor_3238181"></a>  <span class="comment_date">2015-07-30 14:30</span> <a id="a_comment_author_3238181" href="http://www.cnblogs.com/NaNaDreamer/" target="_blank">NaNaDreamer</a> <a href="http://msg.cnblogs.com/send/NaNaDreamer" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="feedbackCon">
+				<div id="comment_body_3238181" class="blog_comment_body">总结的不错哦。点赞呢</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(3238181,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(3238181,&#39;Bury&#39;,this)">反对(0)</a></div><span id="comment_3238181_avatar" style="display:none;">http://pic.cnblogs.com/face/560655/20130826144740.png</span>
+			</div>
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;<span class="comment_actions"></span>
+				</div>
+				<a href="http://www.cnblogs.com/zhcncn/p/4330112.html#3294463" class="layer">#3楼</a><a name="3294463" id="comment_anchor_3294463"></a>  <span class="comment_date">2015-10-29 11:50</span> <a id="a_comment_author_3294463" href="http://www.cnblogs.com/jesy/" target="_blank">Joe-sky</a> <a href="http://msg.cnblogs.com/send/Joe-sky" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="feedbackCon">
+				<div id="comment_body_3294463" class="blog_comment_body">刚学习了下，写得很有条理，赞一个^_^</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(3294463,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(3294463,&#39;Bury&#39;,this)">反对(0)</a></div><span id="comment_3294463_avatar" style="display:none;">http://pic.cnblogs.com/face/779841/20160221113620.png</span>
+			</div>
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;<span class="comment_actions"></span>
+				</div>
+				<a href="http://www.cnblogs.com/zhcncn/p/4330112.html#3307579" class="layer">#4楼</a><a name="3307579" id="comment_anchor_3307579"></a>  <span class="comment_date">2015-11-16 17:31</span> <a id="a_comment_author_3307579" href="http://www.cnblogs.com/zhutty/" target="_blank">一凡先生</a> <a href="http://msg.cnblogs.com/send/%E4%B8%80%E5%87%A1%E5%85%88%E7%94%9F" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="feedbackCon">
+				<div id="comment_body_3307579" class="blog_comment_body">不错，已收藏</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(3307579,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(3307579,&#39;Bury&#39;,this)">反对(0)</a></div><span id="comment_3307579_avatar" style="display:none;">http://pic.cnblogs.com/face/677630/20160123165549.png</span>
+			</div>
+		</div>
+	
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+				<div class="feedbackManage">
+					&nbsp;&nbsp;<span class="comment_actions"></span>
+				</div>
+				<a href="http://www.cnblogs.com/zhcncn/p/4330112.html#3537572" class="layer">#5楼</a><a name="3537572" id="comment_anchor_3537572"></a><span id="comment-maxId" style="display:none;">3537572</span><span id="comment-maxDate" style="display:none;">2016/10/21 11:06:56</span>  <span class="comment_date">2016-10-21 11:06</span> <a id="a_comment_author_3537572" href="http://www.cnblogs.com/jasmine-95/" target="_blank">*茉莉花开*</a> <a href="http://msg.cnblogs.com/send/%2A%E8%8C%89%E8%8E%89%E8%8A%B1%E5%BC%80%2A" title="发送站内短消息" class="sendMsg2This">&nbsp;</a>
+			</div>
+			<div class="feedbackCon">
+				<div id="comment_body_3537572" class="blog_comment_body">不错！</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(3537572,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(3537572,&#39;Bury&#39;,this)">反对(0)</a></div><span id="comment_3537572_avatar" style="display:none;">http://pic.cnblogs.com/face/837618/20151114193945.png</span>
+			</div>
+		</div>
+	<div id="comments_pager_bottom"></div></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id="comment_form" class="commentform">
+<a name="commentform"></a>
+<div id="divCommentShow"></div>
+<div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="http://www.cnblogs.com/zhcncn/p/4330112.html#" onclick="return RefreshPage();">刷新页面</a><a href="http://www.cnblogs.com/zhcncn/p/4330112.html#top">返回顶部</a></div>
+<div id="comment_form_container"><div class="login_tips">注册用户登录后才能发表评论，请 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return login(&#39;commentform&#39;);">登录</a> 或 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return register();">注册</a>，<a href="http://www.cnblogs.com/">访问</a>网站首页。</div></div>
+<div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+<div id="ad_t2"><a href="http://www.ucancode.com/index.htm" target="_blank">【推荐】50万行VC++源码: 大型组态工控、电力仿真CAD与GIS源码库</a><br><a href="http://www.gcpowertools.com.cn/products/activereports/excel.htm?utm_source=cnblogs&amp;utm_medium=blogpage&amp;utm_term=bottom&amp;utm_content=AR&amp;utm_campaign=community" target="_blank">【报表】Excel 报表开发18 招式，人人都能做报表</a><br><a href="http://click.aliyun.com/m/15483" target="_blank">【活动】阿里云海外云服务全面降价助力企业全球布局</a><br><a href="http://web.tanzhouedu.com/index/keCourse.html" target="_blank">【粉丝福利】Web前端基础到高级在线直播教学</a><br><a href="https://group.cnblogs.com/topic/76829.html" target="_blank">【实用】40+篇云服务器操作及运维基础知识！</a><br></div>
+<div id="opt_under_post"></div>
+<div id="cnblogs_c1" class="c_ad_block"><a href="https://cn.udacity.com/course/data-analyst-nanodegree--nd002-cn-basic/?utm_source=cnblogs&amp;utm_medium=referral&amp;utm_campaign=DAND03" target="_blank"><img width="300" height="250" src="./JavaScript单元测试框架-Jasmine - 金石开 - 博客园_files/24442-20170509155547285-603349158.jpg" alt="优达学城0509"></a></div>
+<div id="under_post_news"><div class="itnews c_ad_block"><b>最新IT新闻</b>:<br> ·  <a href="http://news.cnblogs.com/n/569489/" target="_blank">蚂蚁金服CEO美国母校演讲：金钱不是成功的标准</a><br> ·  <a href="http://news.cnblogs.com/n/569488/" target="_blank">SIM卡再见！三星/苹果/华为联手推广e-SIM</a><br> ·  <a href="http://news.cnblogs.com/n/569487/" target="_blank">三星S8运行Win10真机曝光：手机变电脑</a><br> ·  <a href="http://news.cnblogs.com/n/569486/" target="_blank">杭州机场放大招：15公里内无人机无法起飞</a><br> ·  <a href="http://news.cnblogs.com/n/569485/" target="_blank">“想哭”勒索蠕虫是一场惊天炒作吗？</a><br>» <a href="http://news.cnblogs.com/" title="IT新闻" target="_blank">更多新闻...</a></div></div>
+<div id="cnblogs_c2" class="c_ad_block"><a href="http://click.aliyun.com/m/17215/" target="_blank"><img width="468" height="60" src="./JavaScript单元测试框架-Jasmine - 金石开 - 博客园_files/24442-20170417123605337-535991337.jpg" alt="阿里云E4"></a></div>
+<div id="under_post_kb"><div class="itnews c_ad_block" id="kb_block"><b>最新知识库文章</b>:<br><div id="kb_recent"> ·  <a href="http://kb.cnblogs.com/page/569056/" target="_blank">软件开发为什么很难</a><br> ·  <a href="http://kb.cnblogs.com/page/565901/" target="_blank">唱吧DevOps的落地，微服务CI/CD的范本技术解读</a><br> ·  <a href="http://kb.cnblogs.com/page/566523/" target="_blank">程序员，如何从平庸走向理想？</a><br> ·  <a href="http://kb.cnblogs.com/page/566318/" target="_blank">我为什么鼓励工程师写blog</a><br> ·  <a href="http://kb.cnblogs.com/page/566528/" target="_blank">怎么轻松学习JavaScript</a><br></div>» <a href="http://kb.cnblogs.com/" target="_blank">更多知识库文章...</a></div></div>
+<div id="HistoryToday" class="c_ad_block"></div>
+<script type="text/javascript">
+    fixPostBody();
+    setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+    deliverAdT2();
+    deliverAdC1();
+    deliverAdC2();    
+    loadNewsAndKb();
+    loadBlogSignature();
+    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate);
+    loadOptUnderPost();
+    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);   
+</script>
+</div>
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+			<div id="calendar"><div id="blog-calendar" style="display:none"></div><script type="text/javascript">loadBlogDefaultCalendar();</script></div>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"><div id="sidebar_search" class="sidebar-block"></div><div id="sidebar_categories">
+<div class="catListPostArchive">
+<h3 class="catListTitle">随笔档案<span style="font-size:11px;font-weight:normal">(48)</span></h3>
+
+<ul>
+
+<li><a id="CatList_LinkList_0_Link_0" href="http://www.cnblogs.com/zhcncn/archive/2015/09.html">2015年9月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_1" href="http://www.cnblogs.com/zhcncn/archive/2015/07.html">2015年7月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_2" href="http://www.cnblogs.com/zhcncn/archive/2015/03.html">2015年3月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_3" href="http://www.cnblogs.com/zhcncn/archive/2014/12.html">2014年12月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_4" href="http://www.cnblogs.com/zhcncn/archive/2014/11.html">2014年11月 (4)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_5" href="http://www.cnblogs.com/zhcncn/archive/2014/10.html">2014年10月 (8)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_6" href="http://www.cnblogs.com/zhcncn/archive/2014/09.html">2014年9月 (4)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_7" href="http://www.cnblogs.com/zhcncn/archive/2014/08.html">2014年8月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_8" href="http://www.cnblogs.com/zhcncn/archive/2014/06.html">2014年6月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_9" href="http://www.cnblogs.com/zhcncn/archive/2014/05.html">2014年5月 (3)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_10" href="http://www.cnblogs.com/zhcncn/archive/2014/04.html">2014年4月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_11" href="http://www.cnblogs.com/zhcncn/archive/2014/01.html">2014年1月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_12" href="http://www.cnblogs.com/zhcncn/archive/2013/05.html">2013年5月 (4)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_13" href="http://www.cnblogs.com/zhcncn/archive/2013/04.html">2013年4月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_14" href="http://www.cnblogs.com/zhcncn/archive/2013/03.html">2013年3月 (3)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_15" href="http://www.cnblogs.com/zhcncn/archive/2013/02.html">2013年2月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_16" href="http://www.cnblogs.com/zhcncn/archive/2013/01.html">2013年1月 (6)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_17" href="http://www.cnblogs.com/zhcncn/archive/2012/12.html">2012年12月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_18" href="http://www.cnblogs.com/zhcncn/archive/2012/11.html">2012年11月 (2)</a> </li>
+
+</ul>
+
+</div>
+
+</div><div id="sidebar_scorerank" class="sidebar-block">
+<div class="catListBlogRank">
+<h3 class="catListTitle">积分与排名</h3>
+<ul>
+	<li class="liScore">
+		积分 -	123439
+	</li>
+	<li class="liRank">
+		排名 -	1915
+	</li>
+</ul>
+</div>
+
+
+</div><div id="sidebar_recentcomments" class="sidebar-block"><div id="recent_comments_wrap">
+<div class="catListComment">
+<h3 class="catListTitle">最新评论</h3>
+	<div id="RecentCommentsBlock"><ul>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/zhcncn/p/4071539.html#3612996">1. Re:VirtualBox中安装CentOS-6.6虚拟机</a></li>
+        <li class="recent_comment_body">这个真可能,非常棒.</li>
+        <li class="recent_comment_author">--1713930654</li>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/zhcncn/p/4097881.html#3598743">2. Re:Hexo搭建Github静态博客</a></li>
+        <li class="recent_comment_body">更多关于next主题的文章，可以看我的主页 <a href="http://www.cnblogs.com/zhcncn/p/4330112.html" target="_blank"></a></li>
+        <li class="recent_comment_author">--~思路~</li>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/zhcncn/p/4097881.html#3598742">3. Re:Hexo搭建Github静态博客</a></li>
+        <li class="recent_comment_body">我还是喜欢next主题。next主题之第三方评论系统,<a href="http://www.cnblogs.com/zhcncn/p/4330112.html" target="_blank"></a></li>
+        <li class="recent_comment_author">--~思路~</li>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/zhcncn/p/4030078.html#3593454">4. Re:Linux下安装Git</a></li>
+        <li class="recent_comment_body">git clone 会导致以后每次push都要输入用户名和密码，最好用git clone git@github.com:michaelliao/gitskills.git 吧。...</li>
+        <li class="recent_comment_author">--xiaochou</li>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/zhcncn/p/4151701.html#3570829">5. Re:Win7下安装配置gVim</a></li>
+        <li class="recent_comment_body">mark</li>
+        <li class="recent_comment_author">--白于空</li>
+</ul>
+</div>
+</div>
+</div></div><div id="sidebar_topviewedposts" class="sidebar-block"><div id="topview_posts_wrap">
+<div class="catListView">
+<h3 class="catListTitle">阅读排行榜</h3>
+	<div id="TopViewPostsBlock"><ul><li><a href="http://www.cnblogs.com/zhcncn/p/4030078.html">1. Linux下安装Git(62026)</a></li><li><a href="http://www.cnblogs.com/zhcncn/p/4097881.html">2. Hexo搭建Github静态博客(54070)</a></li><li><a href="http://www.cnblogs.com/zhcncn/p/3969419.html">3. Notepad++配置Python开发环境(52396)</a></li><li><a href="http://www.cnblogs.com/zhcncn/p/4113589.html">4. Sublime Text 3安装与使用(45897)</a></li><li><a href="http://www.cnblogs.com/zhcncn/p/3987301.html">5. VirtualBox中安装Ubuntu12.04/Ubuntu14.04虚拟机(43777)</a></li></ul></div>
+</div>
+</div></div><div id="sidebar_topcommentedposts" class="sidebar-block"><div id="topfeedback_posts_wrap">
+<div class="catListFeedback">
+<h3 class="catListTitle">评论排行榜</h3>
+	<div id="TopFeedbackPostsBlock"><ul><li><a href="http://www.cnblogs.com/zhcncn/p/4097881.html">1. Hexo搭建Github静态博客(11)</a></li><li><a href="http://www.cnblogs.com/zhcncn/p/3987301.html">2. VirtualBox中安装Ubuntu12.04/Ubuntu14.04虚拟机(11)</a></li><li><a href="http://www.cnblogs.com/zhcncn/p/3969419.html">3. Notepad++配置Python开发环境(5)</a></li><li><a href="http://www.cnblogs.com/zhcncn/p/3950477.html">4. boost 1.56.0 编译及使用(5)</a></li><li><a href="http://www.cnblogs.com/zhcncn/p/4330112.html">5. JavaScript单元测试框架-Jasmine(5)</a></li></ul></div>
+</div>
+</div></div></div><script type="text/javascript">loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		
+<!--done-->
+Copyright ©2017 金石开
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+<iframe frameborder="0" scrolling="no" src="./JavaScript单元测试框架-Jasmine - 金石开 - 博客园_files/4.html" style="visibility: hidden; width: 299px; height: 249px; right: 0px; bottom: 0px; position: fixed; border: none; background: white; opacity: 0;"></iframe></body></html>

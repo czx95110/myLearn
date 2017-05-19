@@ -33,7 +33,7 @@ nav{
   a{
     display: block;
     padding: 0 0 0 50px;
-    background: url("../img/item-icon.png")no-repeat 5px 4px;
+    background: url("../img/icon/item-icon.png")no-repeat 5px 4px;
   }
 }
 section{
@@ -77,7 +77,7 @@ section{
       position: absolute;
       top: -1px;
       left: 198px;
-      height: 600px;
+      min-height: 556px;
       border-top: 1px solid $baseColor;
       display: none;
       &.active{
@@ -105,12 +105,13 @@ section{
       position: absolute;
       top: -1px;
       left: 179px;
-      width: 600px;
+      width: 800px;
       height: 600px;
       padding: 10px;
       overflow-y: auto;
       border: 1px solid #00923f;
       display: none;
+      justify-content: space-between;
       &.active{display: block;}
       &::-webkit-scrollbar {
         width: 5px;
@@ -123,13 +124,13 @@ section{
         border-radius: 3px;
       }
       a{
-        display: block;
-        line-height: 30px;
+        display: inline-block;
+        width: 48%;
+        line-height: 24px;
         border-right: 3px;
         background: #6cc6ea;
-        padding: 0 10px;
-        margin-top: 4px;
-        border-radius: 5px;
+        padding: 4px 10px;
+        border-radius: 24px;
       }
     }
     .b-btm{

@@ -63,7 +63,7 @@ nav {
   nav a {
     display: block;
     padding: 0 0 0 50px;
-    background: url("../img/item-icon.png") no-repeat 5px 4px; }
+    background: url("../img/icon/item-icon.png") no-repeat 5px 4px; }
 
 section {
   margin-bottom: 10px; }
@@ -98,7 +98,7 @@ section {
       position: absolute;
       top: -1px;
       left: 198px;
-      height: 600px;
+      min-height: 556px;
       border-top: 1px solid #4352d8;
       display: none; }
       section .left .list-detail.active {
@@ -118,12 +118,13 @@ section {
       position: absolute;
       top: -1px;
       left: 179px;
-      width: 600px;
+      width: 800px;
       height: 600px;
       padding: 10px;
       overflow-y: auto;
       border: 1px solid #00923f;
-      display: none; }
+      display: none;
+      justify-content: space-between; }
       section .left .sub-detail.active {
         display: block; }
       section .left .sub-detail::-webkit-scrollbar {
@@ -134,13 +135,13 @@ section {
         background: #1be;
         border-radius: 3px; }
       section .left .sub-detail a {
-        display: block;
-        line-height: 30px;
+        display: inline-block;
+        width: 48%;
+        line-height: 24px;
         border-right: 3px;
         background: #6cc6ea;
-        padding: 0 10px;
-        margin-top: 4px;
-        border-radius: 5px; }
+        padding: 4px 10px;
+        border-radius: 24px; }
     section .left .b-btm {
       border-bottom: 1px dashed #4352d8; }
   section .right {

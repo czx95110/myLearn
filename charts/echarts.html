@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+
+<div id="main" style="width: 600px;height: 500px;margin: 10px auto"></div>
+
+<script src="echarts.js"></script>
+<script>
+  // 基于准备好的dom，初始化echarts实例
+  var myChart = echarts.init(document.getElementById('main'));
+
+  // 指定图表的配置项和数据
+  var option = {
+    title: {
+      text: 'ECharts 入门示例'
+    },
+    tooltip: {},
+    legend: {
+      data:['CEO']
+    },
+    xAxis: {
+      data: ["A","B","C","D","E","F"]
+    },
+    xAxis3D:{
+
+    },
+    yAxis: {},
+    series: [{
+      name: 'FF',
+      type: 'line',
+      data: [5, 20, 36, 10, 10, 20]
+    }]
+  };
+
+  // 使用刚指定的配置项和数据显示图表。
+  myChart.setOption(option);
+</script>
+</body>
+</html>

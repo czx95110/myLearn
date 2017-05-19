@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+
+<div id="con" style="width: 200px;height: 200px; text-align: center;">
+  <img id="img" src="../img/icon/1096558.png" alt="a"/>
+
+  <p>1</p>
+
+  <p>2</p>
+
+  <p>3</p>
+
+  <p>4</p>
+
+  <p>5</p>
+
+  <p>6</p>
+
+  <p>7</p>
+
+  <p>8</p>
+
+  <p>9</p>
+
+  <p>10</p>
+</div>
+
+
+<script src="rgbaster.js"></script>
+<script>
+  var img=document.getElementById('img');
+  RGBaster.colors(img, {
+    success: function(payload) {
+      // You now have the payload.
+      console.log(payload.dominant);
+      console.log(payload.secondary);
+      console.log(payload.palette);
+//      con.style.backgroundColor=payload.secondary;
+      var p=document.querySelectorAll('p');
+      console.log(p);
+      for(var i=0;i< p.length;i++){
+        p[i].style.color=payload.palette[i];
+      }
+
+    }
+
+  });
+</script>
+</body>
+</html>

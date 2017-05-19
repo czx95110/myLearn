@@ -6,5 +6,28 @@
 </head>
 <body>
 
+
+<div class="ajax">
+  <h1>兼容性低IE版ajax的代码写法</h1>
+  <pre>
+    var xhr;
+    if (window.XMLHttpRequest)
+    {
+      //  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+      xhr=new XMLHttpRequest();
+    }
+    else
+    {
+      // IE6, IE5 浏览器执行代码
+      xhr=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+
+  </pre>
+</div>
+
+<script>
+
+</script>
+
 </body>
 </html>
